@@ -3,9 +3,9 @@ project:
 
 website: 
   page-navigation: true
-  title: "SPL quarto simple" 
-  site-url: "https://uf-splab.github.io/SPL-quarto-simple/" 
-  repo-url: "https://github.com/UF-SPLab/SPL-quarto-simple/"
+  title: "Open Neuro" 
+  site-url: "https://uf-splab.github.io/open-neuro/" 
+  repo-url: "https://github.com/UF-SPLab/open-neuro/"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
@@ -33,10 +33,10 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: content/add-content.qmd
-        text: Add content
-      - href: content/customizing.qmd
-        text: Customizing
+      - href: content/mpfc.qmd
+        text: MPFC
+      - href: content/misophonia.qmd
+        text: Misophonia
       - href: content/rendering.qmd
         text: Rendering
       - href: content/rmarkdown.Rmd
