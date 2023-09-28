@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/old_index.html</loc>
-    <lastmod>2023-02-04T13:22:34.197Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/acknowledgements.html</loc>
-    <lastmod>2023-02-04T13:22:36.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/publishing.html</loc>
-    <lastmod>2023-02-04T13:22:36.885Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/customizing.html</loc>
-    <lastmod>2023-02-04T13:22:37.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/rmarkdown.html</loc>
-    <lastmod>2023-02-04T13:22:39.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/add-content.html</loc>
-    <lastmod>2023-02-04T13:22:39.521Z</lastmod>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/index.html</loc>
+    <lastmod>2023-09-28T18:20:36.914Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/SPL-quarto-simple/content/code.html</loc>
-    <lastmod>2023-02-04T13:22:40.873Z</lastmod>
+    <lastmod>2023-09-28T18:20:36.214Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/SPL-quarto-simple/content/rendering.html</loc>
-    <lastmod>2023-02-04T13:22:41.329Z</lastmod>
+    <lastmod>2023-09-28T18:20:33.666Z</lastmod>
   </url>
   <url>
-    <loc>https://uf-splab.github.io/SPL-quarto-simple/index.html</loc>
-    <lastmod>2023-02-04T13:22:41.745Z</lastmod>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/add-content.html</loc>
+    <lastmod>2023-09-28T18:20:32.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/acknowledgements.html</loc>
+    <lastmod>2023-09-28T18:20:30.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/customizing.html</loc>
+    <lastmod>2023-09-28T18:20:32.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/publishing.html</loc>
+    <lastmod>2023-09-28T18:20:33.306Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/content/rmarkdown.html</loc>
+    <lastmod>2023-09-28T18:20:35.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/SPL-quarto-simple/old_index.html</loc>
+    <lastmod>2023-09-28T18:20:36.594Z</lastmod>
   </url>
 </urlset>
