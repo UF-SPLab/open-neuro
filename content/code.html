@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Neuro - Rendering with Code</title>
+<title>Open Neuro - Working with Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/misophonia.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../content/miso.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Misophonia</span></a>
   </div>
 </li>
@@ -188,21 +188,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#modify-the-github-action" id="toc-modify-the-github-action" class="nav-link active" data-scroll-target="#modify-the-github-action">Modify the GitHub Action</a></li>
-  <li><a href="#render-locally-and-publish-to-gh-pages-branch" id="toc-render-locally-and-publish-to-gh-pages-branch" class="nav-link" data-scroll-target="#render-locally-and-publish-to-gh-pages-branch">Render locally and publish to gh-pages branch</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/code.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/code.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rendering with Code</h1>
+<h1 class="title">Working with Code</h1>
 </div>
 
 
@@ -217,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.</p>
+<p>We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">14</span>, <span class="dv">32</span>, <span class="dv">22</span>, <span class="dv">38</span>)</span>
@@ -232,20 +225,8 @@ Coefficients:
       1.056        1.326  </code></pre>
 </div>
 </div>
-<section id="modify-the-github-action" class="level2">
-<h2 class="anchored" data-anchor-id="modify-the-github-action">Modify the GitHub Action</h2>
-<p>You will need to change the GitHub Action in <code>.github/workflows</code> to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in <code>code.qmd</code>. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.</p>
-<p>If getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the <code>gh-pages</code> branch. If you do this, make sure to delete or rename the GitHub Action to something like</p>
-<pre><code>render-and-publish.old_yml</code></pre>
-<p>so GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.</p>
-</section>
-<section id="render-locally-and-publish-to-gh-pages-branch" class="level2">
-<h2 class="anchored" data-anchor-id="render-locally-and-publish-to-gh-pages-branch">Render locally and publish to gh-pages branch</h2>
-<p>To render locally and push up to the <code>gh-pages</code> branch, open a terminal window and then <code>cd</code> to the directory with the Quarto project. Type this in the terminal:</p>
-<pre><code>quarto render gh-pages</code></pre>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -614,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">© CC-1.0</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/code.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/code.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
