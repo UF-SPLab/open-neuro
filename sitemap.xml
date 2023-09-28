@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://uf-splab.github.io/open-neuro/index.html</loc>
-    <lastmod>2023-09-28T18:39:37.136Z</lastmod>
+    <lastmod>2023-09-28T18:40:39.418Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/code.html</loc>
-    <lastmod>2023-09-28T18:39:36.440Z</lastmod>
+    <lastmod>2023-09-28T18:40:38.734Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rendering.html</loc>
-    <lastmod>2023-09-28T18:39:33.640Z</lastmod>
+    <lastmod>2023-09-28T18:40:36.130Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/add-content.html</loc>
-    <lastmod>2023-09-28T18:39:32.868Z</lastmod>
+    <lastmod>2023-09-28T18:40:35.370Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/customizing.html</loc>
-    <lastmod>2023-09-28T18:39:32.188Z</lastmod>
+    <lastmod>2023-09-28T18:40:34.698Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/open-neuro/content/miso.html</loc>
+    <lastmod>2023-09-28T18:40:31.070Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/acknowledgements.html</loc>
-    <lastmod>2023-09-28T18:39:29.892Z</lastmod>
+    <lastmod>2023-09-28T18:40:34.342Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/mpfc.html</loc>
-    <lastmod>2023-09-28T18:39:32.516Z</lastmod>
+    <lastmod>2023-09-28T18:40:35.022Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/publishing.html</loc>
-    <lastmod>2023-09-28T18:39:33.284Z</lastmod>
+    <lastmod>2023-09-28T18:40:35.778Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rmarkdown.html</loc>
-    <lastmod>2023-09-28T18:39:35.308Z</lastmod>
+    <lastmod>2023-09-28T18:40:37.610Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/old_index.html</loc>
-    <lastmod>2023-09-28T18:39:36.816Z</lastmod>
+    <lastmod>2023-09-28T18:40:39.098Z</lastmod>
   </url>
 </urlset>

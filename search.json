@@ -105,6 +105,13 @@
     "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
   },
   {
+    "objectID": "content/miso.html",
+    "href": "content/miso.html",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Info"
+  },
+  {
     "objectID": "content/acknowledgements.html",
     "href": "content/acknowledgements.html",
     "title": "Acknowledgments",
