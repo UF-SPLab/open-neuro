@@ -1,1 +1,1 @@
-Sitemap: https://uf-splab.github.io/SPL-quarto-simple/sitemap.xml
+Sitemap: https://uf-splab.github.io/open-neuro/sitemap.xml
