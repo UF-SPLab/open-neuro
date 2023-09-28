@@ -35,7 +35,7 @@ website:
         text: Home
       - href: content/mpfc.qmd
         text: MPFC
-      - href: content/misophonia.qmd
+      - href: content/miso.qmd
         text: Misophonia
       - href: content/rendering.qmd
         text: Rendering
