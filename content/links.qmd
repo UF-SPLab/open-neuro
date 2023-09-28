@@ -1,0 +1,48 @@
+---
+title: Useful Links
+---
+
+### Free Books for Python or R
+
+- [https://wesmckinney.com/book/](https://wesmckinney.com/book/)
+- [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
+- [https://jakevdp.github.io/PythonDataScienceHandbook/](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [https://ggplot2-book.org/](https://ggplot2-book.org/)
+- [https://crumplab.com/Books.html](https://crumplab.com/Books.html)
+- [https://github.com/christophergandrud/Rep-Res-Book](https://github.com/christophergandrud/Rep-Res-Book)
+- [https://merely-useful.tech/py-rse/](https://merely-useful.tech/py-rse/)
+- [https://merely-useful.tech/r-rse/](https://merely-useful.tech/r-rse/)
+
+#### Data Science Courses
+
+- [https://merely-useful.tech/novice-r/](https://merely-useful.tech/novice-r/)
+- [https://github.com/merely-useful/novice-py/](https://github.com/merely-useful/novice-py/)
+- [https://github.com/merely-useful/py-rse](https://github.com/merely-useful/py-rse)
+
+#### Open Science
+Starting points for learning about accessibility
+
+- [https://quarto.org/](https://quarto.org/) 
+- [https://voltrondata.com/labs](https://voltrondata.com/labs)
+- [https://carpentries.org/](https://carpentries.org/)
+- [https://www.cos.io/products/osf](https://www.cos.io/products/osf)
+- [https://ropensci.org](https://ropensci.org) 
+- [https://posit.co/products/enterprise/academy/](https://posit.co/products/enterprise/academy/) 
+- [https://www.datacamp.com](https://www.datacamp.com)
+
+#### Shared Docs with links to more information:
+- [https://github.com/asoplata/open-science-resources](https://github.com/asoplata/open-science-resources) 
+- [https://github.com/asoplata/open-computational-neuroscience-resources](https://github.com/asoplata/open-computational-neuroscience-resources) 
+
+#### Open Science Pre-publication Sites:
+- [https://neurolibre.org](https://neurolibre.org) 
+- [https://psyarxiv.com](https://psyarxiv.com)
+- [https://osf.io/preprints/](https://osf.io/preprints/) 
+- [https://arxiv.org](https://arxiv.org)
+
+
+
+- [Carpentries Tutorial: Introduction to Reproducible Publications with RStudio](https://carpentries-incubator.github.io/Reproducible-Publications-with-RStudio/aio/index.html)
+
+#### Interesting links
+- [Two-minute Neuroscience: ketamine](https://youtu.be/kRtNsaMildw)
