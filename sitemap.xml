@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://uf-splab.github.io/open-neuro/index.html</loc>
-    <lastmod>2023-09-28T18:37:30.609Z</lastmod>
+    <lastmod>2023-09-28T18:39:37.136Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/code.html</loc>
-    <lastmod>2023-09-28T18:37:29.825Z</lastmod>
+    <lastmod>2023-09-28T18:39:36.440Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rendering.html</loc>
-    <lastmod>2023-09-28T18:37:26.901Z</lastmod>
+    <lastmod>2023-09-28T18:39:33.640Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/add-content.html</loc>
-    <lastmod>2023-09-28T18:37:26.077Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uf-splab.github.io/open-neuro/content/acknowledgements.html</loc>
-    <lastmod>2023-09-28T18:37:24.413Z</lastmod>
+    <lastmod>2023-09-28T18:39:32.868Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/customizing.html</loc>
-    <lastmod>2023-09-28T18:37:25.685Z</lastmod>
+    <lastmod>2023-09-28T18:39:32.188Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/open-neuro/content/acknowledgements.html</loc>
+    <lastmod>2023-09-28T18:39:29.892Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/open-neuro/content/mpfc.html</loc>
+    <lastmod>2023-09-28T18:39:32.516Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/publishing.html</loc>
-    <lastmod>2023-09-28T18:37:26.529Z</lastmod>
+    <lastmod>2023-09-28T18:39:33.284Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rmarkdown.html</loc>
-    <lastmod>2023-09-28T18:37:28.589Z</lastmod>
+    <lastmod>2023-09-28T18:39:35.308Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/old_index.html</loc>
-    <lastmod>2023-09-28T18:37:30.253Z</lastmod>
+    <lastmod>2023-09-28T18:39:36.816Z</lastmod>
   </url>
 </urlset>

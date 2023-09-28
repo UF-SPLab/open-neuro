@@ -84,13 +84,6 @@
     "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
   },
   {
-    "objectID": "content/acknowledgements.html",
-    "href": "content/acknowledgements.html",
-    "title": "Acknowledgments",
-    "section": "",
-    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
-  },
-  {
     "objectID": "content/customizing.html",
     "href": "content/customizing.html",
     "title": "Customization",
@@ -110,6 +103,13 @@
     "title": "Customization",
     "section": "Examples",
     "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
+  },
+  {
+    "objectID": "content/acknowledgements.html",
+    "href": "content/acknowledgements.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
   },
   {
     "objectID": "content/publishing.html",
