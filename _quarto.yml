@@ -15,7 +15,7 @@ website:
   
   sidebar:
     background: "#D9E3E4"
-    logo: "content/splab.png"
+    logo: "https://github.com/UF-SPLab/open-neuro/blob/ee8f6a223185e66ffc5aaad689710a85ef05488e/content/splab.png"
     favicon: images/favicon.ico
     pinned: true
     align: center
