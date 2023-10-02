@@ -1,6 +1,8 @@
 [
   {
     "listing": "/content/wiki.html",
-    "items": []
+    "items": [
+      "/content/posts/test_post/index.html"
+    ]
   }
 ]
