@@ -42,20 +42,6 @@
     "text": "Free Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine"
   },
   {
-    "objectID": "content/acknowledgements.html",
-    "href": "content/acknowledgements.html",
-    "title": "Acknowledgments",
-    "section": "",
-    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
-  },
-  {
-    "objectID": "content/miso.html",
-    "href": "content/miso.html",
-    "title": "Misophonia",
-    "section": "",
-    "text": "Info"
-  },
-  {
     "objectID": "content/customizing.html",
     "href": "content/customizing.html",
     "title": "Customization",
@@ -75,6 +61,27 @@
     "title": "Customization",
     "section": "Examples",
     "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
+  },
+  {
+    "objectID": "content/miso.html",
+    "href": "content/miso.html",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Info"
+  },
+  {
+    "objectID": "content/acknowledgements.html",
+    "href": "content/acknowledgements.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
+  },
+  {
+    "objectID": "content/wiki.html",
+    "href": "content/wiki.html",
+    "title": "Open-Science-Wiki",
+    "section": "",
+    "text": "No matching items"
   },
   {
     "objectID": "content/add-content.html",
