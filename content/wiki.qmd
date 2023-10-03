@@ -8,6 +8,7 @@ listing:
     contents: "meeting-notes/*.qmd"
     type: table
   - id: posts
+    contents: "posts"
     sort: "date desc"
     type: grid
     categories: true
