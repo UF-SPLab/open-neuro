@@ -2,16 +2,6 @@
   {
     "listing": "/content/wiki.html",
     "items": [
-      "/content/miso.html",
-      "/content/acknowledgements.html",
-      "/content/customizing.html",
-      "/content/mpfc.html",
-      "/content/add-content.html",
-      "/content/links.html",
-      "/content/publishing.html",
-      "/content/rendering.html",
-      "/content/rmarkdown.html",
-      "/content/code.html",
       "/content/posts/test_post/index.html"
     ]
   }
