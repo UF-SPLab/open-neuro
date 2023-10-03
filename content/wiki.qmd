@@ -1,11 +1,33 @@
 ---
 title: "Open-Science-Wiki"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
+listing: 
+  - id: lab-info
+    contents: "lab-info/*.qmd"
+    type: table
+  - id: meeting-notes
+    contents: "meeting-notes/*.qmd"
+    type: table
+  - id: posts
+    sort: "date desc"
+    type: grid
+    categories: true
+    sort-ui: true
+    filter-ui: true
 page-layout: full
 ---
+
+## Lab Information
+
+:::{#lab-info}
+:::
+
+## Meeting Notes
+
+:::{#meeting-notes}
+:::
+
+
+## Posts
+
+:::{#posts}
+:::
