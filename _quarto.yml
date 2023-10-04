@@ -47,7 +47,7 @@ website:
 format:
   html:
     theme:
-      light: [sketchy, theme.scss] 
+      light: [sketchy, _bootswatch.scss] 
       dark: [sketchy, theme-dark.scss]
     code-copy: true
     code-overflow: wrap
