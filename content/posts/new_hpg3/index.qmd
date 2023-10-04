@@ -1,6 +1,12 @@
 ---
 title: "Getting Started with HiPerGator3"
+author: "RPM"
+date: "2023-10-04"
 draft: true
 ---
 
-- [HiPerGator3 New User Training](https://help.rc.ufl.edu/doc/New_user_training)
+1. [Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]
+   - []()
+   - []()
+1. [Go to HiPerGator3 New User Training i.e.,req by UF RC](https://help.rc.ufl.edu/doc/New_user_training)
+1. [Complete the required Coursera training](https://coursera.org/groups/hipergator-account-training-ywszh/invitation)
