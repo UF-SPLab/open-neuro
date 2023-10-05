@@ -28,7 +28,7 @@ website:
         text: "Open Neuroscience"
 
     style: "docked"
-    search: true
+    search: false
     collapse-level: 1
     contents:
       - href: index.qmd
