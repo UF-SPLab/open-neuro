@@ -6,8 +6,8 @@ date: "2023-10-04"
 
 ## Getting Started with Research
 
--[ ] [Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]
-   -[ ] [FERPA Basics](https://privacy.ufl.edu/privacy-training/ferpa-basics-and-ferpa-for-faculty/)
-   -[ ] [Maintaining a Safe and Respectful Campus ](https://learn-and-grow.hr.ufl.edu/courses-registration/compliance-training/)
--[ ] [Go to HiPerGator3 New User Training i.e.,req by UF RC](https://help.rc.ufl.edu/doc/New_user_training)
--[ ] [Complete the required Coursera training](https://coursera.org/groups/hipergator-account-training-ywszh/invitation)
+- [ ] [Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]
+   - [ ] [FERPA Basics](https://privacy.ufl.edu/privacy-training/ferpa-basics-and-ferpa-for-faculty/)
+   - [ ] [Maintaining a Safe and Respectful Campus ](https://learn-and-grow.hr.ufl.edu/courses-registration/compliance-training/)
+- [ ] [Go to HiPerGator3 New User Training i.e.,req by UF RC](https://help.rc.ufl.edu/doc/New_user_training)
+- [ ] [Complete the required Coursera training](https://coursera.org/groups/hipergator-account-training-ywszh/invitation)
