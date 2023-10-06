@@ -47,7 +47,6 @@ website:
 format:
   html:
     theme:
-      version: 4
       bootswatch: sketchy
       primary: "#6CC3D4"
     code-copy: true
