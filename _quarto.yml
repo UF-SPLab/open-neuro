@@ -47,8 +47,9 @@ website:
 format:
   html:
     theme:
-      light: [sketchy, theme.scss] 
-      dark: [sketchy, theme-dark.scss]
+      version: 5
+      bootswatch: sketchy
+      primary: "#6CC3D4"
     code-copy: true
     code-overflow: wrap
     toc: true
