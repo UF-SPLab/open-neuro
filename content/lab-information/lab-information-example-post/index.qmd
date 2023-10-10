@@ -1,0 +1,8 @@
+---
+title: "Example template"
+author: "RPM"
+date: "2023-10-10"
+draft: false
+---
+
+This is an example template for a new post. You can use it as a starting point for your own posts.
