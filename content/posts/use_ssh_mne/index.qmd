@@ -1,0 +1,95 @@
+---
+title: "SSH to HPG3 and run MNE-BIDS-Pipeline"
+author: "RPM"
+date: "2023-08-09"
+draft: false
+---
+
+# connect to UF Research Computing HPG3 Cluster from terminal on macOS
+
+Type the following command in the terminal:
+
+
+`ssh ` *urgatoruser*`@hpg.rc.ufl.edu`
+
+Then, follow the prompts to enter your password and Duo two-factor authentication.
+
+**Your password will not be displayed as you type it.**
+Then, your terminal should look like this:
+
+```bash
+ssh urgatoruser@hpg.rc.ufl.edu
+Password: xxxxxxxx
+Duo two-factor login for urgatoruser@ufl.edu
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-1809
+ 2. Phone call to XXX-XXX-1809
+
+Passcode or option (1-2): 1
+```
+
+Works through the UF Single-sign on similar to for Canvas and gatormail.
+
+
+## a single node 2 CPU core job with 2gb of RAM for 90 minutes can be started with the following command
+
+```bash
+srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i
+```
+
+`[mygatoruser@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash'
+
+## a single node 4 CPU core job with 28gb of RAM for 120 minutes can be started with the following command
+
+```bash
+srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i
+```
+
+
+`srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i`  
+
+`srun: job 4572441 queued and waiting for resources`  
+
+`srun: job 4572441 has been allocated resources`. 
+
+Now you are on the compute node. You can check the hostname and the node list with the following commands:
+
+```bash
+echo "Hello from $(hostname)"
+```
+
+`Hello from c0711a-s6.ufhpc`
+
+
+```bash
+echo $SLURM_JOB_NODELIST
+```
+
+`c0711a-s6`
+
+# Navigate to group storage on Blue drive then activate conda environment to have access to pipeline
+
+```bash
+cd /blue/psb4934/share/mears/misophonia/miso-project-pipeline
+
+module load conda
+conda activate mne_1_4_2
+```
+
+## Random Tips:
+
+Create a symbolic link to your group storage directory on Blue drive:
+
+`ln -s /blue/psb4934/`<your_gator_username>  `blue_psb4934`
+
+[Using OpenOn Demand for file management](https://help.rc.ufl.edu/doc/Open_OnDemand_Files)
+
+[Troubleshooting HPG3 Open OnDemand](https://help.rc.ufl.edu/doc/Open_OnDemand_Troubleshooting)
+
+[Using `rsync` to copy/move files on HPG3 ](https://help.rc.ufl.edu/doc/Rsync)
+
+
+
+[macOS Development Environment: iTerm2, oh-my-zsh, and VS Code](https://josh-ops.com/posts/my-macos-development-environment/)
