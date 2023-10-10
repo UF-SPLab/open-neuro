@@ -63,6 +63,41 @@
     "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
   },
   {
+    "objectID": "content/customizing.html",
+    "href": "content/customizing.html",
+    "title": "Customization",
+    "section": "",
+    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation."
+  },
+  {
+    "objectID": "content/customizing.html#quarto-documentation",
+    "href": "content/customizing.html#quarto-documentation",
+    "title": "Customization",
+    "section": "",
+    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation."
+  },
+  {
+    "objectID": "content/customizing.html#examples",
+    "href": "content/customizing.html#examples",
+    "title": "Customization",
+    "section": "Examples",
+    "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
+  },
+  {
+    "objectID": "content/miso.html",
+    "href": "content/miso.html",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Info"
+  },
+  {
+    "objectID": "content/acknowledgements.html",
+    "href": "content/acknowledgements.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
+  },
+  {
     "objectID": "content/wiki.html",
     "href": "content/wiki.html",
     "title": "Open-Science-Wiki",
@@ -89,41 +124,6 @@
     "title": "Open-Science-Wiki",
     "section": "Posts",
     "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "content/acknowledgements.html",
-    "href": "content/acknowledgements.html",
-    "title": "Acknowledgments",
-    "section": "",
-    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
-  },
-  {
-    "objectID": "content/miso.html",
-    "href": "content/miso.html",
-    "title": "Misophonia",
-    "section": "",
-    "text": "Info"
-  },
-  {
-    "objectID": "content/customizing.html",
-    "href": "content/customizing.html",
-    "title": "Customization",
-    "section": "",
-    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation."
-  },
-  {
-    "objectID": "content/customizing.html#quarto-documentation",
-    "href": "content/customizing.html#quarto-documentation",
-    "title": "Customization",
-    "section": "",
-    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation."
-  },
-  {
-    "objectID": "content/customizing.html#examples",
-    "href": "content/customizing.html#examples",
-    "title": "Customization",
-    "section": "Examples",
-    "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
   },
   {
     "objectID": "content/add-content.html",
