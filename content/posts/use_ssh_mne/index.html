@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="RPM">
+<meta name="dcterms.date" content="2023-08-09">
 
-<title>Open Neuro - Open-Science-Wiki</title>
+<title>Open Neuro - SSH to HPG3 and run MNE-BIDS-Pipeline</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.ico" rel="icon">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -63,94 +97,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-lab-info .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: [],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-lab-info'] = new List('listing-lab-info', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-meeting-notes .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: [],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-meeting-notes'] = new List('listing-meeting-notes', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -163,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Open-Science-Wiki</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">SSH to HPG3 and run MNE-BIDS-Pipeline</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -173,11 +120,39 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">SSH to HPG3 and run MNE-BIDS-Pipeline</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>RPM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 9, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="../../../index.html" class="sidebar-logo-link">
       <img src="https://github.com/UF-SPLab/open-neuro/blob/ee8f6a223185e66ffc5aaad689710a85ef05488e/content/splab.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
@@ -195,37 +170,37 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/mpfc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../content/mpfc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MPFC</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/miso.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../content/miso.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Misophonia</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../content/links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful Links</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/code.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../content/code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code in your files</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/acknowledgements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../content/acknowledgements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgements</span></a>
   </div>
 </li>
@@ -239,186 +214,76 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-information" id="toc-lab-information" class="nav-link active" data-scroll-target="#lab-information">Lab Information</a></li>
-  <li><a href="#meeting-notes" id="toc-meeting-notes" class="nav-link" data-scroll-target="#meeting-notes">Meeting Notes</a></li>
-  <li><a href="#posts" id="toc-posts" class="nav-link" data-scroll-target="#posts">Posts</a></li>
+  <li><a href="#connect-to-uf-research-computing-hpg3-cluster-from-terminal-on-macos" id="toc-connect-to-uf-research-computing-hpg3-cluster-from-terminal-on-macos" class="nav-link active" data-scroll-target="#connect-to-uf-research-computing-hpg3-cluster-from-terminal-on-macos">connect to UF Research Computing HPG3 Cluster from terminal on macOS</a>
+  <ul class="collapse">
+  <li><a href="#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command" id="toc-a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command" class="nav-link" data-scroll-target="#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command">a single node 2 CPU core job with 2gb of RAM for 90 minutes can be started with the following command</a></li>
+  <li><a href="#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command" id="toc-a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command" class="nav-link" data-scroll-target="#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command">a single node 4 CPU core job with 28gb of RAM for 120 minutes can be started with the following command</a></li>
+  </ul></li>
+  <li><a href="#navigate-to-group-storage-on-blue-drive-then-activate-conda-environment-to-have-access-to-pipeline" id="toc-navigate-to-group-storage-on-blue-drive-then-activate-conda-environment-to-have-access-to-pipeline" class="nav-link" data-scroll-target="#navigate-to-group-storage-on-blue-drive-then-activate-conda-environment-to-have-access-to-pipeline">Navigate to group storage on Blue drive then activate conda environment to have access to pipeline</a>
+  <ul class="collapse">
+  <li><a href="#random-tips" id="toc-random-tips" class="nav-link" data-scroll-target="#random-tips">Random Tips:</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/wiki.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/wiki.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div></div></div>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/posts/use_ssh_mne/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/posts/use_ssh_mne/index.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Open-Science-Wiki</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="lab-information" class="level2">
-<h2 class="anchored" data-anchor-id="lab-information">Lab Information</h2>
-<div id="listing-lab-info" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-</tr>
-</thead>
-<tbody class="list">
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="connect-to-uf-research-computing-hpg3-cluster-from-terminal-on-macos" class="level1">
+<h1>connect to UF Research Computing HPG3 Cluster from terminal on macOS</h1>
+<p>Type the following command in the terminal:</p>
+<p><code>ssh</code> <em>urgatoruser</em><code>@hpg.rc.ufl.edu</code></p>
+<p>Then, follow the prompts to enter your password and Duo two-factor authentication.</p>
+<p><strong>Your password will not be displayed as you type it.</strong> Then, your terminal should look like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> urgatoruser@hpg.rc.ufl.edu</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Password:</span> xxxxxxxx</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Duo</span> two-factor login for urgatoruser@ufl.edu</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> a passcode or select one of the following options:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a> <span class="ex">1.</span> Duo Push to XXX-XXX-1809</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a> <span class="ex">2.</span> Phone call to XXX-XXX-1809</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Passcode</span> or option <span class="er">(</span><span class="ex">1-2</span><span class="kw">)</span><span class="bu">:</span> 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Works through the UF Single-sign on similar to for Canvas and gatormail.</p>
+<section id="a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command">a single node 2 CPU core job with 2gb of RAM for 90 minutes can be started with the following command</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--account</span><span class="op">=</span>psb4934 <span class="at">--qos</span><span class="op">=</span>psb4934 <span class="at">--ntasks</span><span class="op">=</span>1 <span class="at">--cpus-per-task</span><span class="op">=</span>2 <span class="at">--mem</span><span class="op">=</span>2gb <span class="at">-t</span> 90 <span class="at">--pty</span> bash <span class="at">-i</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’</p>
 </section>
-<section id="meeting-notes" class="level2">
-<h2 class="anchored" data-anchor-id="meeting-notes">Meeting Notes</h2>
-<div id="listing-meeting-notes" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-</tr>
-</thead>
-<tbody class="list">
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command">a single node 4 CPU core job with 28gb of RAM for 120 minutes can be started with the following command</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--account</span><span class="op">=</span>psb4934 <span class="at">--qos</span><span class="op">=</span>psb4934 <span class="at">--ntasks</span><span class="op">=</span>1 <span class="at">--cpus-per-task</span><span class="op">=</span>4 <span class="at">--mem</span><span class="op">=</span>28gb <span class="at">-t</span> 60 <span class="at">--pty</span> bash <span class="at">-i</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i</code></p>
+<p><code>srun: job 4572441 queued and waiting for resources</code></p>
+<p><code>srun: job 4572441 has been allocated resources</code>.</p>
+<p>Now you are on the compute node. You can check the hostname and the node list with the following commands:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello from </span><span class="va">$(</span><span class="fu">hostname</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>Hello from c0711a-s6.ufhpc</code></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$SLURM_JOB_NODELIST</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>c0711a-s6</code></p>
 </section>
-<section id="posts" class="level2">
-<h2 class="anchored" data-anchor-id="posts">Posts</h2>
-<div id="listing-posts" class="quarto-listing quarto-listing-container-grid">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1696377600000" data-listing-file-modified-sort="1696945794142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../content/posts/new_hpg3/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Getting Started with HiPerGator3
-</h5>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-RPM
-</div>
-<div class="listing-date">
-Oct 4, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1691539200000" data-listing-file-modified-sort="1696945794142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="../content/posts/use_ssh_mne/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SSH to HPG3 and run MNE-BIDS-Pipeline
-</h5>
-<div class="card-text listing-description">
-Type the following command in the terminal:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-RPM
-</div>
-<div class="listing-date">
-Aug 9, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1654041600000" data-listing-file-modified-sort="1696945794142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../content/posts/test_post/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Post template
-</h5>
-<div class="card-text listing-description">
-This is a test post.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-RPM
-</div>
-<div class="listing-date">
-Jun 1, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+</section>
+<section id="navigate-to-group-storage-on-blue-drive-then-activate-conda-environment-to-have-access-to-pipeline" class="level1">
+<h1>Navigate to group storage on Blue drive then activate conda environment to have access to pipeline</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /blue/psb4934/share/mears/misophonia/miso-project-pipeline</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mne_1_4_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="random-tips" class="level2">
+<h2 class="anchored" data-anchor-id="random-tips">Random Tips:</h2>
+<p>Create a symbolic link to your group storage directory on Blue drive:</p>
+<p><code>ln -s /blue/psb4934/</code><your_gator_username> <code>blue_psb4934</code></your_gator_username></p>
+<p><a href="https://help.rc.ufl.edu/doc/Open_OnDemand_Files">Using OpenOn Demand for file management</a></p>
+<p><a href="https://help.rc.ufl.edu/doc/Open_OnDemand_Troubleshooting">Troubleshooting HPG3 Open OnDemand</a></p>
+<p><a href="https://help.rc.ufl.edu/doc/Rsync">Using <code>rsync</code> to copy/move files on HPG3</a></p>
+<p><a href="https://josh-ops.com/posts/my-macos-development-environment/">macOS Development Environment: iTerm2, oh-my-zsh, and VS Code</a></p>
 
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
