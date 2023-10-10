@@ -2,11 +2,13 @@
 title: "Open-Science-Wiki"
 listing: 
   - id: lab-info
-    contents: "lab-info/*.qmd"
+    contents: "lab-information"
     type: table
+    sort: "date desc"
   - id: meeting-notes
-    contents: "meeting-notes/*.qmd"
+    contents: "meeting-notes"
     type: table
+    sort: "date desc"
   - id: posts
     contents: "posts"
     sort: "date desc"
