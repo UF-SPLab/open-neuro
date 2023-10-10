@@ -1,0 +1,50 @@
+---
+title: "Understanding rsync"
+author: "bot"
+date: "2022-04-26"
+draft: true
+---
+
+
+rsync is a powerful command-line tool for transferring files and directories between local and remote systems efficiently. Here are 5 examples illustrating how to use it:
+
+a) From one directory to a newly created directory:
+
+```bash
+rsync -av /path/to/source/directory/ /path/to/destination/directory/
+```
+This command will copy the contents of the source directory to a new directory. If the new directory does not exist, it will be created. The -a option is for archive mode, preserving file permissions, ownerships, and timestamps. The -v option is for verbose mode, showing the progress of the transfer.
+
+b) Using pattern matching to copy some files but not others:
+
+```bash
+rsync -av --include='*.txt' --exclude='*' /path/to/source/directory/ /path/to/destination/directory/
+```
+
+This command will copy only text files (with a .txt extension) from the source directory to the destination directory. The --include option is used to specify the pattern for files to be included, and the --exclude option is used to specify the pattern for files to be excluded.
+
+c) From a child directory to a parent directory:
+
+```bash
+rsync -av /path/to/parent/source/child/ /path/to/parent/
+```
+
+This command will copy the contents of the child directory to its parent directory. If there are any conflicts, the files in the parent directory will be updated or overwritten.
+
+d) To a directory on a completely different drive:
+
+```bash
+rsync -av /path/to/source/directory/ /media/user/different_drive/destination/directory/
+```
+
+This command will copy the contents of the source directory to a destination directory on a different drive. Replace /media/user/different_drive with the path of the mounted drive on your system.
+
+e) To a remote folder on a different network:
+
+```bash
+rsync -av -e "ssh -p PORT" /path/to/source/directory/ user@remote_host:/path/to/remote/directory/
+```
+
+This command will copy the contents of the source directory to a remote directory on a different network. Replace PORT with the SSH port number (usually 22), user with the remote user, and remote_host with the remote host's IP address or hostname. The -e option is used to specify the remote shell to use (ssh in this case) and any additional options for the remote shell (like the port number). Make sure you have SSH access to the remote system.
+
+Remember that the trailing slashes in the source paths are important. If you include a trailing slash, rsync will copy the contents of the source directory, while if you exclude it, the source directory itself will be copied.

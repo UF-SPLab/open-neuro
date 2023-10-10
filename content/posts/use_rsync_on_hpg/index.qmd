@@ -1,0 +1,32 @@
+---
+title: "Post template"
+author: "RPM"
+date: "2023-03-29"
+draft: false
+---
+
+A better way is to copy all the files from the "psy4911/share" folder to your HiPerGator (HPG) folder.
+The rsync command for moving files between directories on HPG is described here.
+[Copying_files_between_directories with rsync](https://help.rc.ufl.edu/doc/Rsync#Copying_files_between_directories)
+You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below).
+![ephys folders to copy from shared folder to your own folder](copydir.png)
+
+Then if you copy and paste these commands into terminal it will do the work for you:
+`rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/`*yourusername*`/ket_ephys/`
+`rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/`*yourusername*`/ket_ephys/`
+`rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/`*yourusername*`/ket_ephys/`
+
+For the files in the hi-ket folder there's another script (and a package named NEO ) that's required to convert them from .plx files to .fif files. 
+
+Required python packages:
+- NEO
+   - [NEO repo](https://github.com/NeuralEnsemble/python-neo)
+   - [NEO documentation](https://neo.readthedocs.io/en/latest/)
+- MNE
+   - [MNE Tutorial: importing data from NEO](https://mne.tools/stable/auto_examples/io/read_neo_format.html#sphx-glr-auto-examples-io-read-neo-format-py)
+
+Code for the file conversion:
+
+The main thing is that it takes 15 minutes per file on hipergator (HPG) when it's set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour. 
+
+An even bigger savings comes when doing machine learning / AI with deeplabcut on HPG.
