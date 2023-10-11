@@ -2,4 +2,20 @@
 title: MPFC
 ---
 
-## Info
+## Overview
+
+
+
+### DeepLabCut
+
+- Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. [https://doi.org/10.1038/s41596-019-0176-0](https://static1.squarespace.com/static/57f6d51c9f74566f55ecf271/t/5eab5ff7999bf94756b27481/1588289532243/NathMathis2019.pdf)
+- Mathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. [https://doi.org/10.1016/j.neuron.2020.09.017](https://doi.org/10.1016/j.neuron.2020.09.017)
+
+#### Video links
+
+- [DLC Course Links](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/master/DLCcourse.md)
+- [Introduction to DeepLabCut for Non-Programmers](https://youtu.be/KO1iQPQPMzw?si=kKy67FCovCLlh0eR)
+- [Annotation & Labeling keypoints with napari-deeplabcut](https://www.youtube.com/watch?v=hsA9IB5r73E)
+
+### NEO/MNE e-phys
+
