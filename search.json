@@ -70,6 +70,20 @@
     "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
   },
   {
+    "objectID": "content/mpfc.html",
+    "href": "content/mpfc.html",
+    "title": "MPFC",
+    "section": "",
+    "text": "Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
+  },
+  {
+    "objectID": "content/mpfc.html#overview",
+    "href": "content/mpfc.html#overview",
+    "title": "MPFC",
+    "section": "",
+    "text": "Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
+  },
+  {
     "objectID": "content/customizing.html",
     "href": "content/customizing.html",
     "title": "Customization",
