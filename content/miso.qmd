@@ -2,5 +2,34 @@
 title: Misophonia
 ---
 
-# Info
+# Overview
+
+## What is misophonia?
+
+Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.
+
+- [Misophonia on Wikipedia](https://en.wikipedia.org/wiki/Misophonia)
+
+- Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., ... & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. [https://doi.org/10.3389/fnins.2022.899476](https://doi.org/10.3389/fnins.2022.899476)
+- **Accepted Pre-registration**: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.[https://doi.org/10.17605/OSF.IO/E26AD](https://doi.org/10.17605/OSF.IO/E26AD)
+
+- [Misophonia: Zotero Refs](https://www.zotero.org/groups/2418504/uf-ephys-misophonia/library)
+
+### Related concept (but not the same phenomenon)
+
+ASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.
+
+### MNE-Python
+
+- [MNE-Python](https://mne.tools/stable/index.html) is a Python package for MEG and EEG data analysis.
+
+### MNE-BIDS
+
+- [MNE-BIDS](https://mne.tools/mne-bids/stable/index.html) is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.
+
+- [BIDS](https://bids.neuroimaging.io/) (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.
+
+### MNE-BIDS-Pipeline   
+
+- [MNE-BIDS-Pipeline](https://mne.tools/mne-bids-pipeline/stable/index.html) is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.
 
