@@ -21,18 +21,46 @@
     "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
   },
   {
-    "objectID": "content/posts/open_sci_github_intro/index.html",
-    "href": "content/posts/open_sci_github_intro/index.html",
-    "title": "Introduction to GitHub for Open Science",
+    "objectID": "content/links.html",
+    "href": "content/links.html",
+    "title": "Useful Links",
     "section": "",
-    "text": "Open Science With GitHub: An Introduction"
+    "text": "Free Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine"
   },
   {
-    "objectID": "content/posts/open_sci_github_intro/index.html#overview",
-    "href": "content/posts/open_sci_github_intro/index.html#overview",
-    "title": "Introduction to GitHub for Open Science",
-    "section": "Overview",
-    "text": "Overview\nMuch of open science requires some technical knowledge that many novices find to be initially burdensome and confusing. Open source analysis tools are usually a work in progress. Documentation for these tools, if present at all, will be incomplete or out of date. The purpose of this slideshow is to explore concepts that will enable team coordination on software usage and code development projects. The hope is that users will be able to find the information that they need from development notes and communication between code authors. In the long-term, notes and comments about the intended function, rationale, and usage of code will be useful for outsiders but also for the project organizers and code developers themselves."
+    "objectID": "content/wiki.html",
+    "href": "content/wiki.html",
+    "title": "Open-Science-Wiki",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/wiki.html#lab-information",
+    "href": "content/wiki.html#lab-information",
+    "title": "Open-Science-Wiki",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/wiki.html#meeting-notes",
+    "href": "content/wiki.html#meeting-notes",
+    "title": "Open-Science-Wiki",
+    "section": "Meeting Notes",
+    "text": "Meeting Notes\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/wiki.html#posts",
+    "href": "content/wiki.html#posts",
+    "title": "Open-Science-Wiki",
+    "section": "Posts",
+    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/posts/use_rsync_on_hpg/index.html",
+    "href": "content/posts/use_rsync_on_hpg/index.html",
+    "title": "Post template",
+    "section": "",
+    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
   },
   {
     "objectID": "content/posts/new_hpg3/index.html",
@@ -49,6 +77,13 @@
     "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
   },
   {
+    "objectID": "content/posts/test_post/index.html",
+    "href": "content/posts/test_post/index.html",
+    "title": "Post template",
+    "section": "",
+    "text": "This is a test post."
+  },
+  {
     "objectID": "content/meeting-notes/index.html",
     "href": "content/meeting-notes/index.html",
     "title": "Example template",
@@ -56,18 +91,32 @@
     "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
   },
   {
-    "objectID": "content/links.html",
-    "href": "content/links.html",
-    "title": "Useful Links",
-    "section": "",
-    "text": "Free Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine"
-  },
-  {
     "objectID": "content/lab-information/lab-information-example-post/index.html",
     "href": "content/lab-information/lab-information-example-post/index.html",
     "title": "Example template",
     "section": "",
     "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
+  },
+  {
+    "objectID": "content/miso.html",
+    "href": "content/miso.html",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
+  },
+  {
+    "objectID": "content/miso.html#what-is-misophonia",
+    "href": "content/miso.html#what-is-misophonia",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Working with Code",
+    "section": "",
+    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
   },
   {
     "objectID": "content/mpfc.html",
@@ -105,20 +154,6 @@
     "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
   },
   {
-    "objectID": "content/miso.html",
-    "href": "content/miso.html",
-    "title": "Misophonia",
-    "section": "",
-    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
-  },
-  {
-    "objectID": "content/miso.html#what-is-misophonia",
-    "href": "content/miso.html#what-is-misophonia",
-    "title": "Misophonia",
-    "section": "",
-    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
-  },
-  {
     "objectID": "content/acknowledgements.html",
     "href": "content/acknowledgements.html",
     "title": "Acknowledgments",
@@ -126,32 +161,46 @@
     "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
   },
   {
-    "objectID": "content/wiki.html",
-    "href": "content/wiki.html",
-    "title": "Open-Science-Wiki",
+    "objectID": "content/posts/use_ssh_mne/index.html",
+    "href": "content/posts/use_ssh_mne/index.html",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\nYour password will not be displayed as you type it. Then, your terminal should look like this:\nssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
   },
   {
-    "objectID": "content/wiki.html#lab-information",
-    "href": "content/wiki.html#lab-information",
-    "title": "Open-Science-Wiki",
+    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "href": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’"
   },
   {
-    "objectID": "content/wiki.html#meeting-notes",
-    "href": "content/wiki.html#meeting-notes",
-    "title": "Open-Science-Wiki",
-    "section": "Meeting Notes",
-    "text": "Meeting Notes\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 10, 2023\n\n\nExample template\n\n\nRPM \n\n\n\n\n\n\nNo matching items"
+    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "href": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "",
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
   },
   {
-    "objectID": "content/wiki.html#posts",
-    "href": "content/wiki.html#posts",
-    "title": "Open-Science-Wiki",
-    "section": "Posts",
-    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "content/posts/use_ssh_mne/index.html#random-tips",
+    "href": "content/posts/use_ssh_mne/index.html#random-tips",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "Random Tips:",
+    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/psb4934/ blue_psb4934\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
+  },
+  {
+    "objectID": "content/posts/open_sci_github_intro/index.html",
+    "href": "content/posts/open_sci_github_intro/index.html",
+    "title": "Introduction to GitHub for Open Science",
+    "section": "",
+    "text": "Open Science With GitHub: An Introduction"
+  },
+  {
+    "objectID": "content/posts/open_sci_github_intro/index.html#overview",
+    "href": "content/posts/open_sci_github_intro/index.html#overview",
+    "title": "Introduction to GitHub for Open Science",
+    "section": "Overview",
+    "text": "Overview\nMuch of open science requires some technical knowledge that many novices find to be initially burdensome and confusing. Open source analysis tools are usually a work in progress. Documentation for these tools, if present at all, will be incomplete or out of date. The purpose of this slideshow is to explore concepts that will enable team coordination on software usage and code development projects. The hope is that users will be able to find the information that they need from development notes and communication between code authors. In the long-term, notes and comments about the intended function, rationale, and usage of code will be useful for outsiders but also for the project organizers and code developers themselves."
   },
   {
     "objectID": "content/add-content.html",
@@ -229,54 +278,5 @@
     "title": "Rendering",
     "section": "Step 3. Render within RStudio",
     "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”."
-  },
-  {
-    "objectID": "content/posts/test_post/index.html",
-    "href": "content/posts/test_post/index.html",
-    "title": "Post template",
-    "section": "",
-    "text": "This is a test post."
-  },
-  {
-    "objectID": "content/posts/use_rsync_on_hpg/index.html",
-    "href": "content/posts/use_rsync_on_hpg/index.html",
-    "title": "Post template",
-    "section": "",
-    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
-  },
-  {
-    "objectID": "content/posts/use_ssh_mne/index.html",
-    "href": "content/posts/use_ssh_mne/index.html",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "",
-    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\nYour password will not be displayed as you type it. Then, your terminal should look like this:\nssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
-  },
-  {
-    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
-    "href": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "",
-    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’"
-  },
-  {
-    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
-    "href": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "",
-    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
-  },
-  {
-    "objectID": "content/posts/use_ssh_mne/index.html#random-tips",
-    "href": "content/posts/use_ssh_mne/index.html#random-tips",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "Random Tips:",
-    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/psb4934/ blue_psb4934\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
-  },
-  {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "Working with Code",
-    "section": "",
-    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
   }
 ]
