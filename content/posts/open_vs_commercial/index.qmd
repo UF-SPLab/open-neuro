@@ -1,0 +1,21 @@
+---
+title: "Open Source Vs. Proprietary Software"
+author: "RPM"
+date: "2023-12-08"
+draft: true
+---
+
+
+- Colliau, Taylor; Rogers, Grace; Hughes, Z.; and Ozgur, Ceyhun, "MatLab vs. Python vs. R" (2017). Business Faculty Publications. 51.[https://scholar.valpo.edu/cba_fac_pub/51](https://scholar.valpo.edu/cba_fac_pub/51)
+
+
+- [Mathworks’ Matlab vs Python over time](https://discourse.julialang.org/t/mathworks-matlab-vs-python-over-time/83612)
+
+
+- [How ChatGPT Helped Me To Convert a MATLAB Toolbox to Python and Learn Python Coding](https://waterprogramming.wordpress.com/2023/09/18/how-chatgpt-helped-me-to-convert-a-matlab-toolbox-to-python-and-learn-python-coding/)
+
+- [FOSS Science](https://wiki.ni4os.eu/index.php/Software_and_free_and_open_source_software_in_open_science)
+
+
+
+
