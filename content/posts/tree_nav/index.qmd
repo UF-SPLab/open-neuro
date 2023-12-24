@@ -1,0 +1,221 @@
+---
+title: "Navigating Miso Project Pipeline on HiPerGator"
+author: "RPM"
+date: "2023-10-16"
+draft: true
+---
+
+
+## Useful filesystem navigation functions
+
+- `cd` - change directory
+- `ls` - list contents of directories
+- `pwd` - print working directory
+- `tree` - list contents of directories in a tree-like format
+- `history` - list previous commands (up to 500 by default)
+- `history 20` - list previous 20 commands (or any number)
+
+
+```{bash, eval = FALSE}
+cd ~/blue_psb4934
+tree -d -L 2 share/mears/misophonia/miso-project-pipeline/processed/bids_eeg/derivatives
+```
+
+
+```{bash, eval = FALSE}
+
+```
+
+
+
+```{bash, eval = FALSE}
+
+```
+
+
+```{bash, eval = FALSE}
+
+```
+
+
+```{bash, eval = FALSE}
+
+```
+
+
+
+## advanced functions
+- `ln` - create links between files
+- `locate` - find files and directories by name
+- `rsync` - copy files and directories
+
+### Careful with these
+- `cp` - copy files and directories
+- `mv` - move files and directories
+- `rm` - remove files and directories
+- `rmdir` - remove empty directories
+
+### detailed functions
+- `touch` - create a file
+- `mkdir` - make directory
+- `cat` - print contents of a file
+- `head` - print first few lines of a file
+- `tail` - print last few lines of a file
+- `info` - print information about a file
+- `find` - find files and directories
+
+### other useful tricks
+- CTRL+A - go to beginning of line
+- CTRL+E - go to end of line
+- CTRL+U - delete from cursor to beginning of line
+- CTRL+K - delete from cursor to end of line
+- CTRL+C - kill current process
+- <tab> - autocomplete
+- <up> - previous command
+- <down> - next command
+- <ctrl+r> - reverse search through history
+- <ctrl+l> - clear screen
+- <ctrl+d> - exit shell
+
+- `;` - run multiple commands on one line
+- `|` - pipe output of one command to another
+- `>` - redirect output of a command to a file
+- `||` - run second command only if first fails
+- ` &&` - run second command only if first succeeds
+
+<!--- https://tldr.inbrowser.app/ -->
+<!--- https://www.git-tower.com/blog/command-line-cheat-sheet/ -->
+<!--- https://cran.rstudio.com/web/packages/fs/vignettes/function-comparisons.html -->
+
+
+### File permissions
+- `chmod` - change permissions of a file or directory
+- `chown` - change owner of a file or directory
+- `chgrp` - change group of a file or directory
+- `rwx` - read, write, execute (for user, group, and other)
+- `r` - read a file (4)
+- `w` - write to a file (2)
+- `x` - execute a file (1)
+- `s` - setuid/setgid (4)
+
+
+### old pipelines and dev
+
+`cd blue_psb4934/share/mne-pipelines`
+`tree -d -L 2`
+.
+├── miso_mne_bids_pipeline
+│   ├── mne-bids-pipeline
+│   │   ├── docs
+│   │   └── mne_bids_pipeline
+│   └── mne-bids-pipeline-main
+│       ├── docs
+│       └── mne_bids_pipeline
+└── miso_pydoit_pipeline
+    └── pydoit-main
+        ├── data
+        ├── notebooks_2023
+        ├── old_scripts
+        └── processed
+        
+        
+### BIDS-EEG pipeline
+
+`cd blue_psb4934/share/mears/misophonia/miso-project-pipeline/processed/bids_eeg`
+`tree -d -L 2`
+
+
+
+`cd blue_psb4934/share/mears/misophonia/miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline/sub-average/eeg`
+
+`tree -d -L 2`
+
+
+.
+├── joblib
+│   └── mne_bids_pipeline
+│       └── steps
+├── sub-average
+│   └── eeg
+├── sub-M603
+│   └── eeg
+├── sub-M604
+│   └── eeg
+:
+:
+:
+└── sub-S632
+    └── eeg
+
+### Useful BIDS-EEG pipeline derivatives paths
+
+./sub-average/eeg/sub-average_task-genaudi3_report.html
+
+./bids_eeg/derivatives/mne-bids-pipeline/sub-M640/eeg/sub-M640_task-genaudi3_report.html
+
+./sub-M640/eeg/.
+sub-M640_task-genaudi3_ave.fif
+sub-M640_task-genaudi3_cov.fif
+sub-M640_task-genaudi3_eog-epo.fif
+sub-M640_task-genaudi3_epo.fif
+sub-M640_task-genaudi3_proc-clean_epo.fif
+sub-M640_task-genaudi3_proc-filt_raw.fif
+sub-M640_task-genaudi3_proc-ssp_epo.fif
+sub-M640_task-genaudi3_proj.fif
+:
+sub-M640_task-genaudi3_report.html
+
+
+sub-M605_task-genaudi3_ave.fif                                            sub-M605_task-genaudi3_proc-habcs+cndcs+FullEpochs+rocauc_decoding.mat
+sub-M605_task-genaudi3_cov.fif                                            sub-M605_task-genaudi3_proc-habcs+cndcs+FullEpochs+rocauc_decoding.tsv
+sub-M605_task-genaudi3_epo.fif                                            sub-M605_task-genaudi3_proc-habcs+cndcs+TimeByTime+rocauc_decoding.mat
+sub-M605_task-genaudi3_proc-clean_epo.fif                                 sub-M605_task-genaudi3_proc-habcs+cndcs+TimeByTime+rocauc_decoding.tsv
+sub-M605_task-genaudi3_proc-cndcs+habcs+FullEpochs+rocauc_decoding.mat    sub-M605_task-genaudi3_proc-habgs1+cndgs1+FullEpochs+rocauc_decoding.mat
+sub-M605_task-genaudi3_proc-cndcs+habcs+FullEpochs+rocauc_decoding.tsv    sub-M605_task-genaudi3_proc-habgs1+cndgs1+FullEpochs+rocauc_decoding.tsv
+sub-M605_task-genaudi3_proc-cndcs+habcs+TimeByTime+rocauc_decoding.mat    sub-M605_task-genaudi3_proc-habgs1+cndgs1+TimeByTime+rocauc_decoding.mat
+sub-M605_task-genaudi3_proc-cndcs+habcs+TimeByTime+rocauc_decoding.tsv    sub-M605_task-genaudi3_proc-habgs1+cndgs1+TimeByTime+rocauc_decoding.tsv
+sub-M605_task-genaudi3_proc-cndgs1+habgs1+FullEpochs+rocauc_decoding.mat  sub-M605_task-genaudi3_proc-habgs2+cndgs2+FullEpochs+rocauc_decoding.mat
+sub-M605_task-genaudi3_proc-cndgs1+habgs1+FullEpochs+rocauc_decoding.tsv  sub-M605_task-genaudi3_proc-habgs2+cndgs2+FullEpochs+rocauc_decoding.tsv
+sub-M605_task-genaudi3_proc-cndgs1+habgs1+TimeByTime+rocauc_decoding.mat  sub-M605_task-genaudi3_proc-habgs2+cndgs2+TimeByTime+rocauc_decoding.mat
+sub-M605_task-genaudi3_proc-cndgs1+habgs1+TimeByTime+rocauc_decoding.tsv  sub-M605_task-genaudi3_proc-habgs2+cndgs2+TimeByTime+rocauc_decoding.tsv
+sub-M605_task-genaudi3_proc-cndgs2+habgs2+FullEpochs+rocauc_decoding.mat  sub-M605_task-genaudi3_proc-ssp_epo.fif
+sub-M605_task-genaudi3_proc-cndgs2+habgs2+FullEpochs+rocauc_decoding.tsv  sub-M605_task-genaudi3_proj.fif
+sub-M605_task-genaudi3_proc-cndgs2+habgs2+TimeByTime+rocauc_decoding.mat  sub-M605_task-genaudi3_report.h5
+sub-M605_task-genaudi3_proc-cndgs2+habgs2+TimeByTime+rocauc_decoding.tsv  sub-M605_task-genaudi3_report.h5.lock
+sub-M605_task-genaudi3_proc-filt_raw.fif                                  sub-M605_task-genaudi3_report.html
+
+total 1129696
+-rw-rw-r-- 1 mears akeil   7966099 Aug  7 23:51 sub-M605_task-genaudi3_ave.fif
+-rw-rw-r-- 1 mears akeil     60065 Aug  8 00:35 sub-M605_task-genaudi3_cov.fif
+-rw-rw-r-- 1 mears akeil 216902601 Aug  7 23:45 sub-M605_task-genaudi3_epo.fif
+-rw-rw-r-- 1 mears akeil 197022678 Aug  7 23:47 sub-M605_task-genaudi3_proc-clean_epo.fif
+-rw-rw-r-- 1 mears akeil       232 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndcs+habcs+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        82 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndcs+habcs+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     84376 Aug  8 00:08 sub-M605_task-genaudi3_proc-cndcs+habcs+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     80264 Aug  8 00:08 sub-M605_task-genaudi3_proc-cndcs+habcs+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil       232 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndgs1+habgs1+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        84 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndgs1+habgs1+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     84376 Aug  8 00:09 sub-M605_task-genaudi3_proc-cndgs1+habgs1+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     83373 Aug  8 00:09 sub-M605_task-genaudi3_proc-cndgs1+habgs1+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil       232 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndgs2+habgs2+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        69 Aug  8 00:00 sub-M605_task-genaudi3_proc-cndgs2+habgs2+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     84376 Aug  8 00:09 sub-M605_task-genaudi3_proc-cndgs2+habgs2+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     66804 Aug  8 00:09 sub-M605_task-genaudi3_proc-cndgs2+habgs2+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil 499938642 Jul 31 10:03 sub-M605_task-genaudi3_proc-filt_raw.fif
+-rw-rw-r-- 1 mears akeil       232 Aug  7 22:01 sub-M605_task-genaudi3_proc-habcs+cndcs+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        82 Aug  7 22:01 sub-M605_task-genaudi3_proc-habcs+cndcs+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     60376 Aug  7 22:07 sub-M605_task-genaudi3_proc-habcs+cndcs+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     57091 Aug  7 22:07 sub-M605_task-genaudi3_proc-habcs+cndcs+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil       232 Aug  7 22:01 sub-M605_task-genaudi3_proc-habgs1+cndgs1+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        84 Aug  7 22:01 sub-M605_task-genaudi3_proc-habgs1+cndgs1+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     60376 Aug  7 22:07 sub-M605_task-genaudi3_proc-habgs1+cndgs1+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     59505 Aug  7 22:07 sub-M605_task-genaudi3_proc-habgs1+cndgs1+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil       232 Aug  7 22:01 sub-M605_task-genaudi3_proc-habgs2+cndgs2+FullEpochs+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil        73 Aug  7 22:01 sub-M605_task-genaudi3_proc-habgs2+cndgs2+FullEpochs+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil     60376 Aug  7 22:08 sub-M605_task-genaudi3_proc-habgs2+cndgs2+TimeByTime+rocauc_decoding.mat
+-rw-rw-r-- 1 mears akeil     47615 Aug  7 22:08 sub-M605_task-genaudi3_proc-habgs2+cndgs2+TimeByTime+rocauc_decoding.tsv
+-rw-rw-r-- 1 mears akeil 216902601 Aug  7 23:46 sub-M605_task-genaudi3_proc-ssp_epo.fif
+-rw-rw-r-- 1 mears akeil        92 Jul 31 10:47 sub-M605_task-genaudi3_proj.fif
+-rw-rw-r-- 1 mears akeil   7830085 Aug  8 00:35 sub-M605_task-genaudi3_report.h5
+-rw-r--r-- 1 mears akeil         0 Aug  8 00:35 sub-M605_task-genaudi3_report.h5.lock
+-rw-rw-r-- 1 mears akeil   9257250 Aug  8 00:35 sub-M605_task-genaudi3_report.html

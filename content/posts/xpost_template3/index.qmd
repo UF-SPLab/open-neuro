@@ -1,0 +1,11 @@
+---
+title: "title"
+author: "initials"
+date: "2020-00-00"
+draft: true
+---
+
+- [ ] learn how to use this
+- [ ] learn how to graph in Python/R
+- [ ] dataframe concepts
+- [ ] todo list

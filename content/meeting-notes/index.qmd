@@ -1,8 +1,26 @@
 ---
-title: "Example template"
+title: "Meeting template"
 author: "RPM"
 date: "2023-10-10"
 draft: false
 ---
 
 This is an example template for a new post. You can use it as a starting point for your own posts.
+
+
+## Meeting notes
+
+## Concepts Methods covered in this meeting
+
+[generic link](https://www.google.com)
+
+
+## Data Presented/Discussed
+
+## TODO list
+
+- [ ] todo
+- [ ] todo
+- [ ] todo
+- [ ] todo
+

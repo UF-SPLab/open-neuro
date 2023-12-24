@@ -1,0 +1,16 @@
+{
+  "hash": "b469a2d2d317b047e09399c8373a167a",
+  "result": {
+    "markdown": "---\ntitle: \"Developing a training plan\"\nauthor: \"RPM\"\ndate: \"2023-12-24\"\ndraft: true\n---\n\n\n### Essential Components of Open Science / Computational Reproducibility\n\n::: {#comp_scale}\n::: col-3\n\n```{mermaid}\n\ngraph TD;\n    A[start] -->|Arrow| B[finish]\n\n```\n\n:::\n\n::: column\n\n```{mermaid}\n\ngraph LR;\n    A[Computing Environment] -->|Arrow| B[Workflow / Pipeline]\n\n```\n\n\n|                       |                      |\n|-----------------------|----------------------|\n| Computing Environment | Workflow / Pipeline  |\n| Raw Data / Code       | Analysis Derivatives |\n:::\n:::\n\n\n:::{layout-ncol=2}\n\n:::{.left}\n\nContent for column 1 here\n\n:::\n\n:::{.right}\n\nContent for column 2 here\n\n:::\n\n:::\n\n\n:::: {style=\"display: flex;\"}\n\n::: {}\nHere is the **first** Div.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nstr(iris)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n'data.frame':\t150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n```\n:::\n:::\n\n:::\n\n::: {}\nAnd this block will be put on the right:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(iris[, -5])\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n:::\n\n::::\n\n\n### Computing Environment\n\n-   [ ] learn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)\n-   [ ] learn shell scripting for generalizing tasks across hardware/operating systems\n\n### workflow/pipeline\n\n-   [ ] reproducibility/open science\n-   [ ] todo list\n\n### raw data / code\n\n-   [ ] learn how to use this\n-   [ ] dataframe concepts\n\n### Derivatives\n\n-   [ ] data wrangling in Python/R\n-   [ ] learn how to graph in Python/R\n-   [ ] implementation of intermediate steps\n-   [ ] inferential statistics\n\n## Meta-learning\n\n-   [ ] How to learn as a scientist: How do I learn how to do ... ?\n-   [ ] Acquire specific capabilities/skills: How do I find out what I need to learn to do ... ?\n-   [ ] Cultivating capabilities through stepwise approximation : What initial step do I take?\n\n\n```{mermaid}\n\ngraph TD;\n    A[Computing Environment] -->|Arrow| B[Workflow / Pipeline]\n    B -->|Arrow| C[Analysis Derivatives]\n    C -->|Arrow| D[Analysis Results]\n    D -->|Arrow| E[Manuscript]\n    E -->|Arrow| F[Publication]\n\n```\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

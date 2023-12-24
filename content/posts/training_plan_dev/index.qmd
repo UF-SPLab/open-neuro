@@ -1,0 +1,111 @@
+---
+title: "Developing a training plan"
+author: "RPM"
+date: "2023-12-24"
+draft: false
+---
+
+## Essential Components of a Training Plan
+
+
+
+## Meta-learning
+
+::: {style="display: flex; position: relative;"}
+
+::: {.left style="position: relative; top: 0px; left: 0px;"}
+
+```{mermaid}
+
+graph TD;
+    A[Define Aims/Goals] --> B[Identify Resources]
+    B --> C[Inquire about approaches]
+    C --> D[Iterrogate methods]
+    D --> E[Take step]
+    E --> F[Recursively repeat...]-->A
+
+```
+
+:::
+
+
+::: {.right style="text-align: center;"}
+
+#### Learn as a scientist 
+
+- [ ]  How do I learn how to do ... ?
+
+####  Cultivating capabilities
+
+- [ ] How do I find out what I need to learn to do ... ?
+
+#### Acquire specific knowledge/skills
+
+- [ ] What initial steps() do I take?
+
+
+:::
+
+:::
+
+
+## Open Science Approach
+
+::: {style="display: flex;"}
+<div>
+Specificity
+
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=1.5, fig.height=9}
+
+graph TD;
+    A[coarse] --> B[granular]
+
+
+```
+
+</div>
+
+::: {.middle style="text-align: center"}
+
+
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=9, fig.height=3}
+
+
+graph LR;
+    A[Abstract] ---> B[Concrete]
+
+
+```
+
+|                       |                      |
+|-----------------------|----------------------|
+| Computing Environment | Workflow / Pipeline  |
+| Raw Data / Code       |  Analysis Derivatives </br> derived variables graphs stats|
+
+
+Representativeness
+:::
+:::
+
+### Computing Environment
+
+-   [ ] learn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)
+-   [ ] learn shell scripting for generalizing tasks across hardware/operating systems
+
+### workflow/pipeline
+
+-   [ ] reproducibility/open science
+
+
+### raw data / code
+
+-   [ ] learn how to use this
+-   [ ] dataframe concepts
+
+### Derivatives
+
+-   [ ] data wrangling in Python/R
+-   [ ] learn how to graph in Python/R
+-   [ ] implementation of intermediate steps
+-   [ ] inferential statistics
+
