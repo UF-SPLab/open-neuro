@@ -263,14 +263,14 @@
     "href": "content/posts/training_plan_dev/index.html#meta-learning",
     "title": "Developing a training plan",
     "section": "Meta-learning",
-    "text": "Meta-learning\n\n\n\n\n\n\ngraph TD;\n    A[Define Aims/Goals] --&gt; B[Identify Resources]\n    B --&gt; C[Inquire about approaches]\n    C --&gt; D[Iterrogate methods]\n    D --&gt; E[Take step]\n    E --&gt; F[Recursively repeat...]--&gt;A\n\n\n\n\n\n\n\n\n\nLearn as a scientist\n\nHow do I learn how to do … ?\n\n\n\nCultivating capabilities\n\nHow do I find out what I need to learn to do … ?\n\n\n\nAcquire specific knowledge/skills\n\nWhat initial steps() do I take?"
+    "text": "Meta-learning\n\n\n\n\n\n\ngraph TD;\n    A[Define Aims/Goals] --&gt; B[Identify Resources]\n    B --&gt; C[Inquire about approaches]\n    C --&gt; D[Iterrogate methods]\n    D --&gt; E[Take step]\n    E --&gt; F[Recursively repeat...]--&gt;A\n\n\n\n\n\n\n\n\n\nLearn as a scientist\n\nHow do I learn how to do … ?\n\n\n\nCultivating capabilities\n\nHow do I find out what I need to learn to do … ?\n\n\n\nAcquire specific knowledge/skills\n\nWhat initial steps do I take?"
   },
   {
     "objectID": "content/posts/training_plan_dev/index.html#open-science-approach",
     "href": "content/posts/training_plan_dev/index.html#open-science-approach",
     "title": "Developing a training plan",
     "section": "Open Science Approach",
-    "text": "Open Science Approach\n\n\nSpecificity\n\n\n\n\ngraph TD;\n    A[coarse] --&gt; B[granular]\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph LR;\n    A[Abstract] ---&gt; B[Concrete]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputing Environment\nWorkflow / Pipeline\n\n\nRaw Data / Code\nAnalysis Derivatives  derived variables graphs stats\n\n\n\nRepresentativeness\n\n\n\nComputing Environment\n\nlearn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)\nlearn shell scripting for generalizing tasks across hardware/operating systems\n\n\n\nworkflow/pipeline\n\nreproducibility/open science\n\n\n\nraw data / code\n\nlearn how to use this\ndataframe concepts\n\n\n\nDerivatives\n\ndata wrangling in Python/R\nlearn how to graph in Python/R\nimplementation of intermediate steps\ninferential statistics"
+    "text": "Open Science Approach\n\n\nSpecificity\n\n\n\n\ngraph TD;\n    A[coarse] --&gt; B[granular]\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph LR;\n    A[Abstract] ---&gt; |Representativeness &lt;/br&gt; &lt;/br&gt; &lt;/tab&gt; | B[Concrete]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputing Environment\nWorkflow / Pipeline\n\n\nRaw Data  Code\nAnalysis Derivatives  - derived variables  - graphs  - stats\n\n\n\n\n\n\nComputing Environment\n\nlearn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)\nlearn shell scripting for generalizing tasks across hardware/operating systems\n\n\n\nworkflow/pipeline\n\nreproducibility/open science\n\n\n\nraw data / code\n\nlearn how to use this\ndataframe concepts\n\n\n\nDerivatives\n\ndata wrangling in Python/R\nlearn how to graph in Python/R\nimplementation of intermediate steps\ninferential statistics"
   },
   {
     "objectID": "content/wiki.html",
