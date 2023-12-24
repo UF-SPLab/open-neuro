@@ -41,7 +41,7 @@ graph TD;
 
 #### Acquire specific knowledge/skills
 
-- [ ] What initial steps() do I take?
+- [ ] What initial steps do I take?
 
 
 :::
@@ -72,7 +72,7 @@ graph TD;
 
 
 graph LR;
-    A[Abstract] ---> B[Concrete]
+    A[Abstract] ---> |Representativeness </br> </br> </tab> | B[Concrete]
 
 
 ```
@@ -80,10 +80,9 @@ graph LR;
 |                       |                      |
 |-----------------------|----------------------|
 | Computing Environment | Workflow / Pipeline  |
-| Raw Data / Code       |  Analysis Derivatives </br> derived variables graphs stats|
+| Raw Data </br> Code       | Analysis Derivatives </br> - derived variables </br> -  graphs </br> -  stats|
 
 
-Representativeness
 :::
 :::
 
