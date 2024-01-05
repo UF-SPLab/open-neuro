@@ -187,10 +187,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#meta-learning" id="toc-meta-learning" class="nav-link" data-scroll-target="#meta-learning">Meta-learning</a></li>
   <li><a href="#open-science-approach" id="toc-open-science-approach" class="nav-link" data-scroll-target="#open-science-approach">Open Science Approach</a>
   <ul class="collapse">
-  <li><a href="#computing-environment" id="toc-computing-environment" class="nav-link" data-scroll-target="#computing-environment">Computing Environment</a></li>
+  <li><a href="#computing-environment-1" id="toc-computing-environment-1" class="nav-link" data-scroll-target="#computing-environment-1">Computing Environment</a></li>
   <li><a href="#workflowpipeline" id="toc-workflowpipeline" class="nav-link" data-scroll-target="#workflowpipeline">workflow/pipeline</a></li>
-  <li><a href="#raw-data-code" id="toc-raw-data-code" class="nav-link" data-scroll-target="#raw-data-code">raw data / code</a></li>
+  <li><a href="#raw-data-code-1" id="toc-raw-data-code-1" class="nav-link" data-scroll-target="#raw-data-code-1">raw data / code</a></li>
   <li><a href="#derivatives" id="toc-derivatives" class="nav-link" data-scroll-target="#derivatives">Derivatives</a></li>
+  <li><a href="#another-graph" id="toc-another-graph" class="nav-link" data-scroll-target="#another-graph">another graph</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/posts/training_plan_dev/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/posts/training_plan_dev/index.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -203,6 +204,17 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="essential-components-of-a-training-plan" class="level2">
 <h2 class="anchored" data-anchor-id="essential-components-of-a-training-plan">Essential Components of a Training Plan</h2>
+<ul class="task-list">
+<li><input type="checkbox">1. <strong>Aims/Goals</strong> - What do you want to learn?</li>
+<li><input type="checkbox">2. <strong>Resources</strong> - What resources are available to you?</li>
+<li><input type="checkbox">3. <strong>Approaches</strong> - What approaches are available to you?</li>
+<li><input type="checkbox">4. <strong>Methods</strong> - What methods are available to you?</li>
+<li><input type="checkbox">5. <strong>Steps</strong> - What steps do you take to learn?</li>
+<li><input type="checkbox">6. <strong>Implementation</strong> - Who will collaborate and facilitate?</li>
+<li><input type="checkbox">7. <strong>Roles and Responsibilities</strong> - Who will do what?</li>
+<li><input type="checkbox">7. <strong>Assessment</strong> - How will you know you are learning?</li>
+<li><input type="checkbox">8. <strong>Evaluation</strong> - How will you know you have learned?</li>
+</ul>
 </section>
 <section id="meta-learning" class="level2">
 <h2 class="anchored" data-anchor-id="meta-learning">Meta-learning</h2>
@@ -257,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div>
 <pre class="mermaid mermaid-js">graph TD;
-    A[coarse] --&gt; B[granular]
+    A[coarse] -----&gt; B[granular]
 
 
 </pre>
@@ -281,26 +293,27 @@ graph LR;
 </div>
 </div>
 </div>
-<table class="table">
+<table class="table table-bordered text-white border border-white rounded-3">
+<caption></caption>
 <colgroup>
-<col style="width: 51%">
-<col style="width: 48%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Computing Environment</td>
-<td>Workflow / Pipeline</td>
+<td><h4 id="computing-environment" class="anchored"><strong>Computing Environment</strong></h4></td>
+<td><h4 id="workflow-pipeline" class="anchored"><strong>Workflow</strong> / <br> <strong>Pipeline</strong></h4></td>
 </tr>
 <tr class="even">
-<td>Raw Data <br> Code</td>
-<td>Analysis Derivatives <br> - derived variables <br> - graphs <br> - stats</td>
+<td><h4 id="raw-data-code" class="anchored"><strong>Raw Data</strong> <br> &amp; Code</h4></td>
+<td><h5 id="analysis-derivatives-derived-variables-statsfigures" class="anchored"><strong>Analysis Derivatives</strong><br>-<em>derived variables</em><br>-<em>stats/figures</em></h5></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<section id="computing-environment" class="level3">
-<h3 class="anchored" data-anchor-id="computing-environment">Computing Environment</h3>
+<section id="computing-environment-1" class="level3">
+<h3 class="anchored" data-anchor-id="computing-environment-1">Computing Environment</h3>
 <ul class="task-list">
 <li><input type="checkbox">learn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)</li>
 <li><input type="checkbox">learn shell scripting for generalizing tasks across hardware/operating systems</li>
@@ -312,8 +325,8 @@ graph LR;
 <li><input type="checkbox">reproducibility/open science</li>
 </ul>
 </section>
-<section id="raw-data-code" class="level3">
-<h3 class="anchored" data-anchor-id="raw-data-code">raw data / code</h3>
+<section id="raw-data-code-1" class="level3">
+<h3 class="anchored" data-anchor-id="raw-data-code-1">raw data / code</h3>
 <ul class="task-list">
 <li><input type="checkbox">learn how to use this</li>
 <li><input type="checkbox">dataframe concepts</li>
@@ -327,6 +340,70 @@ graph LR;
 <li><input type="checkbox">implementation of intermediate steps</li>
 <li><input type="checkbox">inferential statistics</li>
 </ul>
+</section>
+<section id="another-graph" class="level3">
+<h3 class="anchored" data-anchor-id="another-graph">another graph</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'theme':'forest'}}%%
+graph LR
+
+    subgraph DeepLabCut
+        direction BT
+        subgraph Training
+            s1--&gt;s2
+
+        end
+
+        subgraph Decoding
+            s3 --&gt; s1
+            
+        end
+
+        s2 --&gt;s3 
+       
+    end
+ 
+
+    subgraph ETHZ-INS/DLCAnalyzer
+        direction BT
+        s3 --&gt; s4
+        s5 --&gt; s6 
+        s6 --&gt; s4
+        
+        subgraph dlca[Derivative Variables &lt;/br&gt; Data Visualizations]
+          s4 --&gt; s5
+        end
+    end
+
+    subgraph Analysis
+       s6 --&gt;  s7{Inferential Stats}
+    end
+ 
+
+ %% Notice that no text in shape are added here instead that is appended further down
+    
+
+    %% Comments after double percent signs
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:1px;
+     classDef white fill:#fff,stroke:#333,stroke-width:1px;
+     classDef sq stroke:#f66,stroke-width:1px;
+     classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;
+     class sq,Analysis green
+     class ETHZ-INS/DLCAnalyzer orange
+     class Training,dlca white
+     class DeepLabCut white
+     class Decoding blue
+     
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>

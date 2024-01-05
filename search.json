@@ -49,25 +49,39 @@
     "text": "Overview\nMuch of open science requires some technical knowledge that many novices find to be initially burdensome and confusing. Open source analysis tools are usually a work in progress. Documentation for these tools, if present at all, will be incomplete or out of date. The purpose of this slideshow is to explore concepts that will enable team coordination on software usage and code development projects. The hope is that users will be able to find the information that they need from development notes and communication between code authors. In the long-term, notes and comments about the intended function, rationale, and usage of code will be useful for outsiders but also for the project organizers and code developers themselves."
   },
   {
-    "objectID": "content/posts/new_hpg3/index.html",
-    "href": "content/posts/new_hpg3/index.html",
-    "title": "Getting Started with HiPerGator3",
+    "objectID": "content/posts/use_ssh_mne/index.html",
+    "href": "content/posts/use_ssh_mne/index.html",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
+    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\nYour password will not be displayed as you type it. Then, your terminal should look like this:\nssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
   },
   {
-    "objectID": "content/posts/new_hpg3/index.html#getting-started-with-research",
-    "href": "content/posts/new_hpg3/index.html#getting-started-with-research",
-    "title": "Getting Started with HiPerGator3",
+    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "href": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’"
   },
   {
-    "objectID": "content/posts/use_rsync_on_hpg/index.html",
-    "href": "content/posts/use_rsync_on_hpg/index.html",
+    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "href": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "",
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
+  },
+  {
+    "objectID": "content/posts/use_ssh_mne/index.html#random-tips",
+    "href": "content/posts/use_ssh_mne/index.html#random-tips",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "Random Tips:",
+    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/psb4934/ blue_psb4934\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
+  },
+  {
+    "objectID": "content/posts/test_post/index.html",
+    "href": "content/posts/test_post/index.html",
     "title": "Post template",
     "section": "",
-    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
+    "text": "This is a test post."
   },
   {
     "objectID": "content/publishing.html",
@@ -179,21 +193,7 @@
     "href": "content/meeting-notes/index.html#meeting-notes",
     "title": "Meeting template",
     "section": "Meeting notes",
-    "text": "Meeting notes"
-  },
-  {
-    "objectID": "content/meeting-notes/index.html#concepts-methods-covered-in-this-meeting",
-    "href": "content/meeting-notes/index.html#concepts-methods-covered-in-this-meeting",
-    "title": "Meeting template",
-    "section": "Concepts Methods covered in this meeting",
-    "text": "Concepts Methods covered in this meeting\ngeneric link"
-  },
-  {
-    "objectID": "content/meeting-notes/index.html#data-presenteddiscussed",
-    "href": "content/meeting-notes/index.html#data-presenteddiscussed",
-    "title": "Meeting template",
-    "section": "Data Presented/Discussed",
-    "text": "Data Presented/Discussed"
+    "text": "Meeting notes\n\nto be discussed\nAgenda for the meeting.\n\ntodo\ntodo\n\n\n\naccomplishments for the week\nList completed activities and notable accomplishments\n\nWhat is working…\nWhat is the current situation…\nWhat is not working…\n\n\n\npriorities for next week\n\nFinish HPG analysis, add to presentation\nMake changes to presentation based of lab meeting feedback and practice presentation\nFinish touching up manuscript draft\n\n\n\nchallenges and roadblocks\nDescribe potential challenges that have impeded or may impede your intended tasks and goals.\n\nMost of batch analysis is contingent on the job scheduler and is taking time\nI’ve had some issues with methylation adjustment and resulting files being corrupted which is pushing me back. Correcting this now\n\n\n\nLessons learned and opportunities for improvement\nList any area that might benefit from improvement within our control; problems you are trying to solve; lessons recently learned or relearned.\n\n\nLiterature\nInclude an interesting paper since the last meeting and a brief summary of why you chose this paper\n\n\nOther activities\nList other activities that are related to your work but are outside of research that you accomplished this week. This will help you appreciate and track all that you do.\n\n\nUpcoming deadlines/date and location of next meeting\n\nInclude the date and location of our next meeting so we can make sure we’re on the same calendar.*"
   },
   {
     "objectID": "content/meeting-notes/index.html#todo-list",
@@ -224,39 +224,88 @@
     "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
   },
   {
-    "objectID": "content/posts/test_post/index.html",
-    "href": "content/posts/test_post/index.html",
+    "objectID": "content/posts/pipeline-tutorial/index.html",
+    "href": "content/posts/pipeline-tutorial/index.html",
+    "title": "Tutorial on MNE-BIDS-Pipeline",
+    "section": "",
+    "text": "slides"
+  },
+  {
+    "objectID": "content/posts/use_rsync_on_hpg/index.html",
+    "href": "content/posts/use_rsync_on_hpg/index.html",
     "title": "Post template",
     "section": "",
-    "text": "This is a test post."
+    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
   },
   {
-    "objectID": "content/posts/use_ssh_mne/index.html",
-    "href": "content/posts/use_ssh_mne/index.html",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html",
+    "title": "Open Neuro",
     "section": "",
-    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\nYour password will not be displayed as you type it. Then, your terminal should look like this:\nssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
+    "text": "R for data science\nGGplot2\n\n\n\n\n\nPython data science handbook\nPython for data analysis, 3rd ed.\n\n\n\n\n\nR Tidymodels"
   },
   {
-    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
-    "href": "content/posts/use_ssh_mne/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#books",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#books",
+    "title": "Open Neuro",
     "section": "",
-    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n`[mygatoruser@login1 ~]$ srun –pty -p hpg2-compute -n 1 -N 1 -t 90 –mem=2gb /bin/bash’"
+    "text": "R for data science\nGGplot2\n\n\n\n\n\nPython data science handbook\nPython for data analysis, 3rd ed.\n\n\n\n\n\nR Tidymodels"
   },
   {
-    "objectID": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
-    "href": "content/posts/use_ssh_mne/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#courses",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#courses",
+    "title": "Open Neuro",
+    "section": "Courses",
+    "text": "Courses\n\nPython ML from scratch"
+  },
+  {
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#skills",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#skills",
+    "title": "Open Neuro",
+    "section": "Skills",
+    "text": "Skills\n\ntables/dataframe\ndata manipulation\ndata visualization"
+  },
+  {
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#data-concepts",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#data-concepts",
+    "title": "Open Neuro",
+    "section": "Data Concepts",
+    "text": "Data Concepts\n\ntidy data\ndata types: lists, arrays, dataframes, matrices\ndataytpes: int, float, string, boolean\ndata structures: series (1d), dataframe (2d), panel (3d)\ndata objects: series, dataframe, panel\ndata manipulation: indexing, slicing, filtering, sorting, grouping, joining, reshaping\ndata visualization: line plots, bar plots, histograms, scatter plots, box plots, heatmaps, subplots\ntidy data: each variable is a column, each observation is a row, each type of observational unit is a table\ndata types: lists, arrays, dataframes, matrices"
+  },
+  {
+    "objectID": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#functions-and-patterns",
+    "href": "content/posts/osci_concepts_skills/rpy_skills_concepts.html#functions-and-patterns",
+    "title": "Open Neuro",
+    "section": "Functions and Patterns",
+    "text": "Functions and Patterns\n\nfunctions: map, apply, filter, reduce, groupby, join, melt, pivot, transpose, stack, unstack, pivot_table, crosstab, merge, concat, append, sort, sort_values, sort_index, sortlevel,\ngrammar of graphics\nunit tests\ndata pipelines"
+  },
+  {
+    "objectID": "content/posts/new_hpg3/index.html",
+    "href": "content/posts/new_hpg3/index.html",
+    "title": "Getting Started with HiPerGator3",
     "section": "",
-    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources.\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\necho \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\necho $SLURM_JOB_NODELIST\nc0711a-s6"
+    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
   },
   {
-    "objectID": "content/posts/use_ssh_mne/index.html#random-tips",
-    "href": "content/posts/use_ssh_mne/index.html#random-tips",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "Random Tips:",
-    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/psb4934/ blue_psb4934\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
+    "objectID": "content/posts/new_hpg3/index.html#getting-started-with-research",
+    "href": "content/posts/new_hpg3/index.html#getting-started-with-research",
+    "title": "Getting Started with HiPerGator3",
+    "section": "",
+    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
+  },
+  {
+    "objectID": "content/posts/training_plan_dev/index.html",
+    "href": "content/posts/training_plan_dev/index.html",
+    "title": "Developing a training plan",
+    "section": "",
+    "text": "1. Aims/Goals - What do you want to learn?\n2. Resources - What resources are available to you?\n3. Approaches - What approaches are available to you?\n4. Methods - What methods are available to you?\n5. Steps - What steps do you take to learn?\n6. Implementation - Who will collaborate and facilitate?\n7. Roles and Responsibilities - Who will do what?\n7. Assessment - How will you know you are learning?\n8. Evaluation - How will you know you have learned?"
+  },
+  {
+    "objectID": "content/posts/training_plan_dev/index.html#essential-components-of-a-training-plan",
+    "href": "content/posts/training_plan_dev/index.html#essential-components-of-a-training-plan",
+    "title": "Developing a training plan",
+    "section": "",
+    "text": "1. Aims/Goals - What do you want to learn?\n2. Resources - What resources are available to you?\n3. Approaches - What approaches are available to you?\n4. Methods - What methods are available to you?\n5. Steps - What steps do you take to learn?\n6. Implementation - Who will collaborate and facilitate?\n7. Roles and Responsibilities - Who will do what?\n7. Assessment - How will you know you are learning?\n8. Evaluation - How will you know you have learned?"
   },
   {
     "objectID": "content/posts/training_plan_dev/index.html#meta-learning",
@@ -270,7 +319,7 @@
     "href": "content/posts/training_plan_dev/index.html#open-science-approach",
     "title": "Developing a training plan",
     "section": "Open Science Approach",
-    "text": "Open Science Approach\n\n\nSpecificity\n\n\n\n\ngraph TD;\n    A[coarse] --&gt; B[granular]\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph LR;\n    A[Abstract] ---&gt; |Representativeness &lt;/br&gt; &lt;/br&gt; &lt;/tab&gt; | B[Concrete]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputing Environment\nWorkflow / Pipeline\n\n\nRaw Data  Code\nAnalysis Derivatives  - derived variables  - graphs  - stats\n\n\n\n\n\n\nComputing Environment\n\nlearn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)\nlearn shell scripting for generalizing tasks across hardware/operating systems\n\n\n\nworkflow/pipeline\n\nreproducibility/open science\n\n\n\nraw data / code\n\nlearn how to use this\ndataframe concepts\n\n\n\nDerivatives\n\ndata wrangling in Python/R\nlearn how to graph in Python/R\nimplementation of intermediate steps\ninferential statistics"
+    "text": "Open Science Approach\n\n\nSpecificity\n\n\n\n\ngraph TD;\n    A[coarse] -----&gt; B[granular]\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph LR;\n    A[Abstract] ---&gt; |Representativeness &lt;/br&gt; &lt;/br&gt; &lt;/tab&gt; | B[Concrete]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputing Environment\nWorkflow /  Pipeline\n\n\nRaw Data  & Code\nAnalysis Derivatives-derived variables-stats/figures\n\n\n\n\n\n\nComputing Environment\n\nlearn how computing works (computing abstractions, operating systems graphics hardware, applications/software, filesystems, etc.)\nlearn shell scripting for generalizing tasks across hardware/operating systems\n\n\n\nworkflow/pipeline\n\nreproducibility/open science\n\n\n\nraw data / code\n\nlearn how to use this\ndataframe concepts\n\n\n\nDerivatives\n\ndata wrangling in Python/R\nlearn how to graph in Python/R\nimplementation of intermediate steps\ninferential statistics\n\n\n\nanother graph\n\n\n\n\n%%{init: {'theme':'forest'}}%%\ngraph LR\n\n    subgraph DeepLabCut\n        direction BT\n        subgraph Training\n            s1--&gt;s2\n\n        end\n\n        subgraph Decoding\n            s3 --&gt; s1\n            \n        end\n\n        s2 --&gt;s3 \n       \n    end\n \n\n    subgraph ETHZ-INS/DLCAnalyzer\n        direction BT\n        s3 --&gt; s4\n        s5 --&gt; s6 \n        s6 --&gt; s4\n        \n        subgraph dlca[Derivative Variables &lt;/br&gt; Data Visualizations]\n          s4 --&gt; s5\n        end\n    end\n\n    subgraph Analysis\n       s6 --&gt;  s7{Inferential Stats}\n    end\n \n\n %% Notice that no text in shape are added here instead that is appended further down\n    \n\n    %% Comments after double percent signs\n\n     classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;\n     classDef orange fill:#f96,stroke:#333,stroke-width:1px;\n     classDef white fill:#fff,stroke:#333,stroke-width:1px;\n     classDef sq stroke:#f66,stroke-width:1px;\n     classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;\n     class sq,Analysis green\n     class ETHZ-INS/DLCAnalyzer orange\n     class Training,dlca white\n     class DeepLabCut white\n     class Decoding blue"
   },
   {
     "objectID": "content/wiki.html",
@@ -298,7 +347,7 @@
     "href": "content/wiki.html#posts",
     "title": "Open-Science-Wiki",
     "section": "Posts",
-    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nDeveloping a training plan\n\n\n\n\n\n\nRPM\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeveloping a training plan\n\n\n\n\n\n\nRPM\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial on MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nJan 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "content/customizing.html",
