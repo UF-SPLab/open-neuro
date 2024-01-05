@@ -10,12 +10,53 @@ This is an example template for a new post. You can use it as a starting point f
 
 ## Meeting notes
 
-## Concepts Methods covered in this meeting
+### to be discussed
 
-[generic link](https://www.google.com)
+*Agenda for the meeting.*
 
+- [ ] *todo*
+- [ ] *todo*
 
-## Data Presented/Discussed
+### accomplishments for the week 
+
+*List completed activities and notable accomplishments*
+
+- [ ] What is working...
+
+- [ ] What is the current situation...
+
+- [ ] What is not working...
+
+### priorities for next week
+
+- Finish HPG analysis, add to presentation
+- Make changes to presentation based of lab meeting feedback and practice presentation
+- Finish touching up manuscript draft
+
+### challenges and roadblocks
+
+*Describe potential challenges that have impeded or may impede your intended tasks and goals.*
+
+- Most of batch analysis is contingent on the job scheduler and is taking time
+- I’ve had some issues with methylation adjustment and resulting files being corrupted which is pushing me back. Correcting this now
+
+### Lessons learned and opportunities for improvement
+
+*List any area that might benefit from improvement within our control; problems you are trying to solve; lessons recently learned or relearned.*
+
+### Literature
+
+*Include an interesting paper since the last meeting and a brief summary of why you chose
+this paper*
+
+### Other activities
+
+*List other activities that are related to your work but are outside of research that you
+accomplished this week. This will help you appreciate and track all that you do.*
+
+### Upcoming deadlines/date and location of next meeting
+
+* Include the date and location of our next meeting so we can make sure we’re on the same calendar.*
 
 ## TODO list
 

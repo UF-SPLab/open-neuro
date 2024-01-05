@@ -7,14 +7,20 @@ draft: false
 
 ## Essential Components of a Training Plan
 
-
+-   [ ] 1. **Aims/Goals** - What do you want to learn?
+-   [ ] 2. **Resources** - What resources are available to you?
+-   [ ] 3. **Approaches** - What approaches are available to you?
+-   [ ] 4. **Methods** - What methods are available to you?
+-   [ ] 5. **Steps** - What steps do you take to learn?
+-   [ ] 6. **Implementation** - Who will collaborate and facilitate?
+-   [ ] 7. **Roles and Responsibilities** - Who will do what?
+-   [ ] 7. **Assessment** - How will you know you are learning?
+-   [ ] 8. **Evaluation** - How will you know you have learned?
 
 ## Meta-learning
 
 ::: {style="display: flex; position: relative;"}
-
 ::: {.left style="position: relative; top: 0px; left: 0px;"}
-
 ```{mermaid}
 
 graph TD;
@@ -25,40 +31,34 @@ graph TD;
     E --> F[Recursively repeat...]-->A
 
 ```
-
 :::
 
-
 ::: {.right style="text-align: center;"}
+#### Learn as a scientist
 
-#### Learn as a scientist 
+-   [ ] How do I learn how to do ... ?
 
-- [ ]  How do I learn how to do ... ?
+#### Cultivating capabilities
 
-####  Cultivating capabilities
-
-- [ ] How do I find out what I need to learn to do ... ?
+-   [ ] How do I find out what I need to learn to do ... ?
 
 #### Acquire specific knowledge/skills
 
-- [ ] What initial steps do I take?
-
-
+-   [ ] What initial steps do I take?
 :::
-
 :::
-
 
 ## Open Science Approach
 
 ::: {style="display: flex;"}
 <div>
+
 Specificity
 
-```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=1.5, fig.height=9}
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=1.5, fig.height=12}
 
 graph TD;
-    A[coarse] --> B[granular]
+    A[coarse] -----> B[granular]
 
 
 ```
@@ -66,9 +66,7 @@ graph TD;
 </div>
 
 ::: {.middle style="text-align: center"}
-
-
-```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=9, fig.height=3}
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=9, fig.height=2}
 
 
 graph LR;
@@ -77,12 +75,13 @@ graph LR;
 
 ```
 
-|                       |                      |
-|-----------------------|----------------------|
-| Computing Environment | Workflow / Pipeline  |
-| Raw Data </br> Code       | Analysis Derivatives </br> - derived variables </br> -  graphs </br> -  stats|
++-----------------------------------+---------------------------------+
+| #### **Computing Environment**    | #### **Workflow** / </br> **Pipeline**                                                        |
++-----------------------------------+---------------------------------+
+| #### **Raw Data** </br> & Code    | ##### **Analysis Derivatives**</br>-*derived variables*</br>-*stats/figures*      
++-----------------------------------+---------------------------------+
 
-
+: {.table .table-bordered .text-white .border .border-white .rounded-3 tbl-colwidths="[50,50]"}
 :::
 :::
 
@@ -94,7 +93,6 @@ graph LR;
 ### workflow/pipeline
 
 -   [ ] reproducibility/open science
-
 
 ### raw data / code
 
@@ -108,3 +106,60 @@ graph LR;
 -   [ ] implementation of intermediate steps
 -   [ ] inferential statistics
 
+### another graph
+
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6}
+
+%%{init: {'theme':'forest'}}%%
+graph LR
+
+    subgraph DeepLabCut
+        direction BT
+        subgraph Training
+            s1-->s2
+
+        end
+
+        subgraph Decoding
+            s3 --> s1
+            
+        end
+
+        s2 -->s3 
+       
+    end
+ 
+
+    subgraph ETHZ-INS/DLCAnalyzer
+        direction BT
+        s3 --> s4
+        s5 --> s6 
+        s6 --> s4
+        
+        subgraph dlca[Derivative Variables </br> Data Visualizations]
+          s4 --> s5
+        end
+    end
+
+    subgraph Analysis
+       s6 -->  s7{Inferential Stats}
+    end
+ 
+
+ %% Notice that no text in shape are added here instead that is appended further down
+    
+
+    %% Comments after double percent signs
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:1px;
+     classDef white fill:#fff,stroke:#333,stroke-width:1px;
+     classDef sq stroke:#f66,stroke-width:1px;
+     classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;
+     class sq,Analysis green
+     class ETHZ-INS/DLCAnalyzer orange
+     class Training,dlca white
+     class DeepLabCut white
+     class Decoding blue
+     
+```

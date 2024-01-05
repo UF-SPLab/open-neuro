@@ -1,0 +1,85 @@
+---
+title: "Open Science Concepts and Skills"
+author: "RPM"
+date: "2023-12-28"
+draft: true
+---
+
+
+# Open science projects
+
+- EEG
+  - miso
+  - assr 20/30/40
+  
+- ML/AI
+  - training model (Python)
+  - testing model (Python)
+  - post-processing (R)
+  
+- Neurodynamics
+  - SPL
+  - CSD
+  - MEG
+  - EEG
+  - ECoG
+  - LFP
+  - MUA
+  - spiking
+  - neural mass models
+  - neural field models
+  - neural network models
+  - neural circuit models
+  - neural population models
+  - neural ensemble models
+  - neural oscillator models
+  - neural attractor models
+  - neural chaos models
+  - neural plasticity models
+  - neural learning models
+  - neural memory models
+  - neural decision models
+  - neural control models
+  - neural motor models
+  - neural sensory models
+  - neural cognitive models
+  - neural computational models
+  - neural information models
+  - neural communication models
+  - neural coding models
+  - neural decoding models
+  - neural encoding models
+  - neural signal processing models
+  - neural signal analysis models
+  - neural signal classification models
+  - neural signal detection models
+  - neural signal estimation models
+  - neural signal prediction models
+  - neural signal reconstruction models
+  - neural signal representation models
+  - neural signal transformation models
+  - neural signal visualization models
+  - neural signal simulation models
+  - neural signal generation models
+  - neural signal synthesis models
+  - neural signal interpretation models
+  - neural signal understanding models
+  - neural signal prediction models
+  - neural signal control models
+  - neural signal optimization models
+  - neural signal adaptation models
+  - neural signal regulation models
+  - neural signal modulation models
+  - neural signal compensation models
+  - neural signal compensation models
+  - neural signal compensation models
+  - neural signal compensation
+
+
+# Open Science Concepts and Skills
+<!--  insert markdown child script named "rpy_skills_concepts.md" -->
+
+{{< rpy_skills_concepts.md >}}
+
+
+
