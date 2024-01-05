@@ -5,4 +5,4 @@ date: "2023-1-2"
 draft: false
 ---
 
-[slides](intro.html)
+[slides](https://csea-lab.github.io/mne-python-intro-slides/intro2MNE_BIDS_Pipeline.html#/title-slide)
