@@ -2,7 +2,7 @@
 title: "Meeting Documentation Table"
 author: "RPM"
 date: "2023-12-30"
-draft: true
+draft: false
 ---
 
 ## Overview of Meeting Notes
@@ -28,3 +28,45 @@ draft: true
 +---------------------------------------+------------------------------------------------+--------------------+--------------------+--------------------+----------------------------+
 
 : Meeting types, roles, and responsibilities
+
+
+::: {style="border:2px solid Tomato;"}
+### [Meeting Roles]{.strong .bold style="color: tomato;"}
+:::
+
+
+#### [Organizer Responsibilities]{.strong style="background-color:tomato; color:white;"}
+
+
+Each meeting has an organizer, who posts and emails the agenda. Most meetings have a note taker.
+
+1. Communicate the agenda in advance. 
+   - *Rationale*: ensure everyone is fully prepared for the meeting. Meetings should be used for things that are more complex and nuanced than those that can be dealt with over email.
+2. Agenda content
+   a. Agenda: : a numbered list of items or questions to discuss, each one no more than one line.
+   b. Short explanatory notes can be later on in the document, if required.
+3. Posting the agenda
+   a. Creating agenda for a new meeting or series
+      i. Create
+   b. Converting a one-off meeting to a series
+      i. Create
+4. Sending the agenda
+   a. Create an email with subject: “Agenda: ⟨title from Table 1⟩, ⟨date⟩”
+   b. Copy the contents of the OneDrive Doc into the text of an email.
+   c. At the bottom, paste the URL of the agenda on OneDrive Doc (even if you have sent out this
+URL before).
+   d. Send to all participants.
+   e. Please email all participants any later updates to the agenda.
+
+
+#### [Notetaker Responsibilities]{.strong style="background-color:powderblue; color:white;"}
+
+1. Edit the Agenda Google Doc to include minutes directly underneath individual agenda items.
+   a. Minutes content
+      i. Record any decisions made in the meeting.
+      ii. Action items. For any actions discussed that need execution by meeting participants, put “ACTION: ⟨responsible person’s name⟩: ⟨action to be taken⟩” with “ACTION:” in bold and all caps. This includes any actions that need to be taken by Michael or other faculty.
+      iii. Usually it is unnecessary to take detailed notes, outside the categories of (i) records of decision and (ii) action items.
+2. Sending the minutes:
+   a. As soon as possible after the meeting (within 24 hours), copy the contents of the agenda with notes into the text of an email and send it to all participants with the URL.
+   b. Copy the notes into your lab notebook for a durable record.
+
