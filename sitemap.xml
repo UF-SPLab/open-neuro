@@ -2,94 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/links.html</loc>
-    <lastmod>2024-01-05T16:44:23.637Z</lastmod>
+    <lastmod>2024-01-08T15:54:03.989Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rmarkdown.html</loc>
-    <lastmod>2024-01-05T16:44:23.041Z</lastmod>
+    <lastmod>2024-01-08T15:54:03.393Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/acknowledgements.html</loc>
-    <lastmod>2024-01-05T16:44:21.081Z</lastmod>
+    <lastmod>2024-01-08T15:54:01.269Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/open_sci_github_intro/index.html</loc>
-    <lastmod>2024-01-05T16:44:20.425Z</lastmod>
+    <lastmod>2024-01-08T15:54:00.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uf-splab.github.io/open-neuro/content/posts/meeting_documentation/index.html</loc>
+    <lastmod>2024-01-08T15:54:00.001Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/use_ssh_mne/index.html</loc>
-    <lastmod>2024-01-05T16:44:18.565Z</lastmod>
+    <lastmod>2024-01-08T15:53:58.613Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/test_post/index.html</loc>
-    <lastmod>2024-01-05T16:44:17.397Z</lastmod>
+    <lastmod>2024-01-08T15:53:57.437Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/publishing.html</loc>
-    <lastmod>2024-01-05T16:44:15.357Z</lastmod>
+    <lastmod>2024-01-08T15:53:55.389Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/rendering.html</loc>
-    <lastmod>2024-01-05T16:44:14.705Z</lastmod>
+    <lastmod>2024-01-08T15:53:54.737Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/miso.html</loc>
-    <lastmod>2024-01-05T16:44:14.145Z</lastmod>
+    <lastmod>2024-01-08T15:53:54.157Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/lab-information/lab-information-example-post/index.html</loc>
-    <lastmod>2024-01-05T16:44:12.925Z</lastmod>
+    <lastmod>2024-01-08T15:53:52.933Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/index.html</loc>
-    <lastmod>2024-01-05T16:44:11.801Z</lastmod>
+    <lastmod>2024-01-08T15:53:51.809Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/calendar.html</loc>
-    <lastmod>2024-01-05T16:44:12.637Z</lastmod>
+    <lastmod>2024-01-08T15:53:52.649Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/code.html</loc>
-    <lastmod>2024-01-05T16:44:13.849Z</lastmod>
+    <lastmod>2024-01-08T15:53:53.861Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/mpfc.html</loc>
-    <lastmod>2024-01-05T16:44:14.417Z</lastmod>
+    <lastmod>2024-01-08T15:53:54.441Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/meeting-notes/index.html</loc>
-    <lastmod>2024-01-05T16:44:15.033Z</lastmod>
+    <lastmod>2024-01-08T15:53:55.065Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/add-content.html</loc>
-    <lastmod>2024-01-05T16:44:15.653Z</lastmod>
+    <lastmod>2024-01-08T15:53:55.693Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/pipeline-tutorial/index.html</loc>
-    <lastmod>2024-01-05T16:44:16.217Z</lastmod>
+    <lastmod>2024-01-08T15:53:56.249Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/use_rsync_on_hpg/index.html</loc>
-    <lastmod>2024-01-05T16:44:18.233Z</lastmod>
+    <lastmod>2024-01-08T15:53:58.289Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/osci_concepts_skills/rpy_skills_concepts.html</loc>
-    <lastmod>2024-01-05T16:44:18.857Z</lastmod>
+    <lastmod>2024-01-08T15:53:58.937Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/new_hpg3/index.html</loc>
-    <lastmod>2024-01-05T16:44:19.497Z</lastmod>
+    <lastmod>2024-01-08T15:53:59.585Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/posts/training_plan_dev/index.html</loc>
-    <lastmod>2024-01-05T16:44:20.813Z</lastmod>
+    <lastmod>2024-01-08T15:54:00.989Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/wiki.html</loc>
-    <lastmod>2024-01-05T16:44:21.857Z</lastmod>
+    <lastmod>2024-01-08T15:54:02.113Z</lastmod>
   </url>
   <url>
     <loc>https://uf-splab.github.io/open-neuro/content/customizing.html</loc>
-    <lastmod>2024-01-05T16:44:23.313Z</lastmod>
+    <lastmod>2024-01-08T15:54:03.669Z</lastmod>
   </url>
 </urlset>
