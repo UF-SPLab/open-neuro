@@ -2,7 +2,7 @@
 title: "Initial Survey"
 author: "RPM"
 date: "2024-01-08"
-draft: true
+draft: false
 ---
 
 Please start the semester by responding to this survey. The goal of this activity is to begin to identify personal priorities and objectives and to think critically about your immediate and short-term goals in this course in relation to your long-term plans.

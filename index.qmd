@@ -2,7 +2,6 @@
 title: "Open Neurophysiology"
 subtitle: "Neurodynamics"
 page-layout: full
-background-image: content/Leonardo-da-Vinci-Drawings-Symbolic-Timme-River.jpg
 search: false
 ---
 
