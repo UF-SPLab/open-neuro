@@ -2,6 +2,14 @@
 title: "Useful Links"
 ---
 
+### Models of Dynamical Systems
+
+- [Mesoscopic Brain Dynamics](http://www.scholarpedia.org/article/Mesoscopic_brain_dynamics)
+- [System Dynamics Interactive Simulations ](https://www.complexity-explorables.org/explorables/)
+- [Kuramoto Model: Weakly Coupled Oscillators](https://en.wikipedia.org/wiki/Kuramoto_model)
+- ["Scale-free" Dynamics and Complexity](http://www.scholarpedia.org/article/Scale-free_neocortical_dynamics)
+- [1/f Noise](http://www.scholarpedia.org/article/1/f_noise)
+
 ### Free Books for Python or R
 
 - [https://wesmckinney.com/book/](https://wesmckinney.com/book/)
