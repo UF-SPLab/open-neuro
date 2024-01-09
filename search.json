@@ -4,7 +4,7 @@
     "href": "content/links.html",
     "title": "Useful Links",
     "section": "",
-    "text": "Free Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine"
+    "text": "Models of Dynamical Systems\n\nMesoscopic Brain Dynamics\nSystem Dynamics Interactive Simulations\nKuramoto Model: Weakly Coupled Oscillators\n“Scale-free” Dynamics and Complexity\n1/f Noise\n\n\n\nFree Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine"
   },
   {
     "objectID": "content/rmarkdown.html",
@@ -98,32 +98,95 @@
     "text": "This is a test post."
   },
   {
-    "objectID": "content/publishing.html",
-    "href": "content/publishing.html",
-    "title": "Publishing",
+    "objectID": "content/posts/pipeline-tutorial/index.html",
+    "href": "content/posts/pipeline-tutorial/index.html",
+    "title": "Tutorial on MNE-BIDS-Pipeline",
     "section": "",
-    "text": "To get your Quarto webpage to show up with the url\nyou have a few steps."
+    "text": "slides"
   },
   {
-    "objectID": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "href": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "title": "Publishing",
-    "section": "Turn on GitHub Pages for your repo",
-    "text": "Turn on GitHub Pages for your repo\n\nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and the root directory.\nTurn on GitHub Actions under Settings &gt; Actions &gt; General\n\nThe GitHub Action will automatically recreate your website when you push to GitHub after you do the initial gh-pages set-up"
+    "objectID": "content/add-content.html",
+    "href": "content/add-content.html",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
   },
   {
-    "objectID": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "href": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "title": "Publishing",
-    "section": "Do your first publish to gh-pages",
-    "text": "Do your first publish to gh-pages\nThe first time you publish to gh-pages, you need to do so locally.\n\nOn your local computer, open a terminal window and cd to your repo directory. Here is what that cd command looks like for me. You command will look different because your local repo will be somewhere else on your computer.\n\ncd ~/Documents/GitHub/NOAA-quarto-simple\n\nPublish to the gh-pages. In the terminal type\n\nquarto publish gh-pages\nThis is going to render your webpage and then push the _site contents to the gh-pages branch."
+    "objectID": "content/add-content.html#edit-and-add-your-pages",
+    "href": "content/add-content.html#edit-and-add-your-pages",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
   },
   {
-    "objectID": "content/publishing.html#dont-like-using-gh-pages",
-    "href": "content/publishing.html#dont-like-using-gh-pages",
-    "title": "Publishing",
-    "section": "Don’t like using gh-pages?",
-    "text": "Don’t like using gh-pages?\nIn some cases, you don’t want your website on the gh-pages branch. For example, if you are creating releases and you want the website pages archived in that release, then you won’t want your website pages on the gh-pages branch.\nHere are the changes you need to make if you to avoid gh-pages branch.\n\nAt the top of _quarto.yml add the following:\n\nproject: \n  type: website\n  output-dir: docs\n\nOn GitHub under Settings &gt; Pages set pages to be made from the main branch and the docs directory.\nMake sure docs is not listed in .gitignore\nPublish the site the first time locally using quarto publish from the terminal\nChange the GitHub Action because you can’t use quarto publish gh-pages. You’ll need to push to the main branch yourself (in the GitHub Action)\n\non:\n  push:\n    branches: main\n\nname: Render and Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v2 \n        \n      - name: Set up R (needed for Rmd)\n        uses: r-lib/actions/setup-r@v2\n\n      - name: Install packages (needed for Rmd)\n        run: Rscript -e 'install.packages(c(\"rmarkdown\", \"knitr\", \"jsonlite\"))'\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n        with:\n          # To install LaTeX to build PDF book \n          # tinytex: true \n          # uncomment below and fill to pin a version\n          # version: 0.9.600\n      \n      - name: Render Quarto Project\n        uses: quarto-dev/quarto-actions/render@v2\n        with:\n          to: html\n\n      - name: Set up Git\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n\n      - name: Commit all changes and push\n        run: |\n          git add -A && git commit -m 'Build site' || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\""
+    "objectID": "content/add-content.html#add-your-pages-the-project",
+    "href": "content/add-content.html#add-your-pages-the-project",
+    "title": "Customize",
+    "section": "Add your pages the project",
+    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
+  },
+  {
+    "objectID": "content/meeting-notes/index.html",
+    "href": "content/meeting-notes/index.html",
+    "title": "Meeting template",
+    "section": "",
+    "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
+  },
+  {
+    "objectID": "content/meeting-notes/index.html#meeting-notes",
+    "href": "content/meeting-notes/index.html#meeting-notes",
+    "title": "Meeting template",
+    "section": "Meeting notes",
+    "text": "Meeting notes\n\nto be discussed\nAgenda for the meeting.\n\ntodo\ntodo\n\n\n\naccomplishments for the week\nList completed activities and notable accomplishments\n\nWhat is working…\nWhat is the current situation…\nWhat is not working…\n\n\n\npriorities for next week\n\nFinish HPG analysis, add to presentation\nMake changes to presentation based of lab meeting feedback and practice presentation\nFinish touching up manuscript draft\n\n\n\nchallenges and roadblocks\nDescribe potential challenges that have impeded or may impede your intended tasks and goals.\n\nMost of batch analysis is contingent on the job scheduler and is taking time\nI’ve had some issues with methylation adjustment and resulting files being corrupted which is pushing me back. Correcting this now\n\n\n\nLessons learned and opportunities for improvement\nList any area that might benefit from improvement within our control; problems you are trying to solve; lessons recently learned or relearned.\n\n\nLiterature\nInclude an interesting paper since the last meeting and a brief summary of why you chose this paper\n\n\nOther activities\nList other activities that are related to your work but are outside of research that you accomplished this week. This will help you appreciate and track all that you do.\n\n\nUpcoming deadlines/date and location of next meeting\n\nInclude the date and location of our next meeting so we can make sure we’re on the same calendar.*"
+  },
+  {
+    "objectID": "content/meeting-notes/index.html#todo-list",
+    "href": "content/meeting-notes/index.html#todo-list",
+    "title": "Meeting template",
+    "section": "TODO list",
+    "text": "TODO list\n\ntodo\ntodo\ntodo\ntodo"
+  },
+  {
+    "objectID": "content/mpfc.html",
+    "href": "content/mpfc.html",
+    "title": "MPFC",
+    "section": "",
+    "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
+  },
+  {
+    "objectID": "content/mpfc.html#overview",
+    "href": "content/mpfc.html#overview",
+    "title": "MPFC",
+    "section": "",
+    "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Working with Code",
+    "section": "",
+    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
+  },
+  {
+    "objectID": "content/lab-information/lab-information-example-post/index.html",
+    "href": "content/lab-information/lab-information-example-post/index.html",
+    "title": "Example template",
+    "section": "",
+    "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
+  },
+  {
+    "objectID": "content/miso.html",
+    "href": "content/miso.html",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
+  },
+  {
+    "objectID": "content/miso.html#what-is-misophonia",
+    "href": "content/miso.html#what-is-misophonia",
+    "title": "Misophonia",
+    "section": "",
+    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
   },
   {
     "objectID": "content/rendering.html",
@@ -154,95 +217,32 @@
     "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”."
   },
   {
-    "objectID": "content/miso.html",
-    "href": "content/miso.html",
-    "title": "Misophonia",
+    "objectID": "content/publishing.html",
+    "href": "content/publishing.html",
+    "title": "Publishing",
     "section": "",
-    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
+    "text": "To get your Quarto webpage to show up with the url\nyou have a few steps."
   },
   {
-    "objectID": "content/miso.html#what-is-misophonia",
-    "href": "content/miso.html#what-is-misophonia",
-    "title": "Misophonia",
-    "section": "",
-    "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data."
+    "objectID": "content/publishing.html#turn-on-github-pages-for-your-repo",
+    "href": "content/publishing.html#turn-on-github-pages-for-your-repo",
+    "title": "Publishing",
+    "section": "Turn on GitHub Pages for your repo",
+    "text": "Turn on GitHub Pages for your repo\n\nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and the root directory.\nTurn on GitHub Actions under Settings &gt; Actions &gt; General\n\nThe GitHub Action will automatically recreate your website when you push to GitHub after you do the initial gh-pages set-up"
   },
   {
-    "objectID": "content/lab-information/lab-information-example-post/index.html",
-    "href": "content/lab-information/lab-information-example-post/index.html",
-    "title": "Example template",
-    "section": "",
-    "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
+    "objectID": "content/publishing.html#do-your-first-publish-to-gh-pages",
+    "href": "content/publishing.html#do-your-first-publish-to-gh-pages",
+    "title": "Publishing",
+    "section": "Do your first publish to gh-pages",
+    "text": "Do your first publish to gh-pages\nThe first time you publish to gh-pages, you need to do so locally.\n\nOn your local computer, open a terminal window and cd to your repo directory. Here is what that cd command looks like for me. You command will look different because your local repo will be somewhere else on your computer.\n\ncd ~/Documents/GitHub/NOAA-quarto-simple\n\nPublish to the gh-pages. In the terminal type\n\nquarto publish gh-pages\nThis is going to render your webpage and then push the _site contents to the gh-pages branch."
   },
   {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "Working with Code",
-    "section": "",
-    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
-  },
-  {
-    "objectID": "content/mpfc.html",
-    "href": "content/mpfc.html",
-    "title": "MPFC",
-    "section": "",
-    "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
-  },
-  {
-    "objectID": "content/mpfc.html#overview",
-    "href": "content/mpfc.html#overview",
-    "title": "MPFC",
-    "section": "",
-    "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut"
-  },
-  {
-    "objectID": "content/meeting-notes/index.html",
-    "href": "content/meeting-notes/index.html",
-    "title": "Meeting template",
-    "section": "",
-    "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
-  },
-  {
-    "objectID": "content/meeting-notes/index.html#meeting-notes",
-    "href": "content/meeting-notes/index.html#meeting-notes",
-    "title": "Meeting template",
-    "section": "Meeting notes",
-    "text": "Meeting notes\n\nto be discussed\nAgenda for the meeting.\n\ntodo\ntodo\n\n\n\naccomplishments for the week\nList completed activities and notable accomplishments\n\nWhat is working…\nWhat is the current situation…\nWhat is not working…\n\n\n\npriorities for next week\n\nFinish HPG analysis, add to presentation\nMake changes to presentation based of lab meeting feedback and practice presentation\nFinish touching up manuscript draft\n\n\n\nchallenges and roadblocks\nDescribe potential challenges that have impeded or may impede your intended tasks and goals.\n\nMost of batch analysis is contingent on the job scheduler and is taking time\nI’ve had some issues with methylation adjustment and resulting files being corrupted which is pushing me back. Correcting this now\n\n\n\nLessons learned and opportunities for improvement\nList any area that might benefit from improvement within our control; problems you are trying to solve; lessons recently learned or relearned.\n\n\nLiterature\nInclude an interesting paper since the last meeting and a brief summary of why you chose this paper\n\n\nOther activities\nList other activities that are related to your work but are outside of research that you accomplished this week. This will help you appreciate and track all that you do.\n\n\nUpcoming deadlines/date and location of next meeting\n\nInclude the date and location of our next meeting so we can make sure we’re on the same calendar.*"
-  },
-  {
-    "objectID": "content/meeting-notes/index.html#todo-list",
-    "href": "content/meeting-notes/index.html#todo-list",
-    "title": "Meeting template",
-    "section": "TODO list",
-    "text": "TODO list\n\ntodo\ntodo\ntodo\ntodo"
-  },
-  {
-    "objectID": "content/add-content.html",
-    "href": "content/add-content.html",
-    "title": "Customize",
-    "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
-  },
-  {
-    "objectID": "content/add-content.html#edit-and-add-your-pages",
-    "href": "content/add-content.html#edit-and-add-your-pages",
-    "title": "Customize",
-    "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
-  },
-  {
-    "objectID": "content/add-content.html#add-your-pages-the-project",
-    "href": "content/add-content.html#add-your-pages-the-project",
-    "title": "Customize",
-    "section": "Add your pages the project",
-    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
-  },
-  {
-    "objectID": "content/posts/pipeline-tutorial/index.html",
-    "href": "content/posts/pipeline-tutorial/index.html",
-    "title": "Tutorial on MNE-BIDS-Pipeline",
-    "section": "",
-    "text": "slides"
+    "objectID": "content/publishing.html#dont-like-using-gh-pages",
+    "href": "content/publishing.html#dont-like-using-gh-pages",
+    "title": "Publishing",
+    "section": "Don’t like using gh-pages?",
+    "text": "Don’t like using gh-pages?\nIn some cases, you don’t want your website on the gh-pages branch. For example, if you are creating releases and you want the website pages archived in that release, then you won’t want your website pages on the gh-pages branch.\nHere are the changes you need to make if you to avoid gh-pages branch.\n\nAt the top of _quarto.yml add the following:\n\nproject: \n  type: website\n  output-dir: docs\n\nOn GitHub under Settings &gt; Pages set pages to be made from the main branch and the docs directory.\nMake sure docs is not listed in .gitignore\nPublish the site the first time locally using quarto publish from the terminal\nChange the GitHub Action because you can’t use quarto publish gh-pages. You’ll need to push to the main branch yourself (in the GitHub Action)\n\non:\n  push:\n    branches: main\n\nname: Render and Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v2 \n        \n      - name: Set up R (needed for Rmd)\n        uses: r-lib/actions/setup-r@v2\n\n      - name: Install packages (needed for Rmd)\n        run: Rscript -e 'install.packages(c(\"rmarkdown\", \"knitr\", \"jsonlite\"))'\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n        with:\n          # To install LaTeX to build PDF book \n          # tinytex: true \n          # uncomment below and fill to pin a version\n          # version: 0.9.600\n      \n      - name: Render Quarto Project\n        uses: quarto-dev/quarto-actions/render@v2\n        with:\n          to: html\n\n      - name: Set up Git\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n\n      - name: Commit all changes and push\n        run: |\n          git add -A && git commit -m 'Build site' || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\""
   },
   {
     "objectID": "content/posts/use_rsync_on_hpg/index.html",
