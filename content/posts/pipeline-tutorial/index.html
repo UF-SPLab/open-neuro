@@ -63,6 +63,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -185,6 +188,67 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><a href="https://csea-lab.github.io/mne-python-intro-slides/intro2MNE_BIDS_Pipeline.html#/title-slide">slides</a></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR;
+   epo_1--&gt;epo_1_prms;
+   epo_1_prms--&gt;epo_1_Fs;
+   epo_1_prms--&gt;epo_1_L;
+   epo_1_prms--&gt;epo_1_T;
+   epo_1_prms--&gt;epo_1_offset_pts;
+   epo_1_prms--&gt;epo_1_offset_t;
+   epo_1--&gt;epo_1_ops;
+   epo_1_ops--&gt;epo_1_seg_1;
+   epo_1_seg_1--&gt;epo_1_seg_1_prms;
+   epo_1_seg_1_prms--&gt;epo_1_seg_1_freq;
+   epo_1_seg_1_prms--&gt;epo_1_seg_1_n_cyc;
+   epo_1_seg_1_prms--&gt;epo_1_seg_1_ph_offset_r2pi;
+   epo_1_seg_1_prms--&gt;epo_1_seg_1_ph_offset_t;
+   epo_1_seg_1--&gt;epo_1_seg_1_ops;
+   epo_1_seg_1_ops--&gt;epo_1_seg_1_1;
+   epo_1_seg_1_ops--&gt;epo_1_seg_1_2;
+   epo_1_ops--&gt;epo_1_seg_2;
+   epo_1_seg_2--&gt;epo_1_seg_2_prms;
+   epo_1_seg_2_prms--&gt;epo_1_seg_2_freq;
+   epo_1_seg_2_prms--&gt;epo_1_seg_2_n_cyc;
+   epo_1_seg_2_prms--&gt;epo_1_seg_2_ph_offset_r2pi;
+   epo_1_seg_2_prms--&gt;epo_1_seg_2_ph_offset_t;
+   epo_1_seg_2--&gt;epo_1_seg_2_ops;
+   epo_1_seg_2_ops--&gt;epo_1_seg_2_1;
+   epo_1_seg_2_ops--&gt;epo_1_seg_2_2;
+   epo_2--&gt;epo_2_prms;
+   epo_2_prms--&gt;epo_2_Fs;
+   epo_2_prms--&gt;epo_2_L;
+   epo_2_prms--&gt;epo_2_T;
+   epo_2_prms--&gt;epo_2_offset_pts;
+   epo_2_prms--&gt;epo_2_offset_t;
+   epo_2--&gt;epo_2_ops;
+   epo_2_ops--&gt;epo_2_seg_1;
+   epo_2_seg_1--&gt;epo_2_seg_1_prms;
+   epo_2_seg_1_prms--&gt;epo_2_seg_1_freq;
+   epo_2_seg_1_prms--&gt;epo_2_seg_1_n_cyc;
+   epo_2_seg_1_prms--&gt;epo_2_seg_1_ph_offset_r2pi;
+   epo_2_seg_1_prms--&gt;epo_2_seg_1_ph_offset_t;
+   epo_2_seg_1--&gt;epo_2_seg_1_ops;
+   epo_2_seg_1_ops--&gt;epo_2_seg_1_1;
+   epo_2_seg_1_ops--&gt;epo_2_seg_1_2;
+   epo_2_ops--&gt;epo_2_seg_2;
+   epo_2_seg_2--&gt;epo_2_seg_2_prms;
+   epo_2_seg_2_prms--&gt;epo_2_seg_2_freq;
+   epo_2_seg_2_prms--&gt;epo_2_seg_2_n_cyc;
+   epo_2_seg_2_prms--&gt;epo_2_seg_2_ph_offset_r2pi;
+   epo_2_seg_2_prms--&gt;epo_2_seg_2_ph_offset_t;
+   epo_2_seg_2--&gt;epo_2_seg_2_ops;
+   epo_2_seg_2_ops--&gt;epo_2_seg_2_1;
+   epo_2_seg_2_ops--&gt;epo_2_seg_2_2;
+   
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 
 
