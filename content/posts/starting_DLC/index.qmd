@@ -1,0 +1,106 @@
+---
+title: "Getting Started with DLC"
+author: "RPM"
+date: "2024-01-09"
+draft: true
+---
+
+## DeepLabCut: Getting started
+
+## Test out DLC (Basic)
+
+- [https://www.mackenziemathislab.org/dlc-modelzoo](https://www.mackenziemathislab.org/dlc-modelzoo)
+- [Single-frame analysis.](https://huggingface.co/spaces/DeepLabCut/DeepLabCutModelZoo-SuperAnimals)
+-  This just works. It's a small-scale version of what happens on a large-scale with all the 2d frames from your videos.  
+
+## DLC Examples on Google Colab
+
+Most of the DeepLabCut (DLC) tutorials are offered with Google Colab a cloud computing environment with all the software dependencies pre-installed. It really is the best first step if you want to start to understand how DLC works and how to customize it for your needs. 
+- [Click on the "Open in Colab" link on this page](https://github.com/DeepLabCut/DeepLabCut/blob/main/examples/COLAB/COLAB_DEMO_mouse_openfield.ipynb)
+- [Video on DLC on Google Colab](https://www.youtube.com/watch?v=qJGs8nxx80A)
+- [Colab instructions on how to use your own videos](https://github.com/DeepLabCut/DeepLabCut/blob/main/examples/COLAB/COLAB_YOURDATA_TrainNetwork_VideoAnalysis.ipynb)
+
+## A Worshop that has everything you need to use DLC
+
+[DeepLabCut Worshop Materials](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/main/DLCcourse.md#the-basics-of-computing-in-python-terminal-and-overview-of-dlc)
+  
+
+## HiPerGator Links
+- [Faculty Trial Allocation: duration (1-6 months)](https://gravity.rc.ufl.edu/access/request-trial-allocation/)
+- [UFRC Classroom Support](https://www.rc.ufl.edu/get-support/classroom-support/teaching-support/)
+- [UF Research Computing](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+
+### Some links for Getting started
+
+- [YouTube video on using DeepLabCut GUI (~3 min)](https://www.youtube.com/watch?v=KcXogR-p5Ak)
+- Installing Deeplabcut [https://deeplabcut.github.io/DeepLabCut/docs/installation.html](https://deeplabcut.github.io/DeepLabCut/docs/installation.html)
+- DLC User Guide [https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html](https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html)
+- Napari GUI [https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html](https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html)
+- Slightly outdated workshop [https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials)
+
+Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. *Nature protocols, 14(7)*, 2152-2176. [https://doi.org/10.1038/s41596-019-0176-0]()  
+
+Outline of Deeplabcut Workflow (see also, **Figure 2** in *above paper*)
+
+## Procedure Stages
+
+### Stage I: 
+- [ ] project creation (train-mpfc-ket)
+   - [ ] points 1/2: 
+      - [ ] deeplabcut.create_new_project()
+      - [ ] deeplabcut.add_new_videos()
+
+### Stage II: 
+- [ ] Configuration (.yaml), 
+  - [ ] point 3: edit config.yaml
+
+### Stage III: 
+- [ ] Frame selection / data collection
+
+  - [ ] deeplabcut.extract_frames()
+
+### Stage IV: 
+- [ ] Label frames 
+
+  - [ ] points 5/6 deeplabcut.label_frames()
+
+### Stage V: 
+- [ ] Check Annotations
+
+  - [ ] point 7: deeplabcut.check_labels()
+
+### Stage VI: 
+- [ ] Build training dataset
+
+  - [ ] point 8: deeplabcut.create_training_dataset()
+
+### Stage VII: 
+- [ ] Train network
+
+  - [ ] point 9: choose TrainingFraction (in config.yaml, see p.2165)
+
+### Stage VIII: 
+- [ ] Network performance evaluation
+
+  - [ ] point 10: deeplabcut.evaluate_network()
+
+### Stage IX: 
+- [ ] Video analysis & plots
+
+  - [ ] point 11: 
+    deeplabcut.analyze_videos()  
+    deeplabcut.analyze_time_lapse_frames()
+  - [ ] point 12
+  - [ ] point 13
+
+### Stage X: 
+- [ ] Network refinement - outliers
+  - [ ] point 14
+  - [ ] point 15
+  - [ ] point 16
+
+### Stage XI:
+- [ ] ?
+  - [ ] point 17
+
+

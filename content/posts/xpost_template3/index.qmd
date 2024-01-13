@@ -1,11 +1,14 @@
 ---
 title: "title"
-author: "initials"
+author: "bot"
 date: "2020-00-00"
-draft: true
+categories: [ChatGPT]
 ---
 
-- [ ] learn how to use this
-- [ ] learn how to graph in Python/R
-- [ ] dataframe concepts
-- [ ] todo list
+::: {style="color: pink;"}
+User Question:
+:::
+
+::: {style="color: powderblue;"}
+ChatGPT Answer:
+:::

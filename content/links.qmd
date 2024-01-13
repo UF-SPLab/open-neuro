@@ -54,3 +54,11 @@ Starting points for learning about accessibility
 
 #### Interesting links
 - [Two-minute Neuroscience: ketamine](https://youtu.be/kRtNsaMildw)
+
+### Neuroscience Information
+
+- [Neurodata Without Borders](https://www.nwb.org/)
+- [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)
+- [International Conference on Neuroinformatics (ICNF)](https://www.incf.org/)
+- [NeuroStars](https://neurostars.org/)
+- [Concepts in Cognitive: Ontological/Taxonomy](https://www.cognitiveatlas.org/)
