@@ -11,6 +11,7 @@ Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is
 - [Misophonia on Wikipedia](https://en.wikipedia.org/wiki/Misophonia)
 
 - Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., ... & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. [https://doi.org/10.3389/fnins.2022.899476](https://doi.org/10.3389/fnins.2022.899476)
+- Farkas, A. H., Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., ... & Keil, A. (2023). Auditory Aversive Generalization Learning Prompts Threat-Specific Changes in Alpha-Band Activity. bioRxiv, 2023-12. [https://doi.org/10.1101/2023.12.04.569971](https://doi.org/10.1101/2023.12.04.569971)
 - **Accepted Pre-registration**: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.[https://doi.org/10.17605/OSF.IO/E26AD](https://doi.org/10.17605/OSF.IO/E26AD)
 
 - [Misophonia: Zotero Refs](https://www.zotero.org/groups/2418504/uf-ephys-misophonia/library)
@@ -18,6 +19,17 @@ Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is
 ### Related concept (but not the same phenomenon)
 
 ASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.
+
+### Auditory Steady-State Response
+
+- Brugge, J. F., Nourski, K. V., Oya, H., Reale, R. A., Kawasaki, H., Steinschneider, M., & Howard III, M. A. (2009). Coding of repetitive transients by auditory cortex on Heschl's gyrus. Journal of neurophysiology, 102(4), 2358-2374. [https://doi.org/10.1152/jn.91346.2008](https://doi.org/10.1152/jn.91346.2008)
+
+- Popov, T., Oostenveld, R., & Schoffelen, J. M. (2018). FieldTrip made easy: an analysis protocol for group analysis of the auditory steady state brain response in time, frequency, and space. Frontiers in neuroscience, 12, 711.[https://doi.org/10.3389/fnins.2018.00711](https://doi.org/10.3389/fnins.2018.00711)
+
+- Pantev, C., Roberts, L. E., Elbert, T., Roβ, B., & Wienbruch, C. (1996). Tonotopic organization of the sources of human auditory steady-state responses. Hearing research, 101(1-2), 62-74.[]()
+
+- Parker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., ... & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. [https://doi.org/10.1016/j.schres.2019.04.014](https://doi.org/10.1016/j.schres.2019.04.014)
+
 
 ### MNE-Python
 
