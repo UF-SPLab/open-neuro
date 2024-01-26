@@ -1,0 +1,15 @@
+---
+title: "Meeting Notes"
+author: "myname"
+date: "2024-01-26"
+draft: true
+---
+
+# Class Meeting
+
+## Summary Notes
+
+### Todos:
+- [X] add notes
+- [ ] publish notes
+- [ ] other business
