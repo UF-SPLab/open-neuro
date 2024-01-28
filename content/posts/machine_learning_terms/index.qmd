@@ -1,0 +1,54 @@
+---
+title: "AI/ML terminology/definitions"
+author: "RPM"
+date: "2024-01-27"
+draft: true
+---
+
+
+## Loss
+
+- [DataCamp](https://www.datacamp.com/tutorial/loss-function-in-machine-learning)
+- [CloudFactory Computer Vision Wiki](https://wiki.cloudfactory.com/docs/mp-wiki/loss/comprehensive-overview-of-loss-functions-in-machine-learning)
+- [ML Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html)
+- [Kaggle: hands-on-guide-to-loss-functions](https://www.kaggle.com/code/viveknimsarkar/hands-on-guide-to-loss-functions)
+
+## MSE (mean squared error)
+
+$MSE=\frac{1}{N}\sum\limits_{i=1}^N  (y_i - \hat y_i)^2$
+
+Where:
+
+- N is the number of data points;
+- ŷ is the output predicted by the model;
+- y_i is the actual value of the data point.
+
+## Cross-entropy loss
+
+$C.E=-\sum_i^C t_i log(p_i)$
+
+Where $t_i$ is the true label and $p_i$ is the probability of the $i^{th}$ label.
+
+- [CloudFactory: cross-entropy-loss](https://wiki.cloudfactory.com/docs/mp-wiki/loss/cross-entropy-loss)
+
+   - *Cross-Entropy* = 0.00: Perfect predictions. 
+   - *Cross-Entropy* < 0.02: Great predictions.
+   - *Cross-Entropy* < 0.05: On the right track.
+   - *Cross-Entropy* < 0.20: Fine.
+   - *Cross-Entropy* > 0.30: Not great.
+   - *Cross-Entropy* > 1.00: Terrible.
+   - *Cross-Entropy* > 2.00 Something is seriously broken.
+
+
+- [HuggingFace: ML Transformers use C.E. Loss a lot](https://huggingface.co/docs/transformers/main/en/tasks_explained)
+
+# Mathemathics Formatting References
+
+- [MathJax Basics - Math StackExchange](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
+
+# Extra
+
+- [Kaggle Notebook Code](https://www.kaggle.com/code)
+
+

@@ -1,13 +1,20 @@
 ---
-title: "Getting Started with HiPerGator3"
+title: "Getting Started with UF Research Computing"
 author: "RPM"
-date: "2023-10-04"
+date: "2023-01-29"
 ---
 
-## Getting Started with Research
+# Course Registration
 
-- [ ] [Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]
-   - [ ] [FERPA Basics](https://privacy.ufl.edu/privacy-training/ferpa-basics-and-ferpa-for-faculty/)
-   - [ ] [Maintaining a Safe and Respectful Campus ](https://learn-and-grow.hr.ufl.edu/courses-registration/compliance-training/)
-- [ ] [Go to HiPerGator3 New User Training i.e.,req by UF RC](https://help.rc.ufl.edu/doc/New_user_training)
-- [ ] [Complete the required Coursera training](https://coursera.org/groups/hipergator-account-training-ywszh/invitation)
+-   [ ] If you are in [*PSB4934* ]{style="color: darkorange;"}: skip the next step.
+-   [ ] If you're [*not*]{style="color: green;"} in PSB4934: Fill out [PSY4911]{style="color: darkorange;"} form and complete 2 training topics i.e., required by Psychology:
+    -   [ ] [FERPA Basics](https://privacy.ufl.edu/privacy-training/ferpa-basics-and-ferpa-for-faculty/)
+    -   [ ] [Maintaining a Safe and Respectful Campus](https://learn-and-grow.hr.ufl.edu/courses-registration/compliance-training/)
+
+# Orientation to High-Performance Computing on HiPerGator3 (HPG)
+
+-   [ ]  [Go to HiPerGator3 New User Training i.e.,req by UF RC](https://help.rc.ufl.edu/doc/New_user_training)
+-   [ ]  [Complete the required Coursera training](https://coursera.org/groups/hipergator-account-training-ywszh/invitation)
+-   [ ]   [Go to the UFRC Getting Started page](https://help.rc.ufl.edu/doc/Getting_Started)
+-   [ ]   [Bookmark the UFRC Help and Documentation page in your browser](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+

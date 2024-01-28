@@ -1,0 +1,9 @@
+---
+title: Open Science with GitHub
+---
+
+- [MNE-Tools Organization](https://github.com/mne-tools)
+
+- [DeepLabCut Organization](https://github.com/DeepLabCut)
+
+- []()

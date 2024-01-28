@@ -1,0 +1,47 @@
+---
+title: " Options for file transfer: Accessing Remote Storage on HiPerGator"
+author: "RPM"
+date: "2024-01-27"
+draft: true
+---
+
+# Moving files between locations already on HiPerGator
+
+## OpenOnDemand
+
+## Globus
+
+## Command Line
+
+
+# From your computer to HiPerGator
+
+## OpenOnDemand
+
+## JupyterHub
+
+## Globus
+
+## DropBox
+
+## OneDrive & GoogleDrive
+
+
+# Download From HiPerGator to your Computer
+
+## JupyterHub
+
+## RClone
+
+
+
+# UFRC Documentation
+
+- [Options for Transfering Data](https://help.rc.ufl.edu/doc/Transfer_Data)
+- [Sharing with others](https://help.rc.ufl.edu/doc/Sharing_Within_A_Cluster)
+- [Open OnDemand Files App](https://help.rc.ufl.edu/doc/Open_OnDemand_Files)
+- [Samba](https://help.rc.ufl.edu/doc/Samba_Access)
+- [RClone](https://help.rc.ufl.edu/doc/Rclone)
+- [RSync](https://help.rc.ufl.edu/doc/Rsync)
+
+
