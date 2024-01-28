@@ -2,7 +2,7 @@
   {
     "objectID": "content/miso.html",
     "href": "content/miso.html",
-    "title": "Misophonia",
+    "title": "Misophonia Project",
     "section": "",
     "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nFarkas, A. H., Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., … & Keil, A. (2023). Auditory Aversive Generalization Learning Prompts Threat-Specific Changes in Alpha-Band Activity. bioRxiv, 2023-12. https://doi.org/10.1101/2023.12.04.569971\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nBrugge, J. F., Nourski, K. V., Oya, H., Reale, R. A., Kawasaki, H., Steinschneider, M., & Howard III, M. A. (2009). Coding of repetitive transients by auditory cortex on Heschl’s gyrus. Journal of neurophysiology, 102(4), 2358-2374. https://doi.org/10.1152/jn.91346.2008\nPopov, T., Oostenveld, R., & Schoffelen, J. M. (2018). FieldTrip made easy: an analysis protocol for group analysis of the auditory steady state brain response in time, frequency, and space. Frontiers in neuroscience, 12, 711.https://doi.org/10.3389/fnins.2018.00711\nPantev, C., Roberts, L. E., Elbert, T., Roβ, B., & Wienbruch, C. (1996). Tonotopic organization of the sources of human auditory steady-state responses. Hearing research, 101(1-2), 62-74.\nParker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., … & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. https://doi.org/10.1016/j.schres.2019.04.014\n\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "content/miso.html#what-is-misophonia",
     "href": "content/miso.html#what-is-misophonia",
-    "title": "Misophonia",
+    "title": "Misophonia Project",
     "section": "",
     "text": "Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.\n\nMisophonia on Wikipedia\nWard, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., … & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. https://doi.org/10.3389/fnins.2022.899476\nFarkas, A. H., Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., … & Keil, A. (2023). Auditory Aversive Generalization Learning Prompts Threat-Specific Changes in Alpha-Band Activity. bioRxiv, 2023-12. https://doi.org/10.1101/2023.12.04.569971\nAccepted Pre-registration: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.https://doi.org/10.17605/OSF.IO/E26AD\nMisophonia: Zotero Refs\n\n\n\nASMR (Autonomous sensory meridian response) is a tingling sensation that typically begins on the scalp and moves down the back of the neck and upper spine. A pleasant form of paresthesia, it has been compared with auditory-tactile synesthesia and may overlap with frisson.\n\n\n\n\nBrugge, J. F., Nourski, K. V., Oya, H., Reale, R. A., Kawasaki, H., Steinschneider, M., & Howard III, M. A. (2009). Coding of repetitive transients by auditory cortex on Heschl’s gyrus. Journal of neurophysiology, 102(4), 2358-2374. https://doi.org/10.1152/jn.91346.2008\nPopov, T., Oostenveld, R., & Schoffelen, J. M. (2018). FieldTrip made easy: an analysis protocol for group analysis of the auditory steady state brain response in time, frequency, and space. Frontiers in neuroscience, 12, 711.https://doi.org/10.3389/fnins.2018.00711\nPantev, C., Roberts, L. E., Elbert, T., Roβ, B., & Wienbruch, C. (1996). Tonotopic organization of the sources of human auditory steady-state responses. Hearing research, 101(1-2), 62-74.\nParker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., … & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. https://doi.org/10.1016/j.schres.2019.04.014\n\n\n\n\n\nMNE-Python is a Python package for MEG and EEG data analysis.\n\n\n\n\n\nMNE-BIDS is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.\nBIDS (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.\n\n\n\n\n\nMNE-BIDS-Pipeline is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "content/mpfc.html",
     "href": "content/mpfc.html",
-    "title": "MPFC",
+    "title": "MPFC & Ketamine Project",
     "section": "",
     "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "content/mpfc.html#overview",
     "href": "content/mpfc.html#overview",
-    "title": "MPFC",
+    "title": "MPFC & Ketamine Project",
     "section": "",
     "text": "mPFC-ketamine Zotero Refs\n\n\n\n\nNath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. https://doi.org/10.1038/s41596-019-0176-0\nMathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. https://doi.org/10.1016/j.neuron.2020.09.017\n\n\n\n\nDLC Course Links\nIntroduction to DeepLabCut for Non-Programmers\nAnnotation & Labeling keypoints with napari-deeplabcut",
     "crumbs": [
@@ -65,21 +65,14 @@
     "href": "content/wiki.html#posts",
     "title": "Open-Science-Wiki",
     "section": "Posts",
-    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDenotation & Connotation of the term Neurophysiology\n\n\n\nChatGPT\n\n\ndefinitions\n\n\n\n\n\n\n\nbot\n\n\nJan 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Survey\n\n\n\n\n\n\nRPM\n\n\nJan 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeeting Documentation Table\n\n\n\n\n\n\nRPM\n\n\nDec 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDeveloping a training plan\n\n\n\n\n\n\nRPM\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with HiPerGator3\n\n\n\n\n\n\nRPM\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial on MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nJan 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\nChatGPT\n\n\n\n\n\n\n\nbot\n\n\nOct 31, 2019\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Posts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDenotation & Connotation of the term Neurophysiology\n\n\n\nChatGPT\n\n\ndefinitions\n\n\n\n\n\n\n\nbot\n\n\nJan 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Survey\n\n\n\n\n\n\nRPM\n\n\nJan 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeeting Documentation Table\n\n\n\n\n\n\nRPM\n\n\nDec 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDeveloping a training plan\n\n\n\n\n\n\nRPM\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with UF Research Computing\n\n\n\n\n\n\nRPM\n\n\nJan 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial on MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nJan 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\nChatGPT\n\n\n\n\n\n\n\nbot\n\n\nOct 31, 2019\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "content/posts/new_hpg3/index.html",
     "href": "content/posts/new_hpg3/index.html",
-    "title": "Getting Started with HiPerGator3",
+    "title": "Getting Started with UF Research Computing",
     "section": "",
-    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
-  },
-  {
-    "objectID": "content/posts/new_hpg3/index.html#getting-started-with-research",
-    "href": "content/posts/new_hpg3/index.html#getting-started-with-research",
-    "title": "Getting Started with HiPerGator3",
-    "section": "",
-    "text": "[Fill out psy4911 form and complete 2 trainings i.e.,req by Psychology]\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training"
+    "text": "Course Registration\n\nIf you are in PSB4934: skip the next step.\nIf you’re not in PSB4934: Fill out PSY4911 form and complete 2 training topics i.e., required by Psychology:\n\nFERPA Basics\nMaintaining a Safe and Respectful Campus\n\n\n\n\nOrientation to High-Performance Computing on HiPerGator3 (HPG)\n\nGo to HiPerGator3 New User Training i.e.,req by UF RC\nComplete the required Coursera training\nGo to the UFRC Getting Started page\nBookmark the UFRC Help and Documentation page in your browser"
   },
   {
     "objectID": "content/posts/training_plan_dev/index.html",
@@ -208,13 +201,6 @@
     "text": "Meeting types, roles, and responsibilities\n\n\n\n\n\n\n\n\n\n\nActivity\nTitle (for docs)\nOrganizer\nNote Taker\nSend Agenda/ Paper\nPublish Notes/Presentation\n\n\n\n\n1:1\n&lt;your name&gt;\nTeam member\nTeam member\n24 hrs before\n24 hrs after\n\n\n2:1\n&lt;your name&gt;\nJunior team member\nJunior team member\n24 hrs before\n24 hrs after\n\n\nClass Meeting: Literature discusssion\nClass meeting: Literature discussion\npresenter\n\n1 week before\n24 hrs after\n\n\nClass Meeting: Skills Session\nClass meeting: Tech\npresenter\n\n\n24 hrs after\n\n\nClass Meeting: Research\nClass meeting: &lt;your name&gt;&lt;date&gt;: Research\npresenter\npresenter\n\n24 hrs after\n\n\nSupervisory\nSupervisory\n&lt;your name&gt;&lt;date&gt;\npresenter\npresenter\n1 week before\n24 hrs after\n\n\nOther meeting\n&lt;meeting name&gt;&lt;date&gt;\nSenior team member\nJunior team member\n1 week before\n24 hrs after\n\n\n\n\n\n\n\n\nEach meeting has an organizer, who posts and emails the agenda. Most meetings have a note taker.\n\nCommunicate the agenda in advance.\n\nRationale: ensure everyone is fully prepared for the meeting. Meetings should be used for things that are more complex and nuanced than those that can be dealt with over email.\n\nAgenda content\n\nAgenda: : a numbered list of items or questions to discuss, each one no more than one line.\nShort explanatory notes can be later on in the document, if required.\n\nPosting the agenda\n\nCreating agenda for a new meeting or series\n\nCreate\n\nConverting a one-off meeting to a series\n\nCreate\n\n\nSending the agenda\n\nCreate an email with subject: “Agenda: ⟨title from Table 1⟩, ⟨date⟩”\nCopy the contents of the OneDrive Doc into the text of an email.\nAt the bottom, paste the URL of the agenda on OneDrive Doc (even if you have sent out this URL before).\nSend to all participants.\nPlease email all participants any later updates to the agenda.\n\n\n\n\n\n\nEdit the Agenda Google Doc to include minutes directly underneath individual agenda items.\n\nMinutes content\n\nRecord any decisions made in the meeting.\nAction items. For any actions discussed that need execution by meeting participants, put “ACTION: ⟨responsible person’s name⟩: ⟨action to be taken⟩” with “ACTION:” in bold and all caps. This includes any actions that need to be taken by Michael or other faculty.\nUsually it is unnecessary to take detailed notes, outside the categories of (i) records of decision and (ii) action items.\n\n\nSending the minutes:\n\nAs soon as possible after the meeting (within 24 hours), copy the contents of the agenda with notes into the text of an email and send it to all participants with the URL.\nCopy the notes into your lab notebook for a durable record."
   },
   {
-    "objectID": "content/posts/use_rsync_on_hpg/index.html",
-    "href": "content/posts/use_rsync_on_hpg/index.html",
-    "title": "Post template",
-    "section": "",
-    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
-  },
-  {
     "objectID": "content/lab-information/lab-information-example-post/index.html",
     "href": "content/lab-information/lab-information-example-post/index.html",
     "title": "Example template",
@@ -222,45 +208,11 @@
     "text": "This is an example template for a new post. You can use it as a starting point for your own posts."
   },
   {
-    "objectID": "content/add-content.html",
-    "href": "content/add-content.html",
-    "title": "Customize",
+    "objectID": "content/github.html",
+    "href": "content/github.html",
+    "title": "Open Science with GitHub",
     "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
-  },
-  {
-    "objectID": "content/add-content.html#edit-and-add-your-pages",
-    "href": "content/add-content.html#edit-and-add-your-pages",
-    "title": "Customize",
-    "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
-  },
-  {
-    "objectID": "content/add-content.html#add-your-pages-the-project",
-    "href": "content/add-content.html#add-your-pages-the-project",
-    "title": "Customize",
-    "section": "Add your pages the project",
-    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
-  },
-  {
-    "objectID": "content/links.html",
-    "href": "content/links.html",
-    "title": "Useful Links",
-    "section": "",
-    "text": "Models of Dynamical Systems\n\nMesoscopic Brain Dynamics\nSystem Dynamics Interactive Simulations\nKuramoto Model: Weakly Coupled Oscillators\n“Scale-free” Dynamics and Complexity\n1/f Noise\n\n\n\nFree Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine\n\n\n\n\nNeuroscience Information\n\nNeurodata Without Borders\nBrain Imaging Data Structure (BIDS)\nInternational Conference on Neuroinformatics (ICNF)\nNeuroStars\nConcepts in Cognitive: Ontological/Taxonomy",
-    "crumbs": [
-      "Useful Links"
-    ]
-  },
-  {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "Working with Code",
-    "section": "",
-    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326",
-    "crumbs": [
-      "Code in your files"
-    ]
+    "text": "MNE-Tools Organization\nDeepLabCut Organization"
   },
   {
     "objectID": "content/rendering.html",
@@ -289,6 +241,47 @@
     "title": "Rendering",
     "section": "Step 3. Render within RStudio",
     "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”."
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Working with Code",
+    "section": "",
+    "text": "We are interested in doing open science because we’d like to return the favor back to the scientific community as open science has been helpful to us.\n\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/links.html",
+    "href": "content/links.html",
+    "title": "Useful Links",
+    "section": "",
+    "text": "Models of Dynamical Systems\n\nMesoscopic Brain Dynamics\nSystem Dynamics Interactive Simulations\nKuramoto Model: Weakly Coupled Oscillators\n“Scale-free” Dynamics and Complexity\n1/f Noise\n\n\n\nFree Books for Python or R\n\nhttps://wesmckinney.com/book/\nhttps://r4ds.hadley.nz/\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://ggplot2-book.org/\nhttps://crumplab.com/Books.html\nhttps://github.com/christophergandrud/Rep-Res-Book\nhttps://merely-useful.tech/py-rse/\nhttps://merely-useful.tech/r-rse/\n\n\nData Science Courses\n\nhttps://merely-useful.tech/novice-r/\nhttps://github.com/merely-useful/novice-py/\nhttps://github.com/merely-useful/py-rse\n\n\n\nOpen Science\nStarting points for learning about accessibility\n\nhttps://quarto.org/\nhttps://voltrondata.com/labs\nhttps://carpentries.org/\nhttps://www.cos.io/products/osf\nhttps://ropensci.org\nhttps://posit.co/products/enterprise/academy/\nhttps://www.datacamp.com\n\n\n\nShared Docs with links to more information:\n\nhttps://github.com/asoplata/open-science-resources\nhttps://github.com/asoplata/open-computational-neuroscience-resources\n\n\n\nOpen Science Pre-publication Sites:\n\nhttps://neurolibre.org\nhttps://psyarxiv.com\nhttps://osf.io/preprints/\nhttps://arxiv.org\nCarpentries Tutorial: Introduction to Reproducible Publications with RStudio\n\n\n\nInteresting links\n\nTwo-minute Neuroscience: ketamine\n\n\n\n\nNeuroscience Information\n\nNeurodata Without Borders\nBrain Imaging Data Structure (BIDS)\nInternational Conference on Neuroinformatics (ICNF)\nNeuroStars\nConcepts in Cognitive: Ontological/Taxonomy",
+    "crumbs": [
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html",
+    "href": "content/add-content.html",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
+  },
+  {
+    "objectID": "content/add-content.html#edit-and-add-your-pages",
+    "href": "content/add-content.html#edit-and-add-your-pages",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
+  },
+  {
+    "objectID": "content/add-content.html#add-your-pages-the-project",
+    "href": "content/add-content.html#add-your-pages-the-project",
+    "title": "Customize",
+    "section": "Add your pages the project",
+    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
   },
   {
     "objectID": "content/publishing.html",
@@ -324,6 +317,13 @@
     "title": "title",
     "section": "",
     "text": "User Question:\n\n\nChatGPT Answer:"
+  },
+  {
+    "objectID": "content/posts/use_rsync_on_hpg/index.html",
+    "href": "content/posts/use_rsync_on_hpg/index.html",
+    "title": "Post template",
+    "section": "",
+    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
   },
   {
     "objectID": "content/posts/use_ssh_mne/index.html",
