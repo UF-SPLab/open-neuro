@@ -1,8 +1,8 @@
 ---
 title: "Meeting Notes"
 author: "CA"
-date: "01/29/2024"
-draft: true
+date: "01/25/2024"
+draft: false
 ---
 
 # Class Meeting
