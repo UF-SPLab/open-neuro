@@ -48,7 +48,7 @@ graph TD;
 :::
 :::
 
-## Open Science Approach
+## Open Science Approach to Computational Reproducibility
 
 ::: {style="display: flex;"}
 <div>

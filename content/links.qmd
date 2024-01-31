@@ -59,6 +59,12 @@ Starting points for learning about accessibility
 
 - [Neurodata Without Borders](https://www.nwb.org/)
 - [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)
+- [Carpentries: Working with MRI Data in Python](https://carpentries-incubator.github.io/SDC-BIDS-IntroMRI/)
+- [Carpentries: Functional Neuroimaging Analysis in Python](https://carpentries-incubator.github.io/SDC-BIDS-fMRI/)
 - [International Conference on Neuroinformatics (ICNF)](https://www.incf.org/)
+   - [ICNF: Using Training Resources](https://training.incf.org/how-to-use)
+   - [ICNF: *tutorial search*](https://training.incf.org/search)
 - [NeuroStars](https://neurostars.org/)
+- [NeuroHack Academy](https://neurohackademy.org/apply/)
+- [NeuroMatch Academy](https://academy.neuromatch.io/courses)
 - [Concepts in Cognitive: Ontological/Taxonomy](https://www.cognitiveatlas.org/)

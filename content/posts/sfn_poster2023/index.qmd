@@ -1,1 +1,9 @@
+---
+title: "SFN poster link"
+author: "RPM"
+date: "2024-01-30"
+draft: false
+---
 
+
+![](NCF_SfN_ephys-2023_Poster.pdf)
