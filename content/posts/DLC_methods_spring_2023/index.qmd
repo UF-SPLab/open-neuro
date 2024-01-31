@@ -1,0 +1,52 @@
+---
+title: "DLC methods"
+author: "RPM"
+date: "2024-01-31"
+draft: false
+---
+
+[How to write a DeepLabCut Methods Section](https://deeplabcut.github.io/DeepLabCut/docs/recipes/DLCMethods.html)
+
+[config.yaml file](https://github.com/UF-SPLab/mpfc-behavior/blob/main/configuration_info/config.yaml)
+
+## Methods items
+
+For body part tracking we used DeepLabCut (version 2.X.X) [Mathis et al, 2018, Nath et al, 2019]. 
+- DLC v.2.2.6 ?
+
+Specifically, we labeled X number of frames taken from X videos/animals (then X% was used for training (default is 95%). 
+
+- 30 frames
+- 3 animals 
+- 3 videos
+- 28 frames were used for training, i.e., the the DLC default proportion 95% 
+
+
+We used a X-based neural network (i.e., X = ResNet-50) with default parameters for 500,000 training iterations. 
+[see citations below]
+
+- NOTE: I'm not certain what X refers to for X-based; X = ResNet-50 
+- X?: 500,000 training iterations
+
+We validated with X number of shuffles, 
+
+- 1 shuffle
+
+and found the test error was: X pixels, train: X pixels (image size was X by X). 
+
+- test error was 37.38 pixels
+- training error was 1.73 pixels
+- image size was 720 by X 480 pixels
+
+We then used a p-cutoff of X (i.e. 0.9) to condition the X,Y coordinates for future analysis. 
+
+- very consevative p-cutoff of 0.6 for X,Y coordinates for future analysis
+
+This network was then used to analyze eight videos from similar experimental settings.
+
+
+### References 
+
+Insafutdinov, E., Pishchulin, L., Andres, B., Andriluka, M. & Schiele, B. DeeperCut: A deeper, stronger, and faster multi-person pose estimation model. In European Conference on Computer Vision, 34–50 (Springer, 2016).
+
+He, K., Zhang, X., Ren, S. & Sun, J. Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition, 770–778 (2016). URL https://arxiv.org/abs/ 1512.03385.
