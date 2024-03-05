@@ -1,0 +1,31 @@
+---
+title: "title"
+author: "initials"
+date: "2020-00-00"
+draft: false
+---
+
+There are two new groups set in in Canvas, and each has a main page.  
+
+- Misophonia project is working on ERP Bootcamp
+- mPFC-Ketamine project is working on Collab and watching YouTube videos about DeepLabCut
+
+Yesterday we discussed a (very broad) overview of the relationship of cellular-level to macroscopic EEG signals, especially to gamma. This is the first time on the project that I attempted to describe these relationships. Clearly, there was room for improvement, but it was good to introduce some concepts that we will revisit. Although some people might not be interested in some of the details, there were two main points to highlight. First, gamma rhythms indicate that information being passed in brain circuits. When gamma in a sufficiently large number of neurons is synchronized, it can be measured noninvasively, but usually gamma occurs in small amounts and can typically be measured best by invasive ECOG or implanted depth electrodes. Secondly, Anterior Cingulate Cortex (ACC) is a region of Medial Prefrontal Cortex (MPFC) that is functionally correlated with sensory salience, emotional and motivational information. This ACC/MPFC region is one of the few regions of cortex that has reciprocal connections with several modulatory brain regions that are the source of arousal, vigilance, attention, orienting responses, and as such ACC/MPFC is positioned to orchestrate brain states of alertness, neuroplasticity, and learning. 
+
+Fernandez-Ruiz, A., Sirota, A., Lopes-dos-Santos, V., & Dupret, D. (2023). Over and above frequency: gamma oscillations as units of neural circuit operations. Neuron, 111(7), 936-953. [https://doi.org/10.1016/j.neuron.2023.02.026](https://doi.org/10.1016/j.neuron.2023.02.026) 
+
+In the next paper, 
+
+
+
+Here’s an article we briefly discussed about the harmful effects of being bullied or victimized in relation to medial prefrontal cortex function (i.e., in conditions negatively correlated with social-support). 
+[https://neurosciencenews.com/bullying-glutamate-psychosis-25560/](https://neurosciencenews.com/bullying-glutamate-psychosis-25560/) 
+
+Okada, N., Yahata, N., Koshiyama, D. et al. (2024). Longitudinal trajectories of anterior cingulate glutamate and subclinical psychotic experiences in early adolescence: the impact of bullying victimization. Mol Psychiatry. [https://doi.org/10.1038/s41380-023-02382-8](https://doi.org/10.1038/s41380-023-02382-8])
+
+The study that the news release highlights was done at Univ. of Tokyo, and the article is relevant to our research because this part of prefrontal cortex is sort of a barometer for the brain's response to salient, stressful, and aversive chronic experiences. From other research we know that anything that can lessen the impact of this type of constant, uncontrollable stress is protective during this critical developmental time. 
+
+Lazarewicz, M. T., Ehrlichman, R. S., Maxwell, C. R., Gandal, M. J., Finkel, L. H., & Siegel, S. J. (2010). Ketamine Modulates Theta and Gamma Oscillations. Journal of Cognitive Neuroscience, 22(7), 1452–1464. [https://doi.org/10.1162/jocn.2009.21305](https://doi.org/10.1162/jocn.2009.21305)
+
+Alexander, L., Jelen, L. A., Mehta, M. A., & Young, A. H. (2021). The anterior cingulate cortex as a key locus of ketamine’s antidepressant action. Neuroscience & Biobehavioral Reviews, 127, 531–554. [https://doi.org/10.1016/j.neubiorev.2021.05.003](https://doi.org/10.1016/j.neubiorev.2021.05.003)
+

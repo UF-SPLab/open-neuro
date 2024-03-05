@@ -1,0 +1,404 @@
+---
+title: "Pathlength Estimation & Comparison"
+author: "RPM"
+date: "2023-04-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r set_env4script, message=TRUE, warning=TRUE, include=FALSE}
+library(tidyverse)
+library(sp)         #tested with v1.3-2
+library(imputeTS)   #tested with v3.0
+#library(ggplot2)    #tested with v3.1.0
+library(ggmap)      #tested with v3.0.0
+library(data.table) #tested with v1.12.8
+library(cowplot)    #tested with v0.9.4
+library(corrplot)   #tested with v0.84
+library(feather)
+library(kinematics)
+
+library(hms)
+library(fs)
+
+source("/cloud/home/r52541/DLCAnalyzer/R/DLCAnalyzer_Functions_final.R")
+
+```
+
+
+```{r}
+
+get_session_marks_for_segs <- function(subj=sbj, cnd=cn) {
+  
+  st_t <- MPFC_ket_ts_times_wider_dif %>% 
+    filter(subj==sbj,cnd==cn) %>% 
+    select(Start) %>% deframe() %>% 
+    seconds() %>% 
+    as.numeric()
+  
+  end_t <- MPFC_ket_ts_times_wider_dif %>% 
+    filter(subj==sbj,cnd==cn) %>% 
+    select(End) %>% deframe() %>% 
+    seconds() %>% 
+    as.numeric()
+  
+  durn_t <- MPFC_ket_ts_times_wider_dif %>% 
+    filter(subj==sbj,cnd==cn) %>% 
+    select(durn) %>% deframe() %>% 
+    seconds() %>% 
+    as.numeric()
+  
+  seq_start_intvls <- seq(from=st_t,to=end_t,by=(durn_t/6))
+  #seq_start_intvls <- seq(from=22,to=3952,by=655)
+  seq_end_intvls <- seq_start_intvls+(durn_t/6)
+  
+  seq_start_intvls <-seq_start_intvls[1:6]
+  seq_end_intvls <- seq_end_intvls[1:6]
+  return(c(seq_start_intvls,seq_end_intvls) )
+}
+
+```
+
+
+
+### Make data_frame to lag for delta x,y
+
+```{r}
+
+delta_2d_cumsum <- function(sbj,cnd,name,start_nf,end_nf,...) {
+  
+  p_id <- c(1,2,3,4)
+  part <- c("nose","hstg","card","body")
+  parts <- tibble(p_id,part)
+  
+  Tracking <- ReadDLCDataFromCSV(file=name, fps=60)
+  Tracking <- CleanTrackingData(Tracking, likelihoodcutoff = 0.95)
+  Tracking <- CutTrackingData(Tracking,
+                              keep.frames = seq.int(from=start_nf,
+                                                  to=end_nf,by=1))
+  
+  # when using pmap_dfr with a tibble ... is needed for any extra columns
+  pluck_part <- function(part,...) {
+    Tracking %>% purrr::pluck("data",part) %>% add_column(part=part,.before=1L)
+  }
+
+  kp_d <- parts %>% pmap_dfr(pluck_part)
+  
+  df_lag1 <- kp_d %>% 
+    group_by(part) %>% 
+    mutate(b_x = lag(x, order_by = frame), 
+           b_y = lag(y, order_by = frame),
+           b_l = lag(likelihood, order_by = frame))
+  
+  df_lag1sum <- df_lag1 %>% 
+    replace_na(list(b_x = 0, b_y = 0, b_l = 0)) %>% 
+    mutate(
+      min_l = if_else(likelihood>=b_l, exp(likelihood),exp(b_l)),
+      min_lscale=min_l/10,
+      d_xy = sqrt((x - b_x)^2 + (y - b_y)^2),
+      c_xy=cumsum(d_xy))
+  
+  kp_df <- df_lag1sum %>% mutate(tot_sec = frame/60,
+                          tf_min = tot_sec %/% 60,
+                          tf_seg = tf_min %/% 10,
+                          tf_segm = tf_min %/% 3,
+                          tf_sec=frame/60-(tf_min*60))
+  
+  kp_df <-  kp_df %>% add_column(sbj=sbj,cnd=cnd,.before=1L)
+}
+
+```
+
+### Get corrected onset/offset times of videos
+
+```{r }
+
+# # get all csv tracking files ----------------------------------------------
+# 
+# d_str <- fs::path_wd() %>% path("dlc-tracking-csv")
+# #d_str <- "~/Documents/research/animal_behavior/behavior_github/mpfc-behavior/post_analysis_R"
+# f_str <- fs::dir_ls(d_str)
+
+# start_end_adjustments  
+MPFC_ket_ts_times_long <- read_csv(
+  "video_cut_timestamps/MPFC_ts_times_long.csv",
+  col_types = list(col_character())) %>% 
+  mutate(cnd = tolower(session))
+  
+MPFC_ket_ts_times_wider_dif <- MPFC_ket_ts_times_long %>% 
+  pivot_wider(names_from = "ts_type", values_from = "ts") %>% 
+  mutate(durn=as_hms(End)-as_hms(Start))
+
+MPFC_ket_ts_times_wider_dif
+
+```
+
+### Get filepaths of DLC tracking csv files
+
+```{r}
+# get all csv tracking files ----------------------------------------------
+
+data_dir <- "/cloud/project/dlc-tracking-csv"
+
+f_str <- fs::dir_ls(data_dir) %>% 
+  enframe() %>% 
+  mutate(file_str=path_file(value) %>% path_ext_remove()) %>% 
+  extract(file_str,"sbj_cnd",
+          regex = 
+            "mpfc(\\d{2}_[a-z]+)\\d?DLC_resnet50_combo-mpfc-ket*.",
+          remove = F) %>% 
+  separate(sbj_cnd,c("sbj","cnd"),sep="_")
+
+f_str
+
+```
+
+
+```{r}
+fps <- 60
+
+trkn_files <- left_join(f_str, MPFC_ket_ts_times_wider_dif, by=c("sbj"="subj", "cnd"="cnd"))
+
+trkn_files <- trkn_files %>% 
+  mutate(start_nf=as.integer(Start)*fps,end_nf=as.integer(End)*fps)
+
+trkn_files[1,1:6]
+
+```
+
+
+# Subject 20
+
+
+```{r  eval=FALSE, include=FALSE}
+
+kp_df <- trkn_files[2:3,] %>% select(sbj,cnd,name,start_nf,end_nf) %>%  pmap_dfr(delta_2d_cumsum)
+
+write_feather(kp_df,"mpfc20_keypoint_df.feather")
+
+kp_df
+```
+
+
+```{r }
+
+kp_df_str <- "mpfc20_keypoint_df.feather"
+kp_df <- feather::read_feather(kp_df_str)
+
+ggplot(kp_df,aes(tot_sec,c_xy,color=part,alpha=min_lscale))+geom_line()+coord_cartesian(ylim = c(0,1000000))+theme_bw()+facet_grid(sbj~cnd)
+
+
+ggplot(kp_df %>% filter(cnd=="ket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 6)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 20 Ket: Keypoints in 3 min windows")
+
+
+ggsave("mpfc20_keypoint_ket.png",width = 60, height = 60, units = "cm")
+
+ggplot(kp_df %>% filter(cnd=="halket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 5)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 20 HalKet: Keypoints in 3 min windows")
+
+
+ggsave("mpfc20_keypoint_halket.png",width = 60, height = 60, units = "cm")
+
+
+```
+
+
+```{r }
+
+kp_df_smx <- kp_df %>% 
+  group_by(sbj,cnd,part,tf_seg) %>% 
+  summarise(max_seg=max(c_xy),
+            min_seg=min(c_xy),
+            m_mdf=max_seg-min_seg)
+
+
+ggplot(kp_df_smx, aes(tf_seg,m_mdf,fill=part))+
+  geom_bar(stat = "identity", position = position_dodge(), width = 0.7)+
+  coord_cartesian(ylim = c(0,200000))+
+  theme_bw()+
+  facet_grid(sbj~cnd)+
+  labs(title = "MPFC 20: frame by frame distance")
+
+```
+
+
+# Subject 21
+
+
+```{r   eval=FALSE, include=FALSE}
+
+kp_df <- trkn_files[4:5,] %>% select(sbj,cnd,name,start_nf,end_nf) %>%  pmap_dfr(delta_2d_cumsum)
+
+write_feather(kp_df,"mpfc21_keypoint_df.feather")
+
+kp_df
+```
+
+
+```{r }
+
+kp_df_str <- "mpfc21_keypoint_df.feather"
+kp_df <- feather::read_feather(kp_df_str)
+
+ggplot(kp_df,aes(tot_sec,c_xy,color=part,alpha=min_lscale))+geom_line()+coord_cartesian(ylim = c(0,1000000))+theme_bw()+facet_grid(sbj~cnd)
+
+ggplot(kp_df %>% filter(cnd=="ket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 6)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 21 Ket: Keypoints in 3 min windows")
+
+
+ggsave("mpfc21_keypoint_ket.png",width = 60, height = 60, units = "cm")
+
+ggplot(kp_df %>% filter(cnd=="halket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 6)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 21 HalKet: Keypoints in 3 min windows")
+
+
+ggsave("mpfc21_keypoint_halket.png",width = 60, height = 60, units = "cm")
+
+
+```
+
+
+```{r }
+
+kp_df_smx <- kp_df %>% 
+  group_by(sbj,cnd,part,tf_seg) %>% 
+  summarise(max_seg=max(c_xy),
+            min_seg=min(c_xy),
+            m_mdf=max_seg-min_seg)
+
+
+ggplot(kp_df_smx, aes(tf_seg,m_mdf,fill=part))+
+  geom_bar(stat = "identity", position = position_dodge(), width = 0.7)+
+  coord_cartesian(ylim = c(0,200000))+
+  theme_bw()+
+  facet_grid(sbj~cnd)+
+  labs(title = "MPFC 20: frame by frame distance")
+
+```
+
+
+# Subject 22
+
+
+```{r   eval=FALSE, include=FALSE}
+
+kp_df <- trkn_files[6:7,] %>% select(sbj,cnd,name,start_nf,end_nf) %>%  pmap_dfr(delta_2d_cumsum)
+
+write_feather(kp_df,"mpfc22_keypoint_df.feather")
+
+kp_df
+```
+
+
+```{r }
+
+kp_df_str <- "mpfc22_keypoint_df.feather"
+kp_df <- feather::read_feather(kp_df_str)
+
+ggplot(kp_df,aes(tot_sec,c_xy,color=part,alpha=min_lscale))+geom_line()+coord_cartesian(ylim = c(0,1000000))+theme_bw()+facet_grid(sbj~cnd)
+
+ggplot(kp_df %>% filter(cnd=="ket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 6)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 22 Ket: Keypoints in 3 min windows")
+
+ggsave("mpfc22_keypoint_ket.png",width = 60, height = 60, units = "cm")
+
+ggplot(kp_df %>% filter(cnd=="halket"),aes(x,y,color=part,alpha=likelihood))+
+  geom_point(size=0.25)+
+  facet_grid(part~., scales="free")+
+  facet_wrap(.~tf_segm,ncol = 6)+
+  theme_bw()+
+  theme(strip.background = element_blank(), strip.placement = "outside")+
+  labs(title = "MPFC 22 HalKet: Keypoints in 3 min windows")
+
+
+ggsave("mpfc22_keypoint_halket.png",width = 60, height = 60, units = "cm")
+
+
+```
+
+
+```{r }
+
+kp_df_smx <- kp_df %>% 
+  group_by(sbj,cnd,part,tf_seg) %>% 
+  summarise(max_seg=max(c_xy),
+            min_seg=min(c_xy),
+            m_mdf=max_seg-min_seg)
+
+
+ggplot(kp_df_smx, aes(tf_seg,m_mdf,fill=part))+
+  geom_bar(stat = "identity", position = position_dodge(), width = 0.7)+
+  coord_cartesian(ylim = c(0,200000))+
+  theme_bw()+
+  facet_grid(sbj~cnd)+
+  labs(title = "MPFC 22: frame by frame distance")
+
+```
+
+
+
+
+
+
+```{r eval=FALSE, include=FALSE}
+
+Tracking <- ReadDLCDataFromCSV(file = f_str[4], fps = 60)
+
+frames_all_n <- dim(Tracking$data$body)[1]
+
+get_session_marks_for_segs(MPFC_ket_ts_times_wider_dif=MPFC_ket_ts_times_wider_dif,
+                           subj="21", cnd="halket", Start=Start, End=End,
+                           durn=durn,frames_all_n=frames_all_n)
+
+```
+
+
+
+
+
+```{r eval=FALSE, include=FALSE}
+
+  # pluck_part <- function(Tracking, prt,...) {
+  #   Tracking %>% purrr::pluck("data",prt) %>% add_column(part=prt,.before=1L)
+  # }
+  # 
+  # kp_df <- parts %>% map_dfr(~pluck_part(.part), Tracking)
+  
+```
+
+
+```{r}
+
+```
+

@@ -1,0 +1,11 @@
+---
+title: "Using ChatGPT to explain code"
+author: "RPM"
+date: "2024-02-15"
+draft: False
+---
+
+[Link to Markdown document](pathlength_load_comp_kinet.Rmd)
+
+[ChatGPT conversation in data analyst mode](https://chat.openai.com/share/c688cedb-caa1-4e56-a721-d91d07c76ede)
+
