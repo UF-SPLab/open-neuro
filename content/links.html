@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -271,6 +271,50 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://academy.neuromatch.io/courses">NeuroMatch Academy</a></li>
 <li><a href="https://www.cognitiveatlas.org/">Concepts in Cognitive: Ontological/Taxonomy</a></li>
 </ul>
+<p>DataCamp Cheasheets:</p>
+<p>https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines</p>
+<p>https://www.datacamp.com/cheatSheet/bash-and-zsh-shell-terminal-basics-cheat-sheet</p>
+<p>https://www.datacamp.com/cheatSheet/quarto-cheat-sheet-previously-known-as-r-markdown</p>
+<p>https://www.datacamp.com/cheatSheet/the-generative-ai-tools-landscape</p>
+<p>https://www.datacamp.com/cheatSheet/reshaping-data-with-pandas-in-python.</p>
+<p>https://www.datacamp.com/cheatSheet/text-data-in-python-cheat-sheet</p>
+<p>https://www.datacamp.com/cheatSheet/working-with-dates-and-times-in-python-cheat-sheet</p>
+<p>https://www.datacamp.com/cheatSheet/python-seaborn-cheat-sheet</p>
+<p>https://www.datacamp.com/cheatSheet/scipy-cheat-sheet-linear-algebra-in-python</p>
+<p>https://www.datacamp.com/cheatSheet/pandas-cheat-sheet-data-wrangling-in-python</p>
+<p>https://www.datacamp.com/cheatSheet/jupyter-notebook-cheat-sheet</p>
+<p>https://www.datacamp.com/cheatSheet/matplotlib-cheat-sheet-plotting-in-python</p>
+<p>https://www.datacamp.com/cheatSheet/getting-started-with-python-cheat-sheet</p>
+<p>https://www.datacamp.com/tutorial/a-beginners-guide-to-chatgpt-api</p>
+<p>https://www.datacamp.com/tutorial/r-markdown-tutorial</p>
+<p>https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning</p>
+<p>https://www.datacamp.com/tutorial/what-is-hugging-face</p>
+<p>https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines</p>
+<p>https://www.datacamp.com/tutorial/introduction-to-data-pipelines-for-data-professionals</p>
+<p>https://www.datacamp.com/tutorial/a-data-scientists-guide-to-signal-processing</p>
+<p>https://www.datacamp.com/tutorial/seeing-like-a-machine-a-beginners-guide-to-image-analysis-in-machine-learning</p>
+<p>https://www.datacamp.com/tutorial/introduction-to-convolutional-neural-networks-cnns</p>
+<p>https://www.datacamp.com/tutorial/pytorch-vs-tensorflow-vs-keras</p>
+<p>https://www.datacamp.com/tutorial/the-cross-entropy-loss-function-in-machine-learning</p>
+<p>https://viso.ai/deep-learning/pytorchvideo-video-understanding/</p>
+<p>https://www.simplilearn.com/best-ai-tools-for-video-editing-article</p>
+<p>AmadeusGPT: a natural language interface for interactive animal behavioral analysis https://neurips.cc/media/PosterPDFs/NeurIPS%202023/72610.png?t=1701780014.8377924</p>
+<p>https://pytorch.org/audio/stable/index.html</p>
+<p>https://pytorch.org/vision/stable/index.html</p>
+<p>Torchvision https://paperswithcode.com/lib/torchvision#:~:text=torchvision-,The%20torchvision%20library%20consists%20of%20popular%20datasets%2C%20model%20architectures%2C%20and,video%20classification%20and%20semantic%20segmentation.</p>
+<p>State of the Art https://paperswithcode.com/sota</p>
+<p>https://paperswithcode.com/libraries</p>
+<p>https://paperswithcode.com/methods</p>
+<p>https://github.com/huggingface/transformers</p>
+<p>https://huggingface.co/docs/transformers/index</p>
+<p>Cran-R Task Views</p>
+<p>R Task Views: Tracking Data https://cran.r-project.org/web/views/Tracking.html Carpentries https://datacarpentry.org/rr-version-control/02-git-in-github/index.html</p>
+<p>Ten Simple Rules Collection</p>
+<p>https://www.reddit.com/r/bioinformatics/comments/12puflj/plos_computational_biology_ten_simple_rules_papers/?rdt=36960</p>
+<p>PLOS Computational Biology: filter “undergraduate” https://journals.plos.org/ploscompbiol/search?filterJournals=PLoSCompBiol&amp;filterSubjects=Undergraduates&amp;q=</p>
+<p>PLOS Computational Biology: filter “graduate”</p>
+<p>Historical Research</p>
+<p>Computational Historical Thinking: With Applications in R Lincoln A. Mullen https://dh-r.lincolnmullen.com/</p>
 
 
 </section>
@@ -499,6 +543,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/uf-splab\.github\.io\/open-neuro\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -533,7 +595,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
