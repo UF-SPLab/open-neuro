@@ -1,0 +1,353 @@
+---
+title: "Using Custom Python environments for Jupyter Notebooks in HiPerGator"
+format: 
+  html:
+    anchor-sections: true
+    number-sections: true
+    number-depth: 4
+    toc: true
+    toc-depth: 4
+    code-copy: true
+    code-fold: show
+    
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Custom Python Environments for Jupyter Notebooks
+
+To simply use the environment go to
+
+-   [Getting Started: ~/.condarc configuration file](https://uf-splab.github.io/open-neuro/content/posts/share-hpg-envs/#getting-started-conda-configuration)
+
+-   then to [Copy the template_kernelfolder to your path](https://uf-splab.github.io/open-neuro/content/posts/share-hpg-envs/#copy-the-template_kernel-folder-to-your-path)
+
+For additional info about using Python virtual environments with Conda
+please go the the UFRC page or the Software Carpentries pages from which
+these procedures were derived.
+
+-   [UFRC: Customizing a Shared Python
+    Environment](https://help.rc.ufl.edu/doc/Managing_Python_environments_and_Jupyter_kernels)
+-   [Carpentries: Ch.2 Conda
+    Environments](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html)
+-   [Conda: Using the .condarc Configuration
+    file](https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#)
+
+## Background (from UFRC page)
+
+Many projects that use `Python` code require careful management of the
+respective Python environments. Rapid changes in package dependencies,
+package version conflicts, deprecation of APIs (function calls) by
+individual projects, and obsolescence of system drivers and libraries
+make it virtually impossible to use an arbitrary set of packages or
+create one all-encompassing environment that will serve everyone's needs
+over long periods of time. The high velocity of changes in the popular
+ML/DL frameworks and packages and GPU computing exacerbates the problem.
+
+## Getting Started: Conda Configuration
+
+### The <code>\~/.condarc</code> configuration file
+
+<code>conda</code>'s behavior is controlled by a configuration file in
+your home directory called <code>.condarc</code>. The dot at the start
+of the name means that the file is hidden from 'ls' file listing command
+by default. If you have not run <code>conda</code> before, you won't
+have this file. Whether the file exists or not, the steps here will help
+you modify the file to work best on HiPerGator. First load of the
+<code>conda</code> environment module on HiPerGator will put the current
+''best practice'' <code>.condarc</code> into your home directory.
+
+This path will be found in your home directory (i.e.,
+<code>Home/\<myname\></code> is usually symbolized as :
+<code>\~</code>).
+
+``` {.Bash .bash}
+Home/<myname>/.condarc
+```
+
+### <code>conda</code> package cache location
+
+<code>conda</code> caches (keeps a copy) of all downloaded packages by
+default in the <code>\~/.conda/pkgs</code> directory tree. If you
+install a lot of packages you may end up filling up your home quota. You
+can change the default package cache path. To do so, add or change the
+<code>pkgs_dirs</code> setting in your <code>\~/.condarc</code>
+configuration file e.g.:
+
+::: columns
+::: {.column width="45%"}
+``` yaml
+pkgs_dirs:
+  - /blue/psb4934/share/conda/pkgs
+```
+:::
+
+::: {.column width="5%"}
+...
+
+or
+:::
+
+::: {.column width="45%"}
+``` yaml
+  - /blue/psb4934/$USER/conda/pkgs
+```
+:::
+:::
+
+Replace <code>akeil</code> or <code>mygroup</code> with your actual
+group name.
+
+### <code>conda</code> environment location
+
+<code>conda</code> puts all packages installed in a particular
+environment into a single directory. By default ''named''
+<code>conda</code> environments are created in the
+<code>\~/.conda/envs</code> directory tree. They can quickly grow in
+size and, especially if you have many environments, fill the 40GB home
+directory quota. For example, the environment we will create in this
+training is 5.3GB in size. As such, it is important to use ''path''
+based (conda create -p PATH) conda environments, which allow you to use
+any path for a particular environment for example allowing you to keep a
+project-specific conda environment close to the project data in
+</code>/blue/</code> where you group has terrabyte(s) of space.
+
+You can also change the default path for the ''name'' environments
+(<code>conda create -n NAME</code>) if you prefer to keep all
+<code>conda</code> environments in the same directory tree. To do so,
+add or change the <code>envs_dirs</code> setting in the
+<code>\~/.condarc</code> configuration file e.g.:
+
+::: columns
+::: {.column width="45%"}
+``` yaml
+envs_dirs:
+  - /blue/psb4934/share/conda/envs
+```
+:::
+
+::: {.column width="5%"}
+...
+
+or
+:::
+
+::: {.column width="45%"}
+``` yaml
+- /blue/psb4934/$USER/conda/envs
+```
+:::
+:::
+
+Replace <code>mygroup</code> with your actual group name.
+
+::: {.mw-collapsible style="width:90%; padding: 5px; border: 1px solid gray;"}
+### Editing your <code>\~/.condarc</code> file.
+
+One way to edit your <code>\~/.condarc</code> file is to type:
+
+``` {.Bash .bash}
+nano ~/.condarc
+```
+
+If the file is empty, paste in the text below, editing the
+<code>env_dirs:</code> and <code>pkg_dirs:</code> as below. If the file
+has contents, update those lines.
+
+::: callout-note
+Your <code>\~/.condarc</code> should look something like this when you
+are done editing (again, replacing <code>group-akeil</code> and
+<code>USER</code> in the paths with your actual group and username).\
+:::
+
+``` {.YAML .yaml}
+channels: 
+  - conda-forge 
+  - bioconda 
+  - defaults 
+envs_dirs: 
+  - /blue/psb4934/USER/conda/envs 
+pkgs_dirs: 
+  - /blue/psb4934/USER/conda/pkgs 
+auto_activate_base: false 
+auto_update_conda: false 
+always_yes: false 
+show_channel_urls: false
+```
+:::
+
+<div class="mw-collapsible-content" style="padding: 5px;">
+
+## Use your kernel from command line or scripts
+
+Now that we have our environment ready, we can use it from the command
+line or a script using something like:
+
+::: columns
+::: {.column width="35%"}
+``` bash
+module load conda
+conda activate mne
+
+# Run my python script
+python amazing_script.py
+```
+:::
+
+::: {.column width="10%"}
+...\
+or\
+a path based setting:
+:::
+
+::: {.column width="55%"}
+``` bash
+# Set path to environment 
+#   pre-pend to PATH variable
+env_path=/blue/psb4934/share/mne_1_x/conda/bin
+export PATH=$env_path:$PATH
+ 
+# Run my python script
+python amazing_script.py
+```
+:::
+:::
+
+## Setup a Jupyter Kernel for our environment
+
+Often, we want to use the environment in a Jupyter notebook. To do that,
+we can create our own Jupyter Kernel.
+
+### Add the <code>jupyterlab</code> package
+
+In order to use an environment in Jupyter, we need to make sure we
+install the <code>jupyterlab</code> package in the environment:
+
+<code>mamba install jupyterlab</code>
+
+### Copy the <code>template_kernel</code> folder to your path
+
+On HiPerGator, Jupyter looks in two places for kernels when you launch a
+notebook:
+
+-   <code>/apps/jupyterhub/kernels/</code> for the globally available
+    kernels that all users can use. (Also a good place to look for
+    troubleshooting getting your own kernel going)
+
+-   <code>\~/.local/share/jupyter/kernels</code> for each user. (Again,
+    your home directory and the <code>.local</code> folder is hidden
+    since it starts with a dot)
+
+Make the <code>\~/.local/share/jupyter/kernels</code> directory:
+<code>mkdir -p \~/.local/share/jupyter/kernels</code>
+
+Copy the <code>/apps/jupyterhub/template_kernel</code> folder into your
+<code>\~/.local/share/jupyter/kernels</code> directory:
+
+<code>cp -r /apps/jupyterhub/template_kernel/
+\~/.local/share/jupyter/kernels/hfrl</code>
+
+::: callout-note
+This also renames the folder in the copy. It is important that the
+directory names be distinct in both your directory and the global
+<code>/apps/jupyterhub/kernels/</code> directory.
+:::
+
+### Edit the <code>template_kernel</code> files
+
+The <code>template_kernel</code> directory has four files: the
+<code>run.sh</code> and <code>kernel.json</code> files will need to be
+edited in a text editor. We will use <code>nano</code> in this tutorial.
+The <code>logo-64X64.png</code> and <code>logo-32X32.png</code> are
+icons for your kernel to help visually distinguish it from others. You
+can upload icons of those dimensions to replace the files, but they need
+to be named with those names.
+
+#### Edit the <code>kernel.json</code> file
+
+Let's start editing the <code>kernel.json</code> file. As an example, we
+can use:
+
+<code>nano \~/.local/share/jupyter/kernels/hfrl/kernel.json</code>
+
+The template has most of the information and notes on what needs to be
+updated. Edit the file to look like:
+
+``` {.json .json}
+{
+ "language": "python",
+ "display_name": "MNE v1.x",
+ "argv": [
+  "~/.local/share/jupyter/kernels/mne_1_x/run.sh",
+  "-f",
+  "{connection_file}"
+ ]
+}
+```
+
+#### Edit the <code>run.sh</code> file
+
+The <code>run.sh</code> file needs the path to the <code>python</code>
+application that is in our environment. The easiest way to get that is
+to make sure the environment is activated and run the command:
+<code>which python</code>
+
+The path it outputs should look something like:
+<code>/blue/group/share/conda/envs/mne_1\_x/bin/python</code>
+
+Copy that path.
+
+Edit the <code>run.sh</code> file with <code>nano</code>:
+
+<code>nano \~/.local/share/jupyter/kernels/mne_1\_x/run.sh</code>
+
+The file should looks like this, *but with your path*:
+
+``` bash
+#!/usr/bin/bash
+
+exec /blue/psb4934/share/conda/envs/mne_1_x/bin/python -m ipykernel "$@"
+```
+
+If you are doing this in a Jupyter session, refresh your page. If not,
+launch Jupyter.
+
+Your kernel should be there ready for you to use!
+
+## Working with yml files
+
+### Export your environment to an <code>environment.yml</code> file
+
+Now that you have your environment working, you may want to document its
+contents and/or share it with others. The <code>environment.yml</code>
+file defines the environment and can be used to build a new environment
+with the same setup.
+
+To export an environment file from an existing environment, run:
+
+<code>conda env export \> mne_1\_x.yml</code>
+
+You can inspect the contents of this file with <code>cat
+mne_1\_x.yml</code>. This file defines the packages and versions that
+make up the environment as it is at this point in time. Note that it
+also includes packages that were installed via <code>pip</code>.
+
+### Create an environment from a yaml file
+
+If you share the environment yaml file created above with another user,
+they can create a copy of your environment using the command:
+
+<code>conda env create --file mne_1\_x.yml</code>
+
+They may need to edit the last line to change the location to match
+where they want their environment created.
+
+## Group environments
+
+It is possible to create a shared environment accessed by a group on
+HiPerGator, storing the environment in, for example,
+<code>/blue/psb4934/share/conda</code>. In general, this works best if
+only one user has write access to the environment. All installs should
+be made by that one user and should be communicated with the other users
+in the group.
