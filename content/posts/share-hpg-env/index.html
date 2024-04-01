@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="bot">
-<meta name="dcterms.date" content="2022-04-26">
+<meta name="author" content="RPM">
+<meta name="dcterms.date" content="2022-12-30">
 
-<title>Open Neuro - Understanding rsync</title>
+<title>Open Neuro - Sharing Customized Python Environments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Understanding rsync</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Using Custom Python environments for Jupyter Notebooks in HiPerGator</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -130,8 +130,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Understanding rsync</h1>
-                      </div>
+      <h1 class="title">Using Custom Python environments for Jupyter Notebooks in HiPerGator</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">tutorial</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -140,14 +146,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>bot </p>
+               <p>RPM </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 26, 2022</p>
+        <p class="date">December 30, 2022</p>
       </div>
     </div>
     
@@ -217,7 +223,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#custom-python-environments-for-jupyter-notebooks" id="toc-custom-python-environments-for-jupyter-notebooks" class="nav-link active" data-scroll-target="#custom-python-environments-for-jupyter-notebooks">Custom Python Environments for Jupyter Notebooks</a></li>
+  <li><a href="#background-from-ufrc-page" id="toc-background-from-ufrc-page" class="nav-link" data-scroll-target="#background-from-ufrc-page">Background (from UFRC page)</a></li>
+  <li><a href="#getting-started-conda-configuration" id="toc-getting-started-conda-configuration" class="nav-link" data-scroll-target="#getting-started-conda-configuration">Getting Started: Conda Configuration</a>
+  <ul class="collapse">
+  <li><a href="#the-.condarc-configuration-file" id="toc-the-.condarc-configuration-file" class="nav-link" data-scroll-target="#the-.condarc-configuration-file">The <code>~/.condarc</code> configuration file</a></li>
+  <li><a href="#conda-package-cache-location" id="toc-conda-package-cache-location" class="nav-link" data-scroll-target="#conda-package-cache-location"><code>conda</code> package cache location</a></li>
+  <li><a href="#conda-environment-location" id="toc-conda-environment-location" class="nav-link" data-scroll-target="#conda-environment-location"><code>conda</code> environment location</a></li>
+  <li><a href="#editing-your-.condarc-file." id="toc-editing-your-.condarc-file." class="nav-link" data-scroll-target="#editing-your-.condarc-file.">Editing your <code>~/.condarc</code> file.</a></li>
+  </ul></li>
+  <li><a href="#use-your-kernel-from-command-line-or-scripts" id="toc-use-your-kernel-from-command-line-or-scripts" class="nav-link" data-scroll-target="#use-your-kernel-from-command-line-or-scripts">Use your kernel from command line or scripts</a></li>
+  <li><a href="#setup-a-jupyter-kernel-for-our-environment" id="toc-setup-a-jupyter-kernel-for-our-environment" class="nav-link" data-scroll-target="#setup-a-jupyter-kernel-for-our-environment">Setup a Jupyter Kernel for our environment</a>
+  <ul class="collapse">
+  <li><a href="#add-the-jupyterlab-package" id="toc-add-the-jupyterlab-package" class="nav-link" data-scroll-target="#add-the-jupyterlab-package">Add the <code>jupyterlab</code> package</a></li>
+  <li><a href="#copy-the-template_kernel-folder-to-your-path" id="toc-copy-the-template_kernel-folder-to-your-path" class="nav-link" data-scroll-target="#copy-the-template_kernel-folder-to-your-path">Copy the <code>template_kernel</code> folder to your path</a></li>
+  <li><a href="#edit-the-template_kernel-files" id="toc-edit-the-template_kernel-files" class="nav-link" data-scroll-target="#edit-the-template_kernel-files">Edit the <code>template_kernel</code> files</a></li>
+  </ul></li>
+  <li><a href="#working-with-yml-files" id="toc-working-with-yml-files" class="nav-link" data-scroll-target="#working-with-yml-files">Working with yml files</a>
+  <ul class="collapse">
+  <li><a href="#export-your-environment-to-an-environment.yml-file" id="toc-export-your-environment-to-an-environment.yml-file" class="nav-link" data-scroll-target="#export-your-environment-to-an-environment.yml-file">Export your environment to an <code>environment.yml</code> file</a></li>
+  <li><a href="#create-an-environment-from-a-yaml-file" id="toc-create-an-environment-from-a-yaml-file" class="nav-link" data-scroll-target="#create-an-environment-from-a-yaml-file">Create an environment from a yaml file</a></li>
+  </ul></li>
+  <li><a href="#group-environments" id="toc-group-environments" class="nav-link" data-scroll-target="#group-environments">Group environments</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/posts/share-hpg-env/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/posts/share-hpg-env/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -226,35 +259,213 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>rsync is a powerful command-line tool for transferring files and directories between local and remote systems efficiently. Here are 5 examples illustrating how to use it:</p>
-<ol type="a">
-<li>From one directory to a newly created directory:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> /path/to/source/directory/ /path/to/destination/directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will copy the contents of the source directory to a new directory. If the new directory does not exist, it will be created. The -a option is for archive mode, preserving file permissions, ownerships, and timestamps. The -v option is for verbose mode, showing the progress of the transfer.</p>
-<ol start="2" type="a">
-<li>Using pattern matching to copy some files but not others:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> <span class="at">--include</span><span class="op">=</span><span class="st">'*.txt'</span> <span class="at">--exclude</span><span class="op">=</span><span class="st">'*'</span> /path/to/source/directory/ /path/to/destination/directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will copy only text files (with a .txt extension) from the source directory to the destination directory. The –include option is used to specify the pattern for files to be included, and the –exclude option is used to specify the pattern for files to be excluded.</p>
-<ol start="3" type="a">
-<li>From a child directory to a parent directory:</li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> /path/to/parent/source/child/ /path/to/parent/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will copy the contents of the child directory to its parent directory. If there are any conflicts, the files in the parent directory will be updated or overwritten.</p>
-<ol start="4" type="a">
-<li>To a directory on a completely different drive:</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> /path/to/source/directory/ /media/user/different_drive/destination/directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will copy the contents of the source directory to a destination directory on a different drive. Replace /media/user/different_drive with the path of the mounted drive on your system.</p>
-<ol start="5" type="a">
-<li>To a remote folder on a different network:</li>
-</ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> <span class="at">-e</span> <span class="st">"ssh -p PORT"</span> /path/to/source/directory/ user@remote_host:/path/to/remote/directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will copy the contents of the source directory to a remote directory on a different network. Replace PORT with the SSH port number (usually 22), user with the remote user, and remote_host with the remote host’s IP address or hostname. The -e option is used to specify the remote shell to use (ssh in this case) and any additional options for the remote shell (like the port number). Make sure you have SSH access to the remote system.</p>
-<p>Remember that the trailing slashes in the source paths are important. If you include a trailing slash, rsync will copy the contents of the source directory, while if you exclude it, the source directory itself will be copied.</p>
+<section id="custom-python-environments-for-jupyter-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="custom-python-environments-for-jupyter-notebooks">Custom Python Environments for Jupyter Notebooks</h2>
+<p>To simply use the environment go to</p>
+<ul>
+<li><p><a href="https://uf-splab.github.io/open-neuro/content/posts/share-hpg-envs/#getting-started-conda-configuration">Getting Started: ~/.condarc configuration file</a></p></li>
+<li><p>then to <a href="https://uf-splab.github.io/open-neuro/content/posts/share-hpg-envs/#copy-the-template_kernel-folder-to-your-path">Copy the template_kernelfolder to your path</a></p></li>
+</ul>
+<p>For additional info about using Python virtual environments with Conda please go the the UFRC page or the Software Carpentries pages from which these procedures were derived.</p>
+<ul>
+<li><a href="https://help.rc.ufl.edu/doc/Managing_Python_environments_and_Jupyter_kernels">UFRC: Customizing a Shared Python Environment</a></li>
+<li><a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html">Carpentries: Ch.2 Conda Environments</a></li>
+<li><a href="https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#">Conda: Using the .condarc Configuration file</a></li>
+</ul>
+</section>
+<section id="background-from-ufrc-page" class="level2">
+<h2 class="anchored" data-anchor-id="background-from-ufrc-page">Background (from UFRC page)</h2>
+<p>Many projects that use <code>Python</code> code require careful management of the respective Python environments. Rapid changes in package dependencies, package version conflicts, deprecation of APIs (function calls) by individual projects, and obsolescence of system drivers and libraries make it virtually impossible to use an arbitrary set of packages or create one all-encompassing environment that will serve everyone’s needs over long periods of time. The high velocity of changes in the popular ML/DL frameworks and packages and GPU computing exacerbates the problem.</p>
+</section>
+<section id="getting-started-conda-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-conda-configuration">Getting Started: Conda Configuration</h2>
+<section id="the-.condarc-configuration-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-.condarc-configuration-file">The <code>~/.condarc</code> configuration file</h3>
+<p><code>conda</code>‘s behavior is controlled by a configuration file in your home directory called <code>.condarc</code>. The dot at the start of the name means that the file is hidden from ’ls’ file listing command by default. If you have not run <code>conda</code> before, you won’t have this file. Whether the file exists or not, the steps here will help you modify the file to work best on HiPerGator. First load of the <code>conda</code> environment module on HiPerGator will put the current ‘’best practice’’ <code>.condarc</code> into your home directory.</p>
+<p>This path will be found in your home directory (i.e., <code>Home/&lt;myname&gt;</code> is usually symbolized as : <code>~</code>).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Bash bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Home/</span><span class="op">&lt;</span>myname<span class="op">&gt;</span>/.condarc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="conda-package-cache-location" class="level3">
+<h3 class="anchored" data-anchor-id="conda-package-cache-location"><code>conda</code> package cache location</h3>
+<p><code>conda</code> caches (keeps a copy) of all downloaded packages by default in the <code>~/.conda/pkgs</code> directory tree. If you install a lot of packages you may end up filling up your home quota. You can change the default package cache path. To do so, add or change the <code>pkgs_dirs</code> setting in your <code>~/.condarc</code> configuration file e.g.:</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pkgs_dirs</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/share/conda/pkgs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:5%;">
+<p>…</p>
+<p>or</p>
+</div><div class="column" style="width:45%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/$USER/conda/pkgs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Replace <code>akeil</code> or <code>mygroup</code> with your actual group name.</p>
+</section>
+<section id="conda-environment-location" class="level3">
+<h3 class="anchored" data-anchor-id="conda-environment-location"><code>conda</code> environment location</h3>
+<p><code>conda</code> puts all packages installed in a particular environment into a single directory. By default ‘’named’’ <code>conda</code> environments are created in the <code>~/.conda/envs</code> directory tree. They can quickly grow in size and, especially if you have many environments, fill the 40GB home directory quota. For example, the environment we will create in this training is 5.3GB in size. As such, it is important to use ‘’path’’ based (conda create -p PATH) conda environments, which allow you to use any path for a particular environment for example allowing you to keep a project-specific conda environment close to the project data in /blue/ where you group has terrabyte(s) of space.</p>
+<p>You can also change the default path for the ‘’name’’ environments (<code>conda create -n NAME</code>) if you prefer to keep all <code>conda</code> environments in the same directory tree. To do so, add or change the <code>envs_dirs</code> setting in the <code>~/.condarc</code> configuration file e.g.:</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/share/conda/envs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:5%;">
+<p>…</p>
+<p>or</p>
+</div><div class="column" style="width:45%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> /blue/psb4934/$USER/conda/envs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Replace <code>mygroup</code> with your actual group name.</p>
+</section>
+<section id="editing-your-.condarc-file." class="level3 mw-collapsible" style="width:90%; padding: 5px; border: 1px solid gray;">
+<h3 class="anchored" data-anchor-id="editing-your-.condarc-file.">Editing your <code>~/.condarc</code> file.</h3>
+<p>One way to edit your <code>~/.condarc</code> file is to type:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode Bash bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.condarc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If the file is empty, paste in the text below, editing the <code>env_dirs:</code> and <code>pkg_dirs:</code> as below. If the file has contents, update those lines.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your <code>~/.condarc</code> should look something like this when you are done editing (again, replacing <code>group-akeil</code> and <code>USER</code> in the paths with your actual group and username).<br>
+</p>
+</div>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode YAML yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> bioconda </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> defaults </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/envs </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pkgs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/pkgs </span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_activate_base</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_update_conda</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">always_yes</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">show_channel_urls</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<div class="mw-collapsible-content" style="padding: 5px;">
+
+</div></section>
+<section id="use-your-kernel-from-command-line-or-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="use-your-kernel-from-command-line-or-scripts">Use your kernel from command line or scripts</h2>
+<p>Now that we have our environment ready, we can use it from the command line or a script using something like:</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mne</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<p>…<br>
+or<br>
+a path based setting:</p>
+</div><div class="column" style="width:55%;">
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set path to environment </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   pre-pend to PATH variable</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">env_path</span><span class="op">=</span>/blue/psb4934/share/mne_1_x/conda/bin</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$env_path</span>:<span class="va">$PATH</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="setup-a-jupyter-kernel-for-our-environment" class="level2">
+<h2 class="anchored" data-anchor-id="setup-a-jupyter-kernel-for-our-environment">Setup a Jupyter Kernel for our environment</h2>
+<p>Often, we want to use the environment in a Jupyter notebook. To do that, we can create our own Jupyter Kernel.</p>
+<section id="add-the-jupyterlab-package" class="level3">
+<h3 class="anchored" data-anchor-id="add-the-jupyterlab-package">Add the <code>jupyterlab</code> package</h3>
+<p>In order to use an environment in Jupyter, we need to make sure we install the <code>jupyterlab</code> package in the environment:</p>
+<p><code>mamba install jupyterlab</code></p>
+</section>
+<section id="copy-the-template_kernel-folder-to-your-path" class="level3">
+<h3 class="anchored" data-anchor-id="copy-the-template_kernel-folder-to-your-path">Copy the <code>template_kernel</code> folder to your path</h3>
+<p>On HiPerGator, Jupyter looks in two places for kernels when you launch a notebook:</p>
+<ul>
+<li><p><code>/apps/jupyterhub/kernels/</code> for the globally available kernels that all users can use. (Also a good place to look for troubleshooting getting your own kernel going)</p></li>
+<li><p><code>~/.local/share/jupyter/kernels</code> for each user. (Again, your home directory and the <code>.local</code> folder is hidden since it starts with a dot)</p></li>
+</ul>
+<p>Make the <code>~/.local/share/jupyter/kernels</code> directory: <code>mkdir -p ~/.local/share/jupyter/kernels</code></p>
+<p>Copy the <code>/apps/jupyterhub/template_kernel</code> folder into your <code>~/.local/share/jupyter/kernels</code> directory:</p>
+<p><code>cp -r /apps/jupyterhub/template_kernel/ ~/.local/share/jupyter/kernels/hfrl</code></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This also renames the folder in the copy. It is important that the directory names be distinct in both your directory and the global <code>/apps/jupyterhub/kernels/</code> directory.</p>
+</div>
+</div>
+</section>
+<section id="edit-the-template_kernel-files" class="level3">
+<h3 class="anchored" data-anchor-id="edit-the-template_kernel-files">Edit the <code>template_kernel</code> files</h3>
+<p>The <code>template_kernel</code> directory has four files: the <code>run.sh</code> and <code>kernel.json</code> files will need to be edited in a text editor. We will use <code>nano</code> in this tutorial. The <code>logo-64X64.png</code> and <code>logo-32X32.png</code> are icons for your kernel to help visually distinguish it from others. You can upload icons of those dimensions to replace the files, but they need to be named with those names.</p>
+<section id="edit-the-kernel.json-file" class="level4">
+<h4 class="anchored" data-anchor-id="edit-the-kernel.json-file">Edit the <code>kernel.json</code> file</h4>
+<p>Let’s start editing the <code>kernel.json</code> file. As an example, we can use:</p>
+<p><code>nano ~/.local/share/jupyter/kernels/hfrl/kernel.json</code></p>
+<p>The template has most of the information and notes on what needs to be updated. Edit the file to look like:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"MNE v1.x"</span><span class="fu">,</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"~/.local/share/jupyter/kernels/mne_1_x/run.sh"</span><span class="ot">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"-f"</span><span class="ot">,</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{connection_file}"</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a> <span class="ot">]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="edit-the-run.sh-file" class="level4">
+<h4 class="anchored" data-anchor-id="edit-the-run.sh-file">Edit the <code>run.sh</code> file</h4>
+<p>The <code>run.sh</code> file needs the path to the <code>python</code> application that is in our environment. The easiest way to get that is to make sure the environment is activated and run the command: <code>which python</code></p>
+<p>The path it outputs should look something like: <code>/blue/group/share/conda/envs/mne_1_x/bin/python</code></p>
+<p>Copy that path.</p>
+<p>Edit the <code>run.sh</code> file with <code>nano</code>:</p>
+<p><code>nano ~/.local/share/jupyter/kernels/mne_1_x/run.sh</code></p>
+<p>The file should looks like this, <em>but with your path</em>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/bash</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span> /blue/psb4934/share/conda/envs/mne_1_x/bin/python <span class="at">-m</span> ipykernel <span class="st">"</span><span class="va">$@</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you are doing this in a Jupyter session, refresh your page. If not, launch Jupyter.</p>
+<p>Your kernel should be there ready for you to use!</p>
+</section>
+</section>
+</section>
+<section id="working-with-yml-files" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-yml-files">Working with yml files</h2>
+<section id="export-your-environment-to-an-environment.yml-file" class="level3">
+<h3 class="anchored" data-anchor-id="export-your-environment-to-an-environment.yml-file">Export your environment to an <code>environment.yml</code> file</h3>
+<p>Now that you have your environment working, you may want to document its contents and/or share it with others. The <code>environment.yml</code> file defines the environment and can be used to build a new environment with the same setup.</p>
+<p>To export an environment file from an existing environment, run:</p>
+<p><code>conda env export &gt; mne_1_x.yml</code></p>
+<p>You can inspect the contents of this file with <code>cat mne_1_x.yml</code>. This file defines the packages and versions that make up the environment as it is at this point in time. Note that it also includes packages that were installed via <code>pip</code>.</p>
+</section>
+<section id="create-an-environment-from-a-yaml-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-an-environment-from-a-yaml-file">Create an environment from a yaml file</h3>
+<p>If you share the environment yaml file created above with another user, they can create a copy of your environment using the command:</p>
+<p><code>conda env create –file mne_1_x.yml</code></p>
+<p>They may need to edit the last line to change the location to match where they want their environment created.</p>
+</section>
+</section>
+<section id="group-environments" class="level2">
+<h2 class="anchored" data-anchor-id="group-environments">Group environments</h2>
+<p>It is possible to create a shared environment accessed by a group on HiPerGator, storing the environment in, for example, <code>/blue/psb4934/share/conda</code>. In general, this works best if only one user has write access to the environment. All installs should be made by that one user and should be communicated with the other users in the group.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -818,7 +1029,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/posts/understanding_rsync/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/posts/understanding_rsync/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UF-SPLab/open-neuro/edit/main/content/posts/share-hpg-env/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/blob/main/content/posts/share-hpg-env/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UF-SPLab/open-neuro/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
