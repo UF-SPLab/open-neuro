@@ -313,7 +313,8 @@ The file should looks like this, *but with your path*:
 ``` bash
 #!/usr/bin/bash
 
-exec /blue/psb4934/share/conda/envs/mne_1_x/bin/python -m ipykernel "$@"
+exec /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python -m ipykernel "$@"
+
 ```
 
 If you are doing this in a Jupyter session, refresh your page. If not,

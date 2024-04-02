@@ -176,4 +176,13 @@ A config file controls main pipeline parameters. CLI runs all (or part with an o
 - [UF Research Computing Documentation](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
 
 
+Correct address for python env : 
+
+`#!/usr/bin/bash
+exec /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python -m ipykernel "$@"`
+
+Shared Conda environments on HiPerGator:
+
+https://uf-splab.github.io/open-neuro/content/posts/share-hpg-env/
+
 
