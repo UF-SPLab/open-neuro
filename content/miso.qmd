@@ -111,6 +111,64 @@ graph LR;
 
 
 
+#### Prepare your dataset
+
+MNE-BIDS-Pipeline only works with BIDS-formatted raw data.
+
+![](https://mne.tools/mne-bids/assets/MNE-BIDS.png)
+
+
+
+#### Create a configuration file
+
+All parameters of the pipeline are controlled via a configuration file. Create a template:
+
+`mne_bids_pipeline --create-config=/path/to/custom_config.py`
+
+```{python, eval=FALSE, echo=TRUE}
+
+import numpy as np
+
+study_name = "ds000247"
+bids_root = f"~/mne_data/{study_name}"
+deriv_root = f"~/mne_data/derivatives/mne-bids-pipeline/{study_name}"
+
+subjects = ["0002"]
+sessions = ["01"]
+task = "rest"
+task_is_rest = True
+
+crop_runs = (0, 100)  # to speed up computations
+
+ch_types = ["meg"]
+spatial_filter = "ssp"
+
+l_freq = 1.0
+h_freq = 40.0
+
+rest_epochs_duration = 10
+rest_epochs_overlap = 0
+
+epochs_tmin = 0
+baseline = None
+
+```
+
+-   [from example ds000247](https://mne.tools/mne-bids-pipeline/stable/examples/ds000247.html#configuration)
+
+#### Run the pipeline
+
+A config file controls main pipeline parameters. CLI runs all (or part with an override).
+
+-   Re-running a specific stage of the pipeline for additional data
+    -   `mne_bids_pipeline --config=custom_config.py --steps=preprocessing --subjects=0051,0052,0053`
+-   Running the pipeline with different parameters for a specific stage (e.g., changing filter cutoffs, interpolating bad channels, etc.)
+    -   `mne_bids_pipeline --config=custom_config.py --steps=preprocessing/ica`
+-   Running the pipeline with different parameters for a specific subject or session
+    -   `mne_bids_pipeline --config=custom_config.py --steps=preprocessing/ica --session=cond --subjects=0051,0052,0053`
+
+#### Visualize the results (HTML reports)
+
 
 
 ### Finding things on HiPerGator
