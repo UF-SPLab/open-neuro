@@ -44,12 +44,12 @@ Most of the DeepLabCut (DLC) tutorials are offered with Google Colab a cloud com
 ##### A Worshop that has everything you need to use DLC
 
 [DeepLabCut Worshop Materials](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/main/DLCcourse.md#the-basics-of-computing-in-python-terminal-and-overview-of-dlc)
-  
----
-## HiPerGator Links
+
+#### HiPerGator Links
 - [UF Research Computing](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
 - [UFRC Training](https://help.rc.ufl.edu/doc/Training)
----
+
+
 ### Some links for Getting started
 
 - [YouTube video on using DeepLabCut GUI (~3 min)](https://www.youtube.com/watch?v=KcXogR-p5Ak)
@@ -62,7 +62,7 @@ Most of the DeepLabCut (DLC) tutorials are offered with Google Colab a cloud com
 ### Video Behavior Analysis Workflow
 
 
-#### Video Behavior Analysis Workflow {.smaller}
+#### Video Behavior Analysis Workflow
 
 ```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=3}
 
