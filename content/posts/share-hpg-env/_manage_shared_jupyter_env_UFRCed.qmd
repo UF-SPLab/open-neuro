@@ -96,8 +96,8 @@ or
 :::
 :::
 
-Replace <code>akeil</code> or <code>mygroup</code> with your actual
-group name.
+Replace <code>psb4934</code> or <code>mygroup</code> with your actual
+group name, if it's incorrect here.
 
 ### <code>conda</code> environment location
 
@@ -181,6 +181,8 @@ show_channel_urls: false
 
 ## Use your kernel from command line or scripts
 
+
+
 Now that we have our environment ready, we can use it from the command
 line or a script using something like:
 
@@ -213,6 +215,10 @@ python amazing_script.py
 ```
 :::
 :::
+
+If you are still not certain why the environment is not working, you can type the following on the command line `bash conda info --envs` to see the list of environments and their paths. If you don't see `/blue/psb4934/share/conda/mne_1_6_0/mne` in that list of environments then something didn't happen according to plan. If you are still having trouble, please ask for help.
+
+
 
 ## Setup a Jupyter Kernel for our environment
 

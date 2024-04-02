@@ -31,6 +31,70 @@ ASMR (Autonomous sensory meridian response) is a tingling sensation that typical
 - Parker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., ... & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. [https://doi.org/10.1016/j.schres.2019.04.014](https://doi.org/10.1016/j.schres.2019.04.014)
 
 
+### MNE-Python Workflow (Schematic)
+
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE}
+
+%%{init: {'theme':'forest'}}%%
+
+graph LR;
+        subgraph Sensor-level-analysis
+
+       A[Decode time-by-time </br>  using a 'sliding' estimator] --> B[Time-frequency </br> decomposition] 
+       B --> C[Decoding </br> based on </br> common spatial patterns] 
+       C --> D[Noise covariance </br> estimation] 
+       D --> E[Group average </br> at the </br> sensor level] 
+   end
+  
+    subgraph Preprocessing
+
+       l1[Assess </br> channel-wise </br> data quality] --> l2[Estimate </br> head positions] 
+       l2 --> l3[Apply low- and </br> high-pass filters] 
+       l3 --> l4[Temporal regression </br> for artifact removal]
+       l4 --> l5a[Fit ICA] 
+       l5a --> l6a[Find ICA </br> artifacts] 
+       l4 --> l5b[Extract epochs] 
+       l5b --> l7[Apply ICA] 
+       l6a --> l7 --> l8[Remove epochs </br> based on  </br> PTP amplitudes]  
+       l5b --> l6b[Apply SSP] 
+       l4 --> l5c[Compute SSP] 
+       l5c --> l6b[Apply SSP] 
+       l6b --> l8[Remove epochs </br> based on </br> PTP amplitudes] 
+       l8 --> l9[Extract </br> evoked data for </br> each condition] 
+       l9 --> l10[Decode pairs of </br>  conditions based on </br> entire epochs] 
+    end
+    
+
+   
+   %%l0[Raw Data] --> l1
+   %%E --> F[Output </br> Statistical </br> Analysis Pipeline]    
+   
+   classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;
+   classDef orange fill:#f96,stroke:#333,stroke-width:1px;
+   classDef white fill:#fff,stroke:#333,stroke-width:1px;
+   classDef sq stroke:#f66,stroke-width:1px;
+   classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;
+   classDef red fill:#D32737,stroke:#FFF,stroke-width:1.5px;
+     
+   class Preprocessing,Sensor-level-analysis white
+
+```
+
+::: columns
+::: {.column width="50%"}
+
+<https://github.com/mne-tools>
+
+::: 
+::: {.column width="50%"}
+
+<https://mne.tools/stable/index.html>
+
+
+:::
+:::
+
+
 ### MNE-Python
 
 - [MNE-Python](https://mne.tools/stable/index.html) is a Python package for MEG and EEG data analysis.
@@ -44,4 +108,14 @@ ASMR (Autonomous sensory meridian response) is a tingling sensation that typical
 ### MNE-BIDS-Pipeline   
 
 - [MNE-BIDS-Pipeline](https://mne.tools/mne-bids-pipeline/stable/index.html) is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.
+
+
+
+
+
+### Finding things on HiPerGator
+
+- [UF Research Computing Documentation](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+
+
 

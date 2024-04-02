@@ -8,14 +8,170 @@ title: MPFC & Ketamine Project
 
 ### DeepLabCut
 
-- Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7), 2152-2176. [https://doi.org/10.1038/s41596-019-0176-0](https://static1.squarespace.com/static/57f6d51c9f74566f55ecf271/t/5eab5ff7999bf94756b27481/1588289532243/NathMathis2019.pdf)
-- Mathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. Neuron, 108(1), 44-65. [https://doi.org/10.1016/j.neuron.2020.09.017](https://doi.org/10.1016/j.neuron.2020.09.017)
+- Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. *Nature protocols*, 14(7), 2152-2176. [https://doi.org/10.1038/s41596-019-0176-0](https://static1.squarespace.com/static/57f6d51c9f74566f55ecf271/t/5eab5ff7999bf94756b27481/1588289532243/NathMathis2019.pdf)
 
-#### Video links
+- Mathis, A., Schneider, S., Lauer, J., & Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. *Neuron*, 108(1), 44-65. <https://doi.org/10.1016/j.neuron.2020.09.017>
+
+   - [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut)
+
+### DLCAnalyzer
+
+- Sturman, O, von Ziegler, L, Schläppi, C et al.(2020). Deep learning-based behavioral analysis reaches human accuracy and is capable of outperforming commercial solutions. *Neuropsychopharmacology* 45, 1942–52  <https://doi.org/10.1038/s41386-020-0776-y>
+
+   - [Data from DLC (Python):wrangle/plot (R) ](https://github.com/ETHZ-INS/DLCAnalyzer)
+
+### ETHZ-INS/DLCAnalyzer
+
+##### Video links
 
 - [DLC Course Links](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/master/DLCcourse.md)
 - [Introduction to DeepLabCut for Non-Programmers](https://youtu.be/KO1iQPQPMzw?si=kKy67FCovCLlh0eR)
 - [Annotation & Labeling keypoints with napari-deeplabcut](https://www.youtube.com/watch?v=hsA9IB5r73E)
+
+##### Test out DLC (Basic)
+
+- [https://www.mackenziemathislab.org/dlc-modelzoo](https://www.mackenziemathislab.org/dlc-modelzoo)
+- [Single-frame analysis.](https://huggingface.co/spaces/DeepLabCut/DeepLabCutModelZoo-SuperAnimals)
+    -  This just works. It's a small-scale version of what happens on a large-scale with all the 2d frames from your videos.  
+
+##### DLC Examples on Google Colab
+
+Most of the DeepLabCut (DLC) tutorials are offered with Google Colab a cloud computing environment with all the software dependencies pre-installed. It really is the best first step if you want to start to understand how DLC works and how to customize it for your needs. 
+- [Click on the "Open in Colab" link on this page](https://github.com/DeepLabCut/DeepLabCut/blob/main/examples/COLAB/COLAB_DEMO_mouse_openfield.ipynb)
+- [Video on DLC on Google Colab](https://www.youtube.com/watch?v=qJGs8nxx80A)
+- [Colab instructions on how to use your own videos](https://github.com/DeepLabCut/DeepLabCut/blob/main/examples/COLAB/COLAB_YOURDATA_TrainNetwork_VideoAnalysis.ipynb)
+
+##### A Worshop that has everything you need to use DLC
+
+[DeepLabCut Worshop Materials](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/main/DLCcourse.md#the-basics-of-computing-in-python-terminal-and-overview-of-dlc)
+  
+---
+## HiPerGator Links
+- [UF Research Computing](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+- [UFRC Training](https://help.rc.ufl.edu/doc/Training)
+---
+### Some links for Getting started
+
+- [YouTube video on using DeepLabCut GUI (~3 min)](https://www.youtube.com/watch?v=KcXogR-p5Ak)
+- Installing Deeplabcut [https://deeplabcut.github.io/DeepLabCut/docs/installation.html](https://deeplabcut.github.io/DeepLabCut/docs/installation.html)
+- DLC User Guide [https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html](https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html)
+- Napari GUI [https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html](https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html)
+- Slightly outdated workshop [https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials)
+
+
+### Video Behavior Analysis Workflow
+
+
+#### Video Behavior Analysis Workflow {.smaller}
+
+```{mermaid, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=3}
+
+%%{init: {'theme':'forest'}}%%
+
+graph LR
+
+    subgraph Analysis
+       s6 -->  s7{Inferential Stats}
+    end
+ 
+    subgraph ETHZ-INS/DLCAnalyzer
+        s3 --> s4[Data Wrangling </br> Graphing]
+        s5 --> s6[Data Wrangling]
+        s6 --> s4
+        
+        subgraph dlca[</tab> </br> Derivative Variables / Data Visualizations]
+          s4 --> s5[unsupervised</br> classification</br> and clustering]
+        end
+    end
+
+    subgraph DeepLabCut
+
+        subgraph Training
+            s1[add keypoints]-->s2[run training]
+            s2 --> s2a[analyze</br> training]
+            s2a -->s2
+
+        end
+
+        subgraph Decoding
+            s2a --> s3a[add</br> videos] 
+            
+        end
+        
+         
+        s3a --> s3[import data</br>transform]
+       
+    end
+    
+    subgraph Read-in-Data[Raw Data]
+        s0[import video] --> s1
+    end
+    
+ %% Notice that no text in shape are added here instead that is appended further down
+    
+
+    %% Comments after double percent signs
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:1px;
+     classDef white fill:#fff,stroke:#333,stroke-width:1px;
+     classDef sq stroke:#f66,stroke-width:1px;
+     classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;
+     classDef red fill:#D32737,stroke:#FFF,stroke-width:1.5px;
+     class sq,Analysis green
+     class ETHZ-INS/DLCAnalyzer orange
+     class Training,dlca,s0 white
+     class DeepLabCut white
+     class Decoding blue
+     class Read-in-Data red
+     
+```
+
+
+::: columns
+::: {.column width="50%"}
+
+![](DLC_youtube.png){width=50%}
+[on Github](https://github.com/DeepLabCut/DeepLabCut)/
+[Workshop](https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials/blob/main/DLCcourse.md>)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+
+- Unsupervised Clustering: [(R)](https://github.com/ETHZ-INS/BehaviorFlow)
+/ [(R Shiny)](https://github.com/ETHZ-INS/pupillometry)
+
+
+
+:::
+:::
+
+
+
+
+
+
+
+
+#### 0. Data Collection
+
+#### 1. Data Preprocessing
+
+- [ X ] *Digitize behavior videos from analog*
+- [ X ] *Cut, Segment, Name: Subject & Session*
+- [ X ] *Extract behavior timestamp range*
+- [ X ] *Select behavior videos for DLC training*
+
+#### 2. DeepLabCut Training
+
+
 
 ### NEO/MNE e-phys
 
