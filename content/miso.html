@@ -70,6 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -165,9 +168,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#related-concept-but-not-the-same-phenomenon" id="toc-related-concept-but-not-the-same-phenomenon" class="nav-link" data-scroll-target="#related-concept-but-not-the-same-phenomenon">Related concept (but not the same phenomenon)</a></li>
   <li><a href="#auditory-steady-state-response" id="toc-auditory-steady-state-response" class="nav-link" data-scroll-target="#auditory-steady-state-response">Auditory Steady-State Response</a></li>
+  <li><a href="#mne-python-workflow-schematic" id="toc-mne-python-workflow-schematic" class="nav-link" data-scroll-target="#mne-python-workflow-schematic">MNE-Python Workflow (Schematic)</a></li>
   <li><a href="#mne-python" id="toc-mne-python" class="nav-link" data-scroll-target="#mne-python">MNE-Python</a></li>
   <li><a href="#mne-bids" id="toc-mne-bids" class="nav-link" data-scroll-target="#mne-bids">MNE-BIDS</a></li>
   <li><a href="#mne-bids-pipeline" id="toc-mne-bids-pipeline" class="nav-link" data-scroll-target="#mne-bids-pipeline">MNE-BIDS-Pipeline</a></li>
+  <li><a href="#finding-things-on-hipergator" id="toc-finding-things-on-hipergator" class="nav-link" data-scroll-target="#finding-things-on-hipergator">Finding things on HiPerGator</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -220,6 +225,70 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Parker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., … &amp; Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. <a href="https://doi.org/10.1016/j.schres.2019.04.014">https://doi.org/10.1016/j.schres.2019.04.014</a></p></li>
 </ul>
 </section>
+<section id="mne-python-workflow-schematic" class="level3">
+<h3 class="anchored" data-anchor-id="mne-python-workflow-schematic">MNE-Python Workflow (Schematic)</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'theme':'forest'}}%%
+
+graph LR;
+        subgraph Sensor-level-analysis
+
+       A[Decode time-by-time &lt;/br&gt;  using a 'sliding' estimator] --&gt; B[Time-frequency &lt;/br&gt; decomposition] 
+       B --&gt; C[Decoding &lt;/br&gt; based on &lt;/br&gt; common spatial patterns] 
+       C --&gt; D[Noise covariance &lt;/br&gt; estimation] 
+       D --&gt; E[Group average &lt;/br&gt; at the &lt;/br&gt; sensor level] 
+   end
+  
+    subgraph Preprocessing
+
+       l1[Assess &lt;/br&gt; channel-wise &lt;/br&gt; data quality] --&gt; l2[Estimate &lt;/br&gt; head positions] 
+       l2 --&gt; l3[Apply low- and &lt;/br&gt; high-pass filters] 
+       l3 --&gt; l4[Temporal regression &lt;/br&gt; for artifact removal]
+       l4 --&gt; l5a[Fit ICA] 
+       l5a --&gt; l6a[Find ICA &lt;/br&gt; artifacts] 
+       l4 --&gt; l5b[Extract epochs] 
+       l5b --&gt; l7[Apply ICA] 
+       l6a --&gt; l7 --&gt; l8[Remove epochs &lt;/br&gt; based on  &lt;/br&gt; PTP amplitudes]  
+       l5b --&gt; l6b[Apply SSP] 
+       l4 --&gt; l5c[Compute SSP] 
+       l5c --&gt; l6b[Apply SSP] 
+       l6b --&gt; l8[Remove epochs &lt;/br&gt; based on &lt;/br&gt; PTP amplitudes] 
+       l8 --&gt; l9[Extract &lt;/br&gt; evoked data for &lt;/br&gt; each condition] 
+       l9 --&gt; l10[Decode pairs of &lt;/br&gt;  conditions based on &lt;/br&gt; entire epochs] 
+    end
+    
+
+   
+   %%l0[Raw Data] --&gt; l1
+   %%E --&gt; F[Output &lt;/br&gt; Statistical &lt;/br&gt; Analysis Pipeline]    
+   
+   classDef green fill:#9f6,stroke:#333,stroke-width:0.5px;
+   classDef orange fill:#f96,stroke:#333,stroke-width:1px;
+   classDef white fill:#fff,stroke:#333,stroke-width:1px;
+   classDef sq stroke:#f66,stroke-width:1px;
+   classDef blue fill:#6699cc,stroke:#333,stroke-width:1px;
+   classDef red fill:#D32737,stroke:#FFF,stroke-width:1.5px;
+     
+   class Preprocessing,Sensor-level-analysis white
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://github.com/mne-tools" class="uri">https://github.com/mne-tools</a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="https://mne.tools/stable/index.html" class="uri">https://mne.tools/stable/index.html</a></p>
+</div>
+</div>
+</section>
 <section id="mne-python" class="level3">
 <h3 class="anchored" data-anchor-id="mne-python">MNE-Python</h3>
 <ul>
@@ -237,6 +306,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="mne-bids-pipeline">MNE-BIDS-Pipeline</h3>
 <ul>
 <li><a href="https://mne.tools/mne-bids-pipeline/stable/index.html">MNE-BIDS-Pipeline</a> is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.</li>
+</ul>
+</section>
+<section id="finding-things-on-hipergator" class="level3">
+<h3 class="anchored" data-anchor-id="finding-things-on-hipergator">Finding things on HiPerGator</h3>
+<ul>
+<li><a href="https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation">UF Research Computing Documentation</a></li>
 </ul>
 
 
