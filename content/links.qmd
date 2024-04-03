@@ -71,94 +71,94 @@ Starting points for learning about accessibility
 
 DataCamp Cheasheets:
 
-https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines
+<https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines>
 
-https://www.datacamp.com/cheatSheet/bash-and-zsh-shell-terminal-basics-cheat-sheet 
+<https://www.datacamp.com/cheatSheet/bash-and-zsh-shell-terminal-basics-cheat-sheet> 
 
-https://www.datacamp.com/cheatSheet/quarto-cheat-sheet-previously-known-as-r-markdown
+<https://www.datacamp.com/cheatSheet/quarto-cheat-sheet-previously-known-as-r-markdown>
 
-https://www.datacamp.com/cheatSheet/the-generative-ai-tools-landscape
+<https://www.datacamp.com/cheatSheet/the-generative-ai-tools-landscape>
 
-https://www.datacamp.com/cheatSheet/reshaping-data-with-pandas-in-python. 
+<https://www.datacamp.com/cheatSheet/reshaping-data-with-pandas-in-python.> 
 
-https://www.datacamp.com/cheatSheet/text-data-in-python-cheat-sheet 
-
-
-https://www.datacamp.com/cheatSheet/working-with-dates-and-times-in-python-cheat-sheet
-
-https://www.datacamp.com/cheatSheet/python-seaborn-cheat-sheet
-
-https://www.datacamp.com/cheatSheet/scipy-cheat-sheet-linear-algebra-in-python
-
-https://www.datacamp.com/cheatSheet/pandas-cheat-sheet-data-wrangling-in-python
-
-https://www.datacamp.com/cheatSheet/jupyter-notebook-cheat-sheet
-
-https://www.datacamp.com/cheatSheet/matplotlib-cheat-sheet-plotting-in-python
-
-https://www.datacamp.com/cheatSheet/getting-started-with-python-cheat-sheet
-
-https://www.datacamp.com/tutorial/a-beginners-guide-to-chatgpt-api
-
-https://www.datacamp.com/tutorial/r-markdown-tutorial
-
-https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning
-
-https://www.datacamp.com/tutorial/what-is-hugging-face
-
-https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines
-
-https://www.datacamp.com/tutorial/introduction-to-data-pipelines-for-data-professionals
-
-https://www.datacamp.com/tutorial/a-data-scientists-guide-to-signal-processing
-
-https://www.datacamp.com/tutorial/seeing-like-a-machine-a-beginners-guide-to-image-analysis-in-machine-learning
-
-https://www.datacamp.com/tutorial/introduction-to-convolutional-neural-networks-cnns
-
-https://www.datacamp.com/tutorial/pytorch-vs-tensorflow-vs-keras
+<https://www.datacamp.com/cheatSheet/text-data-in-python-cheat-sheet> 
 
 
+<https://www.datacamp.com/cheatSheet/working-with-dates-and-times-in-python-cheat-sheet>
 
-https://www.datacamp.com/tutorial/the-cross-entropy-loss-function-in-machine-learning
+<https://www.datacamp.com/cheatSheet/python-seaborn-cheat-sheet>
 
-https://viso.ai/deep-learning/pytorchvideo-video-understanding/
+<https://www.datacamp.com/cheatSheet/scipy-cheat-sheet-linear-algebra-in-python>
 
-https://www.simplilearn.com/best-ai-tools-for-video-editing-article
+<https://www.datacamp.com/cheatSheet/pandas-cheat-sheet-data-wrangling-in-python>
+
+<https://www.datacamp.com/cheatSheet/jupyter-notebook-cheat-sheet>
+
+<https://www.datacamp.com/cheatSheet/matplotlib-cheat-sheet-plotting-in-python>
+
+<https://www.datacamp.com/cheatSheet/getting-started-with-python-cheat-sheet>
+
+<https://www.datacamp.com/tutorial/a-beginners-guide-to-chatgpt-api>
+
+<https://www.datacamp.com/tutorial/r-markdown-tutorial>
+
+<https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning>
+
+<https://www.datacamp.com/tutorial/what-is-hugging-face>
+
+<https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines>
+
+<https://www.datacamp.com/tutorial/introduction-to-data-pipelines-for-data-professionals>
+
+<https://www.datacamp.com/tutorial/a-data-scientists-guide-to-signal-processing>
+
+<https://www.datacamp.com/tutorial/seeing-like-a-machine-a-beginners-guide-to-image-analysis-in-machine-learning>
+
+<https://www.datacamp.com/tutorial/introduction-to-convolutional-neural-networks-cnns>
+
+<https://www.datacamp.com/tutorial/pytorch-vs-tensorflow-vs-keras>
+
+
+
+<https://www.datacamp.com/tutorial/the-cross-entropy-loss-function-in-machine-learning>
+
+<https://viso.ai/deep-learning/pytorchvideo-video-understanding/>
+
+<https://www.simplilearn.com/best-ai-tools-for-video-editing-article>
 
 
 
 AmadeusGPT: a natural language interface for interactive animal behavioral analysis
-https://neurips.cc/media/PosterPDFs/NeurIPS%202023/72610.png?t=1701780014.8377924
+<https://neurips.cc/media/PosterPDFs/NeurIPS%202023/72610.png?t=1701780014.8377924>
  
 
-https://pytorch.org/audio/stable/index.html
+<https://pytorch.org/audio/stable/index.html>
 
-https://pytorch.org/vision/stable/index.html
+<https://pytorch.org/vision/stable/index.html>
 
 
 Torchvision
-https://paperswithcode.com/lib/torchvision#:~:text=torchvision-,The%20torchvision%20library%20consists%20of%20popular%20datasets%2C%20model%20architectures%2C%20and,video%20classification%20and%20semantic%20segmentation.
+<https://paperswithcode.com/lib/torchvision#:~:text=torchvision-,The%20torchvision%20library%20consists%20of%20popular%20datasets%2C%20model%20architectures%2C%20and,video%20classification%20and%20semantic%20segmentation.>
 
 State of the Art
-https://paperswithcode.com/sota
+<https://paperswithcode.com/sota>
 
-https://paperswithcode.com/libraries
+<https://paperswithcode.com/libraries>
 
-https://paperswithcode.com/methods
+<https://paperswithcode.com/methods>
 
 
-https://github.com/huggingface/transformers
+<https://github.com/huggingface/transformers>
 
-https://huggingface.co/docs/transformers/index
+<https://huggingface.co/docs/transformers/index>
 
 
 Cran-R Task Views
 
 R Task Views: Tracking Data 
-https://cran.r-project.org/web/views/Tracking.html 
+<https://cran.r-project.org/web/views/Tracking.html> 
 Carpentries
-https://datacarpentry.org/rr-version-control/02-git-in-github/index.html
+<https://datacarpentry.org/rr-version-control/02-git-in-github/index.html>
 
 
 
@@ -167,10 +167,10 @@ Ten Simple Rules Collection
 
 
 
-https://www.reddit.com/r/bioinformatics/comments/12puflj/plos_computational_biology_ten_simple_rules_papers/?rdt=36960
+<https://www.reddit.com/r/bioinformatics/comments/12puflj/plos_computational_biology_ten_simple_rules_papers/?rdt=36960>
 
 PLOS Computational Biology: filter “undergraduate”
-https://journals.plos.org/ploscompbiol/search?filterJournals=PLoSCompBiol&filterSubjects=Undergraduates&q=
+<https://journals.plos.org/ploscompbiol/search?filterJournals=PLoSCompBiol&filterSubjects=Undergraduates&q=>
 
 PLOS Computational Biology: filter “graduate”
 
@@ -179,7 +179,7 @@ Historical Research
 
 Computational Historical Thinking: With Applications in R
 Lincoln A. Mullen
-https://dh-r.lincolnmullen.com/
+<https://dh-r.lincolnmullen.com/>
 
 
 
