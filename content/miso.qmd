@@ -1,5 +1,7 @@
 ---
 title: Misophonia Project
+execute:
+  freeze: true 
 ---
 
 # Overview
