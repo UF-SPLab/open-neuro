@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -307,12 +341,75 @@ graph LR;
 <ul>
 <li><a href="https://mne.tools/mne-bids-pipeline/stable/index.html">MNE-BIDS-Pipeline</a> is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.</li>
 </ul>
+<section id="prepare-your-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="prepare-your-dataset">Prepare your dataset</h4>
+<p>MNE-BIDS-Pipeline only works with BIDS-formatted raw data.</p>
+<p><img src="https://mne.tools/mne-bids/assets/MNE-BIDS.png" class="img-fluid"></p>
+</section>
+<section id="create-a-configuration-file" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-configuration-file">Create a configuration file</h4>
+<p>All parameters of the pipeline are controlled via a configuration file. Create a template:</p>
+<p><code>mne_bids_pipeline --create-config=/path/to/custom_config.py</code></p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>study_name <span class="op">=</span> <span class="st">"ds000247"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>bids_root <span class="op">=</span> <span class="ss">f"~/mne_data/</span><span class="sc">{</span>study_name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>deriv_root <span class="op">=</span> <span class="ss">f"~/mne_data/derivatives/mne-bids-pipeline/</span><span class="sc">{</span>study_name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>subjects <span class="op">=</span> [<span class="st">"0002"</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sessions <span class="op">=</span> [<span class="st">"01"</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> <span class="st">"rest"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>task_is_rest <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>crop_runs <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">100</span>)  <span class="co"># to speed up computations</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ch_types <span class="op">=</span> [<span class="st">"meg"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>spatial_filter <span class="op">=</span> <span class="st">"ssp"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>l_freq <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>h_freq <span class="op">=</span> <span class="fl">40.0</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>rest_epochs_duration <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>rest_epochs_overlap <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>epochs_tmin <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>baseline <span class="op">=</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><a href="https://mne.tools/mne-bids-pipeline/stable/examples/ds000247.html#configuration">from example ds000247</a></li>
+</ul>
+</section>
+<section id="run-the-pipeline" class="level4">
+<h4 class="anchored" data-anchor-id="run-the-pipeline">Run the pipeline</h4>
+<p>A config file controls main pipeline parameters. CLI runs all (or part with an override).</p>
+<ul>
+<li>Re-running a specific stage of the pipeline for additional data
+<ul>
+<li><code>mne_bids_pipeline --config=custom_config.py --steps=preprocessing --subjects=0051,0052,0053</code></li>
+</ul></li>
+<li>Running the pipeline with different parameters for a specific stage (e.g., changing filter cutoffs, interpolating bad channels, etc.)
+<ul>
+<li><code>mne_bids_pipeline --config=custom_config.py --steps=preprocessing/ica</code></li>
+</ul></li>
+<li>Running the pipeline with different parameters for a specific subject or session
+<ul>
+<li><code>mne_bids_pipeline --config=custom_config.py --steps=preprocessing/ica --session=cond --subjects=0051,0052,0053</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="visualize-the-results-html-reports" class="level4">
+<h4 class="anchored" data-anchor-id="visualize-the-results-html-reports">Visualize the results (HTML reports)</h4>
+</section>
 </section>
 <section id="finding-things-on-hipergator" class="level3">
 <h3 class="anchored" data-anchor-id="finding-things-on-hipergator">Finding things on HiPerGator</h3>
 <ul>
 <li><a href="https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation">UF Research Computing Documentation</a></li>
 </ul>
+<p>Correct address for python env :</p>
+<p><code>#!/usr/bin/bash exec /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python -m ipykernel "$@"</code></p>
+<p><a href="https://uf-splab.github.io/open-neuro/content/posts/share-hpg-env/">Shared Conda environments on HiPerGator</a></p>
 
 
 </section>
