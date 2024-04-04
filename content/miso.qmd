@@ -10,13 +10,15 @@ execute:
 
 Also, known as selective sound sensitivity syndrome or sound-rage, misophonia is a disorder in which certain sounds trigger emotional or physiological responses that some might perceive as unreasonable given the circumstance. Those who have misophonia might describe it as when a sound “drives you crazy.” Their reactions can range from anger and annoyance to panic and the need to flee.
 
-- [Misophonia on Wikipedia](https://en.wikipedia.org/wiki/Misophonia)
+-   [Misophonia on Wikipedia](https://en.wikipedia.org/wiki/Misophonia)
 
-- Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., ... & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. [https://doi.org/10.3389/fnins.2022.899476](https://doi.org/10.3389/fnins.2022.899476)
-- Farkas, A. H., Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., ... & Keil, A. (2023). Auditory Aversive Generalization Learning Prompts Threat-Specific Changes in Alpha-Band Activity. bioRxiv, 2023-12. [https://doi.org/10.1101/2023.12.04.569971](https://doi.org/10.1101/2023.12.04.569971)
-- **Accepted Pre-registration**: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.[https://doi.org/10.17605/OSF.IO/E26AD](https://doi.org/10.17605/OSF.IO/E26AD)
+-   Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., Traiser, C., ... & Keil, A. (2022). The Relationship Between Self-Reported Misophonia Symptoms and Auditory Aversive Generalization Leaning: A Preliminary Report. Frontiers in Neuroscience, 16, 899476. <https://doi.org/10.3389/fnins.2022.899476>
 
-- [Misophonia: Zotero Refs](https://www.zotero.org/groups/2418504/uf-ephys-misophonia/library)
+-   Farkas, A. H., Ward, R. T., Gilbert, F. E., Pouliot, J., Chiasson, P., McIlvanie, S., ... & Keil, A. (2023). Auditory Aversive Generalization Learning Prompts Threat-Specific Changes in Alpha-Band Activity. bioRxiv, 2023-12. <https://doi.org/10.1101/2023.12.04.569971>
+
+-   **Accepted Pre-registration**: Ward, R., Keil, A., Pouliot, J., Mears, R. P., Chiasson, P., & McIlvanie, S. (2021, September 27). Psychophysiological mechanisms underlying aversive conditioning in Misophonia.<https://doi.org/10.17605/OSF.IO/E26AD>
+
+-   [Misophonia: Zotero Refs](https://www.zotero.org/groups/2418504/uf-ephys-misophonia/library)
 
 ### Related concept (but not the same phenomenon)
 
@@ -24,14 +26,13 @@ ASMR (Autonomous sensory meridian response) is a tingling sensation that typical
 
 ### Auditory Steady-State Response
 
-- Brugge, J. F., Nourski, K. V., Oya, H., Reale, R. A., Kawasaki, H., Steinschneider, M., & Howard III, M. A. (2009). Coding of repetitive transients by auditory cortex on Heschl's gyrus. Journal of neurophysiology, 102(4), 2358-2374. [https://doi.org/10.1152/jn.91346.2008](https://doi.org/10.1152/jn.91346.2008)
+-   Brugge, J. F., Nourski, K. V., Oya, H., Reale, R. A., Kawasaki, H., Steinschneider, M., & Howard III, M. A. (2009). Coding of repetitive transients by auditory cortex on Heschl's gyrus. Journal of neurophysiology, 102(4), 2358-2374. <https://doi.org/10.1152/jn.91346.2008>
 
-- Popov, T., Oostenveld, R., & Schoffelen, J. M. (2018). FieldTrip made easy: an analysis protocol for group analysis of the auditory steady state brain response in time, frequency, and space. Frontiers in neuroscience, 12, 711.[https://doi.org/10.3389/fnins.2018.00711](https://doi.org/10.3389/fnins.2018.00711)
+-   Popov, T., Oostenveld, R., & Schoffelen, J. M. (2018). FieldTrip made easy: an analysis protocol for group analysis of the auditory steady state brain response in time, frequency, and space. Frontiers in neuroscience, 12, 711.<https://doi.org/10.3389/fnins.2018.00711>
 
-- Pantev, C., Roberts, L. E., Elbert, T., Roβ, B., & Wienbruch, C. (1996). Tonotopic organization of the sources of human auditory steady-state responses. Hearing research, 101(1-2), 62-74.[]()
+-   Pantev, C., Roberts, L. E., Elbert, T., Roβ, B., & Wienbruch, C. (1996). Tonotopic organization of the sources of human auditory steady-state responses. Hearing research, 101(1-2), 62-74.[ ]()
 
-- Parker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., ... & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. [https://doi.org/10.1016/j.schres.2019.04.014](https://doi.org/10.1016/j.schres.2019.04.014)
-
+-   Parker, D. A., Hamm, J. P., McDowell, J. E., Keedy, S. K., Gershon, E. S., Ivleva, E. I., ... & Clementz, B. A. (2019). Auditory steady-state EEG response across the schizo-bipolar spectrum. Schizophrenia research, 209, 218-226. <https://doi.org/10.1016/j.schres.2019.04.014>
 
 ### MNE-Python Workflow (Schematic)
 
@@ -84,42 +85,33 @@ graph LR;
 
 ::: columns
 ::: {.column width="50%"}
-
 <https://github.com/mne-tools>
+:::
 
-::: 
 ::: {.column width="50%"}
-
 <https://mne.tools/stable/index.html>
-
-
 :::
 :::
-
 
 ### MNE-Python
 
-- [MNE-Python](https://mne.tools/stable/index.html) is a Python package for MEG and EEG data analysis.
+-   [MNE-Python](https://mne.tools/stable/index.html) is a Python package for MEG and EEG data analysis.
 
 ### MNE-BIDS
 
-- [MNE-BIDS](https://mne.tools/mne-bids/stable/index.html) is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.
+-   [MNE-BIDS](https://mne.tools/mne-bids/stable/index.html) is a Python package for converting data from the Brain Imaging Data Structure (BIDS) format to MNE-Python format.
 
-- [BIDS](https://bids.neuroimaging.io/) (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.
+-   [BIDS](https://bids.neuroimaging.io/) (Brain Imaging Data Structure) A simple and intuitive way to organize and describe your neuroimaging and behavioral data.
 
-### MNE-BIDS-Pipeline   
+### MNE-BIDS-Pipeline
 
-- [MNE-BIDS-Pipeline](https://mne.tools/mne-bids-pipeline/stable/index.html) is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.
-
-
+-   [MNE-BIDS-Pipeline](https://mne.tools/mne-bids-pipeline/stable/index.html) is a full-flegded processing pipeline Python package for preprocessing MEG and EEG data.
 
 #### Prepare your dataset
 
 MNE-BIDS-Pipeline only works with BIDS-formatted raw data.
 
 ![](https://mne.tools/mne-bids/assets/MNE-BIDS.png)
-
-
 
 #### Create a configuration file
 
@@ -171,18 +163,53 @@ A config file controls main pipeline parameters. CLI runs all (or part with an o
 
 #### Visualize the results (HTML reports)
 
+BIDS projects are located two places:
 
+1.  Miso Project `/blue/psb4934/share/misophonia/bids_eeg`
+    -   The `derivatives` folder contains the results of the pipeline, including the HTML reports.
 
-### Finding things on HiPerGator
+    -   Original BIDS-format data are in a different location than reports.
 
-- [UF Research Computing Documentation](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+    -   The original BIDS data for subject `sub-M603` is located in a subfolder named `/sub-M603/eeg/` in the main BIDS folder.
 
+        -   the report for subject `sub-M603` is located in a subfolder named `/derivatives/mne-bids-pipeline/sub-M603/eeg/` in the `derivatives` folder.
 
-Correct address for python env : 
+    -   the report for the group-level analysis (i.e., including grand averages) located in a subfolder named `/derivatives/mne-bids-pipeline/sub-average/eeg/` in the `derivatives` folder.
 
-`#!/usr/bin/bash
-exec /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python -m ipykernel "$@"`
+    -   ``` bash
+    
+        .
+        ├── dataset_description.json
+        ├── derivatives
+        │   └── mne-bids-pipeline
+        │       ├── sub-average
+        │       │   └── eeg
+        │       │       └── 	sub-average_task-genaudi3_report.html
+        │       ├── sub-M603
+        │       │   └── eeg
+        │       ├── sub-M604
+        │       │   └── eeg
+        │       .
+        │       :
+        │
+        ├── sub-M603
+        │   ├── eeg
+        │   └── sub-M603_scans.tsv
+        ├── sub-M604
+        │   ├── eeg
+        │   └── sub-M604_scans.tsv
+        │
+        .
+        :
+        ```
+2.  SZ/BP BIDS data: `/blue/psb4934/share/mears/assr_data/bids_assr`
+
+Finding things on HiPerGator
+
+-   [UF Research Computing Documentation](https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation)
+
+Correct address for python env :
+
+`exec /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python -m ipykernel "$@"`
 
 [Shared Conda environments on HiPerGator](https://uf-splab.github.io/open-neuro/content/posts/share-hpg-env/)
-
-
