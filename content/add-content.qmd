@@ -4,6 +4,10 @@ title: Customize
 
 ## Edit and add your pages
 
+[How to add a new web post card.](https://uf-splab.github.io/open-neuro/content/posts/make-new-github-blogpost/)
+
+
+
 Edit the qmd or md files in the `content` folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).
 
 Each page should start with 

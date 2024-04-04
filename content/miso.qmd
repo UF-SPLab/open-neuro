@@ -166,7 +166,7 @@ A config file controls main pipeline parameters. CLI runs all (or part with an o
 BIDS projects are located two places:
 
 1.  Miso Project `/blue/psb4934/share/misophonia/bids_eeg`
-    -   The `derivatives` folder contains the results of the pipeline, including the HTML reports.
+    -   The `derivatives` folder contains the results of the pipeline, including the HTML reports. The overall structure of the `derivatives` folder is as follows:
 
     -   Original BIDS-format data are in a different location than reports.
 
@@ -202,7 +202,10 @@ BIDS projects are located two places:
         .
         :
         ```
+        - So, to find the grand aveage report, you need to go to `/blue/psb4934/share/misophonia/bids_eeg/derivatives/mne-bids-pipeline/sub-average/eeg` and look for the `sub-average_task-genaudi3_report.html` file.  (For convenience, the grand average report is copied to `/blue/psb4934/share/misophonia/MNE-BIDS_reports/subaverage`) 
+        
 2.  SZ/BP BIDS data: `/blue/psb4934/share/mears/assr_data/bids_assr`
+    - The BIDS paths are similar for this dataset as well. The reports are located in the `derivatives` folder. The grand average report is located in the `sub-average` folder.
 
 Finding things on HiPerGator
 

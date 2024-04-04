@@ -6,4 +6,6 @@ title: Open Science with GitHub
 
 - [DeepLabCut Organization](https://github.com/DeepLabCut)
 
-- []()
+- [NEO/MNE mPFC-ephys](https://github.com/UF-SPLab/mpfc-ephys_2023-2024)
+
+- [DLC & DLCAnalyzer](https://github.com/UF-SPLab/mpfc-behavior)
