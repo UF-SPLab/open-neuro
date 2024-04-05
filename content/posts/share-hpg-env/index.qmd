@@ -5,4 +5,4 @@ date: "2022-12-30"
 categories: [Python, code, AI, tutorial]
 ---
 
-{{< include _manage_shared_jupyter_env_UFRCed.qmd >}}
+{{< include _join_shared_custom_jupyter_env.qmd >}}

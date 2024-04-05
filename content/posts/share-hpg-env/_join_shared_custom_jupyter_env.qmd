@@ -75,26 +75,10 @@ can change the default package cache path. To do so, add or change the
 <code>pkgs_dirs</code> setting in your <code>\~/.condarc</code>
 configuration file e.g.:
 
-::: columns
-::: {.column width="45%"}
 ``` yaml
 pkgs_dirs:
   - /blue/psb4934/share/conda/pkgs
 ```
-:::
-
-::: {.column width="5%"}
-...
-
-or
-:::
-
-::: {.column width="45%"}
-``` yaml
-  - /blue/psb4934/$USER/conda/pkgs
-```
-:::
-:::
 
 Replace <code>psb4934</code> or <code>mygroup</code> with your actual
 group name, if it's incorrect here.
@@ -119,26 +103,10 @@ You can also change the default path for the ''name'' environments
 add or change the <code>envs_dirs</code> setting in the
 <code>\~/.condarc</code> configuration file e.g.:
 
-::: columns
-::: {.column width="45%"}
 ``` yaml
 envs_dirs:
-  - /blue/psb4934/share/conda/envs
+  - /blue/psb4934/share/conda/envs/mne_1_6_0/mne
 ```
-:::
-
-::: {.column width="5%"}
-...
-
-or
-:::
-
-::: {.column width="45%"}
-``` yaml
-- /blue/psb4934/$USER/conda/envs
-```
-:::
-:::
 
 Replace <code>mygroup</code> with your actual group name.
 
