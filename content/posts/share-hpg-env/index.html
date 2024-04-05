@@ -288,40 +288,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="conda-package-cache-location" class="level3">
 <h3 class="anchored" data-anchor-id="conda-package-cache-location"><code>conda</code> package cache location</h3>
 <p><code>conda</code> caches (keeps a copy) of all downloaded packages by default in the <code>~/.conda/pkgs</code> directory tree. If you install a lot of packages you may end up filling up your home quota. You can change the default package cache path. To do so, add or change the <code>pkgs_dirs</code> setting in your <code>~/.condarc</code> configuration file e.g.:</p>
-<div class="columns">
-<div class="column" style="width:45%;">
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pkgs_dirs</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/share/conda/pkgs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:5%;">
-<p>…</p>
-<p>or</p>
-</div><div class="column" style="width:45%;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/$USER/conda/pkgs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
 <p>Replace <code>psb4934</code> or <code>mygroup</code> with your actual group name, if it’s incorrect here.</p>
 </section>
 <section id="conda-environment-location" class="level3">
 <h3 class="anchored" data-anchor-id="conda-environment-location"><code>conda</code> environment location</h3>
 <p><code>conda</code> puts all packages installed in a particular environment into a single directory. By default ‘’named’’ <code>conda</code> environments are created in the <code>~/.conda/envs</code> directory tree. They can quickly grow in size and, especially if you have many environments, fill the 40GB home directory quota. For example, the environment we will create in this training is 5.3GB in size. As such, it is important to use ‘’path’’ based (conda create -p PATH) conda environments, which allow you to use any path for a particular environment for example allowing you to keep a project-specific conda environment close to the project data in /blue/ where you group has terrabyte(s) of space.</p>
 <p>You can also change the default path for the ‘’name’’ environments (<code>conda create -n NAME</code>) if you prefer to keep all <code>conda</code> environments in the same directory tree. To do so, add or change the <code>envs_dirs</code> setting in the <code>~/.condarc</code> configuration file e.g.:</p>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/share/conda/envs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:5%;">
-<p>…</p>
-<p>or</p>
-</div><div class="column" style="width:45%;">
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> /blue/psb4934/$USER/conda/envs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/share/conda/envs/mne_1_6_0/mne</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Replace <code>mygroup</code> with your actual group name.</p>
 </section>
 <section id="editing-your-.condarc-file." class="level3 mw-collapsible" style="width:90%; padding: 5px; border: 1px solid gray;">
 <h3 class="anchored" data-anchor-id="editing-your-.condarc-file.">Editing your <code>~/.condarc</code> file.</h3>
 <p>One way to edit your <code>~/.condarc</code> file is to type:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode Bash bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.condarc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode Bash bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.condarc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If the file is empty, paste in the text below, editing the <code>env_dirs:</code> and <code>pkg_dirs:</code> as below. If the file has contents, update those lines.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -337,18 +319,18 @@ Note
 </p>
 </div>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode YAML yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge </span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> bioconda </span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> defaults </span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/envs </span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pkgs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/pkgs </span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_activate_base</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_update_conda</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">always_yes</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">show_channel_urls</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode YAML yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> bioconda </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> defaults </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">envs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/envs </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pkgs_dirs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /blue/psb4934/USER/conda/pkgs </span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_activate_base</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">auto_update_conda</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">always_yes</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="at"> </span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">show_channel_urls</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <div class="mw-collapsible-content" style="padding: 5px;">
 
@@ -358,26 +340,26 @@ Note
 <p>Now that we have our environment ready, we can use it from the command line or a script using something like:</p>
 <div class="columns">
 <div class="column" style="width:35%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mne</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mne</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <p>…<br>
 or<br>
 a path based setting:</p>
 </div><div class="column" style="width:55%;">
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set path to environment </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   pre-pend to PATH variable</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">env_path</span><span class="op">=</span>/blue/psb4934/share/mne_1_x/conda/bin</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$env_path</span>:<span class="va">$PATH</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set path to environment </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   pre-pend to PATH variable</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">env_path</span><span class="op">=</span>/blue/psb4934/share/mne_1_x/conda/bin</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$env_path</span>:<span class="va">$PATH</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run my python script</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> amazing_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>If you are still not certain why the environment is not working, you can type the following on the command line <code>bash conda info --envs</code> to see the list of environments and their paths. If you don’t see <code>/blue/psb4934/share/conda/mne_1_6_0/mne</code> in that list of environments then something didn’t happen according to plan. If you are still having trouble, please ask for help.</p>
+<p>If you are still not certain why the environment is not working, you can type the following on the command line <code>conda info --envs</code> to see the list of environments and their paths. If you don’t see <code>/blue/psb4934/share/conda/mne_1_6_0/mne</code> in that list of environments then something didn’t happen according to plan. If you are still having trouble, please ask for help.</p>
 </section>
 <section id="setup-a-jupyter-kernel-for-our-environment" class="level2">
 <h2 class="anchored" data-anchor-id="setup-a-jupyter-kernel-for-our-environment">Setup a Jupyter Kernel for our environment</h2>
@@ -419,15 +401,15 @@ Note
 <p>Let’s start editing the <code>kernel.json</code> file. As an example, we can use:</p>
 <p><code>nano ~/.local/share/jupyter/kernels/hfrl/kernel.json</code></p>
 <p>The template has most of the information and notes on what needs to be updated. Edit the file to look like:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"MNE v1.x"</span><span class="fu">,</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"~/.local/share/jupyter/kernels/mne_1_x/run.sh"</span><span class="ot">,</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"-f"</span><span class="ot">,</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{connection_file}"</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a> <span class="ot">]</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a> <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"MNE v1.x"</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"~/.local/share/jupyter/kernels/mne_1_x/run.sh"</span><span class="ot">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"-f"</span><span class="ot">,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{connection_file}"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a> <span class="ot">]</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="edit-the-run.sh-file" class="level4">
 <h4 class="anchored" data-anchor-id="edit-the-run.sh-file">Edit the <code>run.sh</code> file</h4>
@@ -437,9 +419,9 @@ Note
 <p>Edit the <code>run.sh</code> file with <code>nano</code>:</p>
 <p><code>nano ~/.local/share/jupyter/kernels/mne_1_x/run.sh</code></p>
 <p>The file should looks like this, <em>but with your path</em>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/bash</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span> /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python <span class="at">-m</span> ipykernel <span class="st">"</span><span class="va">$@</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/bash</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span> /blue/psb4934/share/conda/envs/mne_1_6_0/mne/bin/python <span class="at">-m</span> ipykernel <span class="st">"</span><span class="va">$@</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you are doing this in a Jupyter session, refresh your page. If not, launch Jupyter.</p>
 <p>Your kernel should be there ready for you to use!</p>
 </section>
