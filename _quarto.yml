@@ -9,11 +9,16 @@ website:
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
+  navbar:
+    background: secondary
+  
   page-footer:
+    background: secondary
     right: "This page is built with [Quarto](https://quarto.org/)."
     left: "&copy; CC-1.0"
   
   sidebar:
+    background: primary
     logo: content/splab.png
     favicon: images/favicon.ico
     pinned: true
