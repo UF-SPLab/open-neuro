@@ -1,0 +1,42 @@
+/*-- scss:functions --*/
+@function colorToRGB ($color) {
+  @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}
+
+@each $color, $hex in (blue: #0021A5, orange: #FA4616) {
+  .text-#{$color} {
+    color: $hex;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-- scss:defaults --*/
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+
+
+$primary-color: #0021A5; // UF Blue
+$lighter-primary: lighten($primary-color, 15%);
+$darker-primary: darken($primary-color, 15%);
+
+
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+}
+
+.navbar {
+  background-color: $primary-color;
+  .nav-item {
+    margin-right: 20px;
+    &:hover {
+      background-color: $lighter-primary;
+    }
+  }
+}

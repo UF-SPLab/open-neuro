@@ -14,8 +14,7 @@ website:
     left: "&copy; CC-1.0"
   
   sidebar:
-    background: "#D9E3E4"
-    logo: "https://github.com/UF-SPLab/open-neuro/blob/ee8f6a223185e66ffc5aaad689710a85ef05488e/content/splab.png"
+    logo: content/splab.png
     favicon: images/favicon.ico
     pinned: true
     align: center
@@ -33,6 +32,7 @@ website:
     contents:
       - href: index.qmd
         text: Home
+        src: splab.png
       - href: content/mpfc.qmd
         text: MPFC
       - href: content/miso.qmd
@@ -47,7 +47,7 @@ website:
 format:
   html:
     theme:
-      light: [sketchy, theme.scss] 
+      light: [new-theme.scss] 
       dark: [sketchy, theme-dark.scss]
 
     code-copy: true
