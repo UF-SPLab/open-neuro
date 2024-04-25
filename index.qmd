@@ -5,7 +5,6 @@ page-layout: full
 search: false
 ---
 
-{{< include content/site_libs/uf-html/all.js>}}
 
 ![](content/DALL-E-Fourier.webp)
 
