@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./img/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <title>Stamats - UFL</title>
+        <meta property="og:title" content="Page Title for SEO"
+        />
+        <meta property="og:description" content="Description for SEO" />
+        <meta property="og:image" content="url to share image" />
+    </head>
+    
+    <body>
+        <!-- START FULL WIDTH TOP NAV CONTAINER (LOGO + TOP NAV)-->
+        <header class="header header-wrapper position-sticky w-100">
+            <div class="container-fluid header-container">
+                <div class="row justify-content-between header-row"> <a class="visually-hidden-focusable" href="#content" tabindex="1">Skip to main content</a>
+
+                    <!--
+                    START LOGO COL-->
+                    <div class="col-sm-8 col-md-6 col-logo"> <a class="navbar-brand" href="index.html" tabindex="1" alt="...">
+              <img src="./img/Florida_logo.svg" alt="Logo" title="school-logo" />
+              <span class="visually-hidden">School Logo Link</span>
+            </a>
+
+                    </div>
+                    <!-- END LOGO COL-->
+                    <!-- START DESKTOP ONLY TOP MENU ITEMS & DROPDOWNS-->
+                    <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3 flex-column audience-nav-col">
+                        <!-- Optional Offsite and UFL Header Links-->
+                        <div class="offsite-links d-flex justify-content-end"> <a href="#" class="optional-offsite-link">Optional off-site link</a>
+
+                            <a
+                            href="#" class="ufl-main-link">University of Florida</a>
+                        </div>
+                        <!-- END Optional Offsite and UFL Header Links-->
+                        <!-- Audience Nav Dropdown Links-->
+                        <div class="audience-nav-links d-flex justify-content-end">
+                            <button class="navbar-search" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" alt="Toggle Search Form"
+                            title="Toggle Search Form"> <span class="visually-hidden">Search Link</span>
+
+                            </button>
+                            <div class="dropdown">
+                                <div class="dropdown-hover"> <a class="nav-link dropdown-toggle-top" href="#" role="button" id="infoMenuLink"
+                                    aria-expanded="false"> Info for.. </a>
+ <span class="mobile-menu-toggle"
+                                    aria-expanded="false"></span>
+
+                                    <ul class="dropdown-menu animate slideIn"
+                                    aria-labelledby="infoMenuLink" tabindex="-1">
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Prospective Students</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Current Students</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Faculty & Staff</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Alumni & Friends</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Visitors & Family</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <div class="dropdown-hover"> <a class="nav-link dropdown-toggle-top" href="#" role="button" id="resourcesMenuLink"
+                                    aria-expanded="false"> Resources </a>
+ <span class="mobile-menu-toggle" aria-expanded="false"></span>
+
+                                    <ul
+                                    class="dropdown-menu animate slideIn dropdown-menu-lg-end" aria-labelledby="resourcesMenuLink">
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Directory</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Campus Map</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">News</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Calendar</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">UF Health</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">UF/IFAS</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">Athletics</a>
+
+                                        </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#" tabindex="0">myUFL</a>
+
+                                        </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END DESKTOP ONLY TOP MENU ITEMS & DROPDOWNS-->
+                    <!-- START MOBILE ONLY SEARCH AND TOGGLE-->
+                    <div class="mobile-nav"> <a class="navbar-search" id="mobile-search-icon" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" alt="Toggle Search Form"
+                        title="Toggle Search Form" tabindex="0">
+              <span class="visually-hidden">Toggle Search Form</span>
+            </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"> <span style="margin-bottom: 10px;margin-top: -10px;">MENU</span>
+
+                            <span
+                            class="navbar-icon-wrapper"> <span class="navbar-toggler-icon"></span>
+</span>
+                        </button>
+                    </div>
+                    <!-- END MOBILE ONLY SEARCH AND TOGGLE-->
+                </div>
+            </div>
+            <!-- END FULL WIDTH TOP NAV CONTAINER (LOGO + TOP NAV)-->
+            <!-- START FULL WIDTH MAIN NAV CONTAINER -->
+            <nav class="navbar main_navbar pt-0 pb-0 navbar-expand-xxl" id="main-navbar">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- START MOBILE ONLY LINKS + MOBILE MENU ACTIVE TOGGLE -->
+                        <div class="mobile-offsite-toggle-wrapper"> <span class="mobile-offsite-links">
+                <a href="#" class="mobile-offsite-link">OPTIONAL OFF-SITE LINK</a>
+                <a href="#" class="mobile-main-link">UNIVERSITY OF FLORIDA</a>
+              </span>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation"> <span style="margin-bottom: 10px;margin-top: -10px;">MENU</span>
+
+                                <span
+                                class="navbar-icon-wrapper"> <span class="navbar-toggler-icon"></span>
+</span>
+                            </button>
+                        </div>
+                        <!-- END MOBILE ONLY LINKS + MOBILE MENU ACTIVE TOGGLE -->
+                        <!-- Start MAIN MENU UL with DD-->
+                        <ul class="navbar-nav d-md-flex m-auto justify-content-evenly flex-wrap w-100"
+                        id="main-nav-ul">
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="/about.html" id="navbarDropdown1"
+                                aria-expanded="false" aria-haspopup="true"> About Our College </a>
+
+                                <span
+                                class="mobile-menu-toggle"></span>
+                                    <!-- Dropdown menu -->
+                                    <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                    aria-labelledby="navbarDropdown1" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                        </li>
+                                    </ul>
+                                    <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" aria-expanded="false"> Academics </a>
+
+                                <!--
+                                Dropdown menu --> <span class="mobile-menu-toggle"></span>
+
+                                <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                aria-labelledby="navbarDropdown2" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                    </li>
+                                </ul>
+                                <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" aria-expanded="false"> Faculty & Research </a>
+
+                                <!--
+                                Dropdown menu --> <span class="mobile-menu-toggle"></span>
+
+                                <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                aria-labelledby="navbarDropdown3" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                    </li>
+                                </ul>
+                                <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" aria-expanded="false"> Student Services </a>
+
+                                <!--
+                                Dropdown menu --> <span class="mobile-menu-toggle"></span>
+
+                                <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                aria-labelledby="navbarDropdown4" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                    </li>
+                                </ul>
+                                <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" aria-expanded="false"> Diversity, Equity & Inclusion </a>
+
+                                <!--
+                                Dropdown menu --> <span class="mobile-menu-toggle"></span>
+
+                                <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                aria-labelledby="navbarDropdown5" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                    </li>
+                                </ul>
+                                <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" aria-expanded="false"> Community Engagement </a>
+
+                                <!--
+                                Dropdown menu --> <span class="mobile-menu-toggle"></span>
+
+                                <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                aria-labelledby="navbarDropdown6" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                    </li>
+                                </ul>
+                                <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <!-- Start menu li with DD-->
+                            <li class="nav-item dropdown dropdown-hover"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" aria-expanded="false"> Alumni & Giving</a>
+
+                                <span
+                                class="mobile-menu-toggle"></span>
+                                    <!-- Dropdown menu -->
+                                    <ul class="dropdown-menu animate slideIn mt-0 ddm-mm col-count-three"
+                                    aria-labelledby="navbarDropdown7" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Under Graduate Programs</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Graduate Programs</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Academic Departments</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Advising & Support</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Academic Policies</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Curriculum Development</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Action</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Another action</a>
+
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" tabindex="0">Something else here</a>
+
+                                        </li>
+                                    </ul>
+                                    <!-- END Dropdown DIV -->
+                            </li>
+                            <!-- End Dropdown Menu List Item -->
+                            <div class="mobile-secondary-dropdown">
+                                <hr>
+                            </div>
+                        </ul>
+                        <!-- End MAIN MENU UL -->
+                        <!-- START MOBILE ONLY SECONDARY LINKS -->
+                        <!-- END MOBILE ONLY SECONDARY LINKS -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- END FULL WIDTH MAIN NAV CONTAINER -->
+<div id="content" class="form-ufl">
+<section class="title-block w-100"> 
+  <!-- Start Breadcrumb template inlcuded in the Title Block -->
+  <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a> </li>
+      <li class="breadcrumb-item"><a href="#">Library</a> </li>
+      <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+    </ol>
+  </nav>
+  <!-- End Breadcrumb template inlcuded in the Title Block -->
+  <div class="container-fluid page-title-container">
+    <div class="title-wrapper">
+      <h1 class="font-heading" style="letter-spacing: -1px;">CONTACT US</h1>
+      <hr>
+    </div>
+  </div>
+</section>
+<!-- Cards Right Rail Section -->
+<section class="fullwidth-text-block  position-relative">
+  <div class="container">
+    <div class="row align-items-start">
+    <div class="col-12">
+    <h2>You have Questions, We Have Answers</h2>
+    <p class="intro">Starting your time as a Gator can feel overwhelming with thousands of questions running through your head. Feel free to explore the rest of our website to learn about the orientation and transition process as well as how we support our Gator families.</p>
+    <p>If you have questions please feel free to complete the contact form below, email us directly, or give our office a call at 352-392-8396.</p>
+    <h3>CONTACT FORM</h3>
+    <hr>
+    <div>
+    <form action="/action_page.php" method="get" id="form1">
+      <div class="row mgBtm">
+        <div class="col-md-6 col-sm-12">
+          <fieldset aria-required="true" 
+          aria-invalid="true" 
+          role="radiogroup">
+            <p class="txtBld">I am a*</p>
+            <div class="radio-btn">
+              <p>
+                <input type="radio" id="student" name="i-am-a" aria-disabled="true" required>
+                <label for="student">Student</label>
+              </p>
+              <p>
+                <input type="radio" id="parent" name="i-am-a" aria-disabled="true">
+                <label for="parent">Parent</label>
+              </p>
+              <p>
+                <input type="radio" id="other" name="i-am-a" aria-disabled="true">
+                <label for="other">Other</label>
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <fieldset aria-required="true" 
+          aria-invalid="true" 
+          role="radiogroup">
+            <p class="txtBld">I’m looking for information on:*</p>
+            <div class="radio-btn">
+              <p>
+                <input type="radio" id="undergrad" name="housing" >
+                <label for="undergrad">Undergraduate Housing</label>
+              </p>
+              <p>
+                <input type="radio" id="grad" name="housing" >
+                <label for="grad">Graduate Housing</label>
+              </p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-12">
+          <fieldset aria-required="true" 
+          aria-invalid="true" 
+          role="radiogroup">
+            <div class="radio-btn mgBtm-40"> <span class="txtBld">I am a*</span> <span class="hozRadio">
+              <input type="radio" id="student2" name="i-am" >
+              <label for="student2">Student</label>
+              </span> <span class="hozRadio">
+              <input type="radio" id="parent1" name="i-am" >
+              <label for="parent1">Parent</label>
+              </span> <span class="hozRadio">
+              <input type="radio" id="other1" name="i-am" >
+              <label for="other1">Other</label>
+              </span></div>
+          </fieldset>
+        </div>
+      </div>
+		<div class="row mgBtm">
+      <fieldset aria-required="true" 
+          aria-invalid="true" 
+          role="radiogroup">
+        <div class="radio-btn"> <span class="txtBld">I’m looking for information on:*</span> <span class="hozRadio">
+          <input type="radio" id="undergrad-housing" name="housing-info" >
+          <label for="undergrad-housing">Undergraduate Housing</label>
+          </span> <span class="hozRadio">
+          <input type="radio" id="grad-housing" name="housing-info" >
+          <label for="grad-housing">Graduate Housing</label>
+          </span> </div>
+      </fieldset>
+		
+		</div>
+      <div class="row ">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="confirm-email">Confirm Email</label>
+              <input type="text" id="confirm-email" name="confirm-email" placeholder="" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h4>Address</h4>
+          <label for="street-address">Street Address</label>
+          <input type="text" id="street-address" name="street-address" placeholder="">
+          <label for="address-2">Address Line 2</label>
+          <input type="text" id="address-2" name="address-2" placeholder="">
+          <div class="row mgBtm">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" placeholder="">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <label for="state">State</label>
+                  <div class="custom-select js-example-basic-single" style="width:100%;" >
+                    <select    style="width:100%;" name="state">
+                      <option value="0">Select a state</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <label for="zip">Zip Code</label>
+                  <input id="zip" name="zip" type="text" pattern="[0-9]*">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-12">
+          <p class="txtBld">What can we help you with?</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <fieldset>
+            <div class="radio-btn">
+              <p>
+                <input type="checkbox" id="applications" name="help" >
+                <label for="applications">Applications</label>
+              </p>
+              <p>
+                <input type="checkbox" id="contracts" name="help" >
+                <label for="contracts">Contracts</label>
+              </p>
+              <p>
+                <input type="checkbox" id="payment" name="help" >
+                <label for="payment">Payment</label>
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="radio-btn">
+            <p>
+              <input type="checkbox" id="roommates" name="help" >
+              <label for="roommates">Roommates</label>
+            </p>
+            <p>
+              <input type="checkbox" id="signup" name="help" >
+              <label for="signup">Room Sign-Up</label>
+            </p>
+            <p>
+              <input type="checkbox" id="appeals" name="help" >
+              <label for="appeals">Appeals</label>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="radio-btn">
+            <p>
+              <input type="checkbox" id="pkg" name="help" >
+              <label for="pkg">Package Discrepancy</label>
+            </p>
+            <p>
+              <input type="checkbox" id="other2" name="help" >
+              <label for="other2">Other</label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-12">
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-12">
+          <p class="txtBld">There are many ways to get involved and join our efforts to provide life-changing care to those we serve. Let us know what interests you!</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="radio-btn">
+            <p>
+              <input type="checkbox" id="support" name="involved" >
+              <label for="support">Support - Becoming a monthly donor</label>
+            </p>
+            <p>
+              <input type="checkbox" id="volunteer" name="involved" >
+              <label for="volunteer">Volunteer - Joining a volunteer programs</label>
+            </p>
+            <p>
+              <input type="checkbox" id="engage" name="involved" >
+              <label for="engage">Engage - Attending webinars, seminars or events</label>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="radio-btn">
+            <p>
+              <input type="checkbox" id="awareness" name="involved" >
+              <label for="awareness">Awareness - Follow us on Facebook and stay up-to-date on the latest News from UF Health (@UFHealthGiving)</label>
+            </p>
+            <p>
+              <input type="checkbox" id="future" name="involved" >
+              <label for="future">Future Impact - Exploring options for legacy/bequest giving</label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-12">
+          <p class="txtBld">There are many ways to get involved and join our efforts to provide life-changing care to those we serve. Let us know what interests you!</p>
+          <div class="radio-btn">
+            <p>
+              <input type="checkbox" id="support1" name="involved" >
+              <label for="support1">Support - Becoming a monthly donor</label>
+            </p>
+            <p>
+              <input type="checkbox" id="volunteer1" name="involved" >
+              <label for="volunteer1">Volunteer - Joining a volunteer programs</label>
+            </p>
+            <p>
+              <input type="checkbox" id="engage1" name="involved" >
+              <label for="engage1">Engage - Attending webinars, seminars or events</label>
+            </p>
+            <p>
+              <input type="checkbox" id="awareness1" name="involved" >
+              <label for="awareness1">Awareness - Follow us on Facebook and stay up-to-date on the latest News from UF Health (@UFHealthGiving)</label>
+            </p>
+            <p>
+              <input type="checkbox" id="future1" name="involved" >
+              <label for="future1">Future Impact - Exploring options for legacy/bequest giving</label>
+            </p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="row ">
+        <div class="col-12">
+          <h3>EVENT INFORMATION</h3>
+          <hr>
+          <label for="event">Event Title</label>
+          <input type="text" id="event" name="event" placeholder="">
+          <label for="descripton">Event Description</label>
+          <textarea id="descripton" name="descripton" placeholder="" style="height:200px"></textarea>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <label for="eventDate">Event Date*</label>
+          <input type="date" id="eventDate" name="eventDate"
+       placeholder="MM/DD/YYYY">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <label for="startTime">Event Start Time</label>
+          <input type="time" name="startTime" id="startTime" value="00:00"/>
+        </div>
+        <div class="col-md-4 col-sm-12 ">
+          <label for="endTime">Event End Time</label>
+          <input type="time" name="endTime" id="endTime" value="00:00" />
+        </div>
+      </div>
+      <div class=" col-12 mgBtm">
+        <fieldset>
+          <p class="txtBld">Will you need technology at this event?</p>
+          <div class="radio-btn">
+            <p>
+              <input type="radio" id="yes" name="tech" >
+              <label for="yes">Yes</label>
+            </p>
+            <p>
+              <input type="radio" id="no" name="tech" >
+              <label for="no">No</label>
+            </p>
+          </div>
+        </fieldset>
+      </div>
+      <div class="row mgBtm">
+        <div class=" col-12">
+          <fieldset>
+            <legend class="txtBld">Upload a File</legend>
+            <input type="file" id="upload"  class="upload"/>
+         
+            <p class="uploadTxt">Allowed types: jpg, jpeg, png, pdf. </p>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row mgBtm">
+        <div class="col-md-6 col-sm-12">
+          <button type="submit" form="form1" value="Submit" class="button animated-border-button button-border-orange button-text-dark">Submit</button>
+        </div>
+        <div class="col-md-6 col-sm-12"> </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+	</div>
+</section>
+ </div>
+<!-- Start Heading left text right row--> 
+
+<!-- END Heading left text right row-->
+
+<!-- OFF CANVAS DROPDWON-->
+<div class="offcanvas offcanvas-top off-canvas-search" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                tabindex="3"></button>
+  </div>
+  <div class="offcanvas-body"> 
+    <!-- START SEARCH FORM -->
+    <form class="d-flex">
+      <input class="form-control" type="search" placeholder="How can we help you?"
+                    tabindex="1" autofocus="true" aria-label="Search">
+      <a class="btn search-submit" type="submit" tabindex="2"></a>
+    </form>
+    <!-- END SEARCH FORM --> 
+  </div>
+</div>
+<!-- END OFF CANVAS DROPDWON--> 
+<!-- START FOOTER WRAPPER -->
+<div class="footer-wrapper">
+  <div id="footerTopBorder" style="width: 1%;"></div>
+  <!-- Footer -->
+  <footer class="footer m-0 footer-title pb-4 text-lg-start text-white"
+            style="background-color: #45526e"> 
+    <!-- Grid container -->
+    <div class="container-fluid p-4 pb-0"> 
+      <!-- Section: Links -->
+      <section class="footer-section"> 
+        <!--Grid row-->
+        <div class="row">
+          <div class="col-12 col-md-6 footer-col-logo pb-5"> <a class="navbar-brand" href="index.html"> <span><img src="./img/mock-logo.svg"  alt="Logo" title="school-logo" /></span> <span class="visually-hidden">School Logo Link</span> </a> </div>
+          <div class="col-12 col-md-6 footer-col-social"> <a href="http://www.facebook.com/uflorida/" target="_blank" class="facebook-icon"
+                                rel="noopener"> <i class="fa-brands fa-facebook-f"></i> <span class="visually-hidden">Facebook Icon</span> </a> <a href="https://twitter.com/UF/" target="_blank"
+                                class="twitter-icon" rel="noopener"> <i class="fa-brands fa-twitter"></i> <span class="visually-hidden">Twitter Icon</span> </a> <a href="https://instagram.com/uflorida/" target="_blank"
+                                class="instagram-icon" rel="noopener"> <i class="fa-brands fa-instagram"></i> <span class="visually-hidden">Instagram Icon</span> </a> <a href="http://www.youtube.com/user/universityofflorida/"
+                                target="_blank" class="youtube-icon" rel="noopener"> <i class="fa-brands fa-youtube"></i> <span class="visually-hidden">Youtube Icon</span> </a> </div>
+        </div>
+        <!--END TOP Grid row--> 
+        <!--Start Link Grid row-->
+        <div class="row"> 
+          <!-- Grid column -->
+          <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 mx-auto my-4">
+            <h2 class="mb-4 footer-title pb-4"> Contact the College </h2>
+            <p>100 Stately Hall <br>
+              PO Box 90210 <br>
+              Gainesville, FL 32611-0212 <br>
+              <br>
+              <a href="mailto:dolar-gupthgo@ufl.edu">dolar-gupthgo@ufl.edu</a> <br>
+              <a href="tel:3528675309">352-867-5309</a> </p>
+          </div>
+          <!-- END Grid column --> 
+          <!-- Grid column -->
+          <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4">
+            <h2 class="mb-4 footer-title pb-4">Programs</h2>
+            <ul>
+              <li><a href="#">Undergraduate</a> </li>
+              <li><a href="#">Master’s</a> </li>
+              <li><a href="#">Doctoral</a> </li>
+              <li><a href="#">Online Certificates</a> </li>
+              <li><a href="#">Post-Doc</a> </li>
+            </ul>
+          </div>
+          <!-- END Grid column --> 
+          <!-- Grid column -->
+          <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4">
+            <h2 class="mb-4 footer-title pb-4"> Schools </h2>
+            <ul>
+              <li><a href="#">School of Thought</a> </li>
+              <li><a href="#">School of Practice</a> </li>
+              <li><a href="#">School of Policy & Implementation</a> </li>
+            </ul>
+          </div>
+          <!-- END Grid column --> 
+          <!-- Grid column -->
+          <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4">
+            <h2 class="mb-4 footer-title pb-4"> Departments </h2>
+            <ul>
+              <li><a href="#">Contemplative Studies</a> </li>
+              <li><a href="#"> Project Management</a> </li>
+              <li><a href="#"> Community Engagement & Improvement</a> </li>
+              <li><a href="#">Big Ideas</a> </li>
+            </ul>
+          </div>
+          <!-- END Grid column --> 
+          <!-- Grid column -->
+          <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4">
+            <h2 class="mb-4 footer-title pb-4"> Offices </h2>
+            <ul>
+              <li><a href="#">Dean</a> </li>
+              <li><a href="#">Alumni & Giving</a> </li>
+              <li><a href="#">Career Services</a> </li>
+              <li><a href="#">IT Support</a> </li>
+              <li><a href="#">Marketing & Communications</a> </li>
+            </ul>
+          </div>
+          <!-- END Grid column --> 
+        </div>
+        <!--END Grid row--> 
+      </section>
+      <!-- Section: Links --> 
+      <!-- Section: Copyright NEED TO TWEAK -->
+      <section class="copyright-section">
+        <div class="row"> 
+          <!-- Grid column -->
+          <div class="col-12 copyright-col"> 
+            <!-- Copyright -->
+            <div class="copyright-links"> <a class="text-white" href="https://www.ufl.edu/">© 2022 University of Florida</a> </div>
+            <div class="copyright-links"> <a class="text-white" href="https://www.ufl.edu/">Accreditation</a> </div>
+            <div class="copyright-links"> <a class="text-white" href="https://www.ufl.edu/">Privacy Policy</a> </div>
+            <div class="copyright-links"> <a class="text-white" href="https://www.ufl.edu/">Equity Statement</a> </div>
+            <!-- Copyright --> 
+          </div>
+        </div>
+      </section>
+      <!-- Section: Copyright --> 
+    </div>
+    <!-- Grid container --> 
+  </footer>
+  <!-- Footer --> 
+</div>
+<!-- END FOOTER WRAPPER --> 
+<script src="./js/all.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script> 
+<script>
+	var x, i, j, l, ll, selElmnt, a, b, c;
+/* Look for any elements with the class "custom-select": */
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /* For each element, create a new DIV that will act as the selected item: */
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /* For each option in the original select element,
+    create a new DIV that will act as an option item: */
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /* When an item is clicked, update the original select box,
+        and the selected item: */
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+    /* When the select box is clicked, close any other select boxes,
+    and open/close the current select box: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener("click", closeAllSelect); 
+	
+	</script>
+
+
+</body>
+</html>

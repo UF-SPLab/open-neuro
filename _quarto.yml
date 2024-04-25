@@ -18,9 +18,11 @@ website:
     left: "&copy; CC-1.0"
   
   sidebar:
-    background: primary
+    background: light
+    foreground: secondary
     logo: content/splab.png
     favicon: images/favicon.ico
+    border: true
     pinned: true
     align: center
     tools: 
@@ -52,8 +54,9 @@ website:
 format:
   html:
     theme:
-      light: [new-theme.scss] 
+      light: [uf-bs-elements.scss] 
       dark: [sketchy, theme-dark.scss]
+
 
     code-copy: true
     code-overflow: wrap

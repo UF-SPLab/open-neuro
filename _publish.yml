@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c2a18db2-0e23-44fb-b907-368d5de46d8a
+      url: 'https://mears.quarto.pub/open-neuro'
