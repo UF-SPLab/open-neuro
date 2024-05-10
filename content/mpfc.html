@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -154,6 +174,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../content/lab-members.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">People</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../content/code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code in your files</span></a>
   </div>
@@ -216,8 +242,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="deeplabcut" class="level3">
 <h3 class="anchored" data-anchor-id="deeplabcut">DeepLabCut</h3>
 <ul>
-<li><p>Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., &amp; Mathis, M. W. (2019). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. <em>Nature protocols</em>, 14(7), 2152-2176. <a href="https://static1.squarespace.com/static/57f6d51c9f74566f55ecf271/t/5eab5ff7999bf94756b27481/1588289532243/NathMathis2019.pdf">https://doi.org/10.1038/s41596-019-0176-0</a></p></li>
-<li><p>Mathis, A., Schneider, S., Lauer, J., &amp; Mathis, M. W. (2020). A primer on motion capture with deep learning: principles, pitfalls, and perspectives. <em>Neuron</em>, 108(1), 44-65. <a href="https://doi.org/10.1016/j.neuron.2020.09.017" class="uri">https://doi.org/10.1016/j.neuron.2020.09.017</a></p>
+<li><p><span class="citation" data-cites="nath2019">Nath et al. (<a href="#ref-nath2019" role="doc-biblioref">2019</a>)</span> <a href="https://www.nature.com/articles/s41596-019-0176-0/figures/2"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41596-019-0176-0/MediaObjects/41596_2019_176_Fig2_HTML.png?as=webp" title="Fig. 2: DeepLabCut workflow." class="img-fluid" width="800" alt="The diagram delineates the workflow, as well as the directory and file structures. The process of the workflow is color coded to represent the locations of the output of each step or section. The main steps are opening a Python session, importing DeepLabCut, creating a project, selecting frames, labeling frames, and training a network. Once trained, this network can be used to apply labels to new videos, or the network can be refined if needed. The process is fueled by interactive graphical user interfaces (GUIs) at several key steps."></a></p></li>
+<li><p><span class="citation" data-cites="mathis2020">Mathis et al. (<a href="#ref-mathis2020" role="doc-biblioref">2020</a>)</span> <a href="https://www.cell.com/neuron/fulltext/S0896-6273(20)30717-0"><img src="https://www.cell.com/cms/attachment/850743da-530c-498a-8092-047ffcb7a855/gr6.jpg" class="img-fluid" alt="Figure 6. An Overview of the Workflow for Deep Learning-Based Pose Estimation, which Highlights Several Critical Decision Points"></a></p>
 <ul>
 <li><a href="https://github.com/DeepLabCut/DeepLabCut">DeepLabCut</a></li>
 </ul></li>
@@ -245,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="test-out-dlc-basic" class="level5">
 <h5 class="anchored" data-anchor-id="test-out-dlc-basic">Test out DLC (Basic)</h5>
 <ul>
-<li><a href="https://www.mackenziemathislab.org/dlc-modelzoo">https://www.mackenziemathislab.org/dlc-modelzoo</a></li>
+<li><a href="https://www.mackenziemathislab.org/dlc-modelzoo" class="uri">https://www.mackenziemathislab.org/dlc-modelzoo</a></li>
 <li><a href="https://huggingface.co/spaces/DeepLabCut/DeepLabCutModelZoo-SuperAnimals">Single-frame analysis.</a>
 <ul>
 <li>This just works. It’s a small-scale version of what happens on a large-scale with all the 2d frames from your videos.</li>
@@ -272,10 +298,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="some-links-for-getting-started">Some links for Getting started</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=KcXogR-p5Ak">YouTube video on using DeepLabCut GUI (~3 min)</a></li>
-<li>Installing Deeplabcut <a href="https://deeplabcut.github.io/DeepLabCut/docs/installation.html">https://deeplabcut.github.io/DeepLabCut/docs/installation.html</a></li>
-<li>DLC User Guide <a href="https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html">https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html</a></li>
-<li>Napari GUI <a href="https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html">https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html</a></li>
-<li>Slightly outdated workshop <a href="https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials">https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials</a></li>
+<li>Installing Deeplabcut <a href="https://deeplabcut.github.io/DeepLabCut/docs/installation.html" class="uri">https://deeplabcut.github.io/DeepLabCut/docs/installation.html</a></li>
+<li>DLC User Guide <a href="https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html" class="uri">https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html</a></li>
+<li>Napari GUI <a href="https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html" class="uri">https://deeplabcut.github.io/DeepLabCut/docs/napariGUI.html</a></li>
+<li>Slightly outdated workshop <a href="https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials" class="uri">https://github.com/DeepLabCut/DeepLabCut-Workshop-Materials</a></li>
 </ul>
 </section>
 <section id="video-behavior-analysis-workflow" class="level3">
@@ -379,13 +405,21 @@ graph LR
 </section>
 </section>
 <section id="neomne-e-phys" class="level3">
-<h3 class="anchored" data-anchor-id="neomne-e-phys">NEO/MNE e-phys</h3>
+
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">NEO/MNE e-phys</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-mathis2020" class="csl-entry" role="listitem">
+Mathis, Alexander, Steffen Schneider, Jessy Lauer, and Mackenzie Weygandt Mathis. 2020. <span>“A Primer on Motion Capture with Deep Learning: Principles, Pitfalls, and Perspectives.”</span> <em>Neuron</em> 108 (1): 44–65. <a href="https://doi.org/10.1016/j.neuron.2020.09.017">https://doi.org/10.1016/j.neuron.2020.09.017</a>.
+</div>
+<div id="ref-nath2019" class="csl-entry" role="listitem">
+Nath, Tanmay, Alexander Mathis, An Chi Chen, Amir Patel, Matthias Bethge, and Mackenzie Weygandt Mathis. 2019. <span>“Using DeepLabCut for 3D Markerless Pose Estimation Across Species and Behaviors.”</span> <em>Nature Protocols</em> 14 (7): 2152–76. <a href="https://doi.org/10.1038/s41596-019-0176-0">https://doi.org/10.1038/s41596-019-0176-0</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
