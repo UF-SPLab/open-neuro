@@ -1,0 +1,11 @@
+---
+title: "Quartize It"
+author: "hrbrmstr"
+format: html
+echo: false
+observable: "https://observablehq.com/d/9c90256b167c877b"
+---
+
+[Instructions: Quartize ObsevableHQ Notebooks](https://github.com/hrbrmstr/reveal-qmd)
+
+{{< include epicyclic-gearing/epicyclic-gearing.qmd >}}

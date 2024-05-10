@@ -46,6 +46,8 @@ website:
         text: Misophonia
       - href: content/links.qmd
         text: Useful Links
+      - href: content/lab-members.qmd
+        text: People
       - href: content/code.qmd
         text: Code in your files
       - href: content/acknowledgements.qmd
